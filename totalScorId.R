@@ -1,0 +1,10 @@
+totalScorId<-function(S){
+	t<-rep(0,length(S))
+	for(i in 1:length(S)){
+		if(S[i]<=160) t[i]<-0
+		if(S[i]>160 & S[i]<=207) t[i]<-1
+		if(S[i]>207) t[i]<-2
+	}
+return(t)
+
+}

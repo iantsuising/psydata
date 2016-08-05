@@ -1,0 +1,327 @@
+% Created 2016-07-25 Mon 01:16
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Data pre-processing}
+\label{sec:orgheadline3}
+
+\subsection{Varibale Y}
+\label{sec:orgheadline1}
+   Add a binary variable Y to the data set: Y = 1 for individual who
+thinks he/she has psychological problems, and Y = 0 otherwise. In
+another word, every observation from group A, B, and C has Y = 1; Y =
+0 for those from group AH.
+
+\subsection{Variable t}
+\label{sec:orgheadline2}
+Divided the total score into three levels (denoted by t). t=0 for
+total score equal to or lower than the health level, 208. t = 1 for
+total score higher than 208 but lower than 208 plus on standard
+deviation (52). t = 2 otherwise.
+
+
+\section{Sample Characteristics}
+\label{sec:orgheadline4}
+
+\begin{verbatim}
+(with-temp-buffer
+ (org-table-import "sampledata.csv" nil) ;; MEMO on `nil' arg is in the footnotes.
+ (setq LST (org-table-to-lisp))
+ ;; comment out or cut below one line if you don't have column names in CSV file.
+ (append (list (car LST)) '(hline) (cdr (org-table-to-lisp)))
+ )
+\end{verbatim}
+
+\begin{center}
+\begin{tabular}{lllll}
+ & Group A, N=3151 & Group B, N=1233 & Group C, N=2246 & Group AH (stratified), N=3029\\
+\hline
+Demographics & Mean ¡À SD or N (\%) & Mean ¡À SD or N (\%) & Mean ¡À SD or N (\%) & Mean ¡À SD or N (\%)\\
+Age(years) & 31.49 ¡À 10.23 & 33.00 ¡À 11.45 & 35.49 ¡À 14.91 & 33.01 ¡À 7.85\\
+Sex &  &  &  & \\
+1 & 1670 (53.0) & 649 (52.6) & 1487 (66.2) & 1384 (45.7)\\
+2 & 1481 (47.0) & 584 (47.4) & 759 (33.8) & 1645 (54.3)\\
+Education &  &  &  & \\
+0 &  & 40 (3.2) & 92 (4.1) & \\
+1 &  & 91 (7.4) & 202 (9.0) & 40 (1.3)\\
+2 & 1220 (38.7) & 529 (42.9) & 882 (39.3) & 1599 (52.8)\\
+3 & 643 (20.4) & 505 (41.0) & 917 (40.8) & 1182 (39.0)\\
+4 & 1288 (40.9) & 68 (5.5) & 153 (6.8) & 208 (6.9)\\
+Marriage &  &  &  & \\
+1 & 1828 (58.0) & 730 (59.2) & 1347 (60.0) & 2029 (67.0)\\
+2 & 1290 (40.9) & 469 (38.0) & 872 (38.8) & 945 (31.2)\\
+3 &  &  & 10 (0.4) & \\
+4 & 33 (1.1) & 34 (2.8) & 17 (0.8) & 55 (1.8)\\
+SCL90 Result &  &  &  & \\
+Total Score & 205.38 ¡À 63.33 & 198.21 ¡À 56.71 & 177.78 ¡À 64.92 & 145.72 ¡À 52.10\\
+Somatization & 1.99 ¡À 0.76 & 1.98 ¡À 0.69 & 1.8 ¡À 0.74 & 1.69 ¡À 0.67\\
+Obsessive.compulsive & 2.52 ¡À 0.85 & 2.51 ¡À 0.79 & 2.17 ¡À 0.81 & 1.85 ¡À 0.67\\
+Interpersonal.sensitivity & 2.29 ¡À 0.87 & 2.24 ¡À 0.86 & 1.99 ¡À 0.86 & 1.6 ¡À 0.63\\
+Depression & 2.58 ¡À 0.91 & 2.45 ¡À 0.85 & 2.17 ¡À 0.94 & 1.68 ¡À 0.68\\
+Anxiety & 2.52 ¡À 0.9 & 2.34 ¡À 0.8 & 2.13 ¡À 0.91 & 1.65 ¡À 0.65\\
+Hostility & 2.21 ¡À 0.92 & 2.14 ¡À 0.8 & 1.91 ¡À 0.88 & 1.56 ¡À 0.68\\
+Phobic.anxiety & 1.89 ¡À 0.83 & 1.75 ¡À 0.72 & 1.74 ¡À 0.78 & 1.36 ¡À 0.53\\
+Paranoid.ideation & 2.07 ¡À 0.85 & 2.04 ¡À 0.8 & 1.79 ¡À 0.81 & 1.51 ¡À 0.62\\
+Psychoticism & 2.1 ¡À 0.77 & 1.98 ¡À 0.71 & 1.79 ¡À 0.73 & 1.48 ¡À 0.56\\
+Additional.items & 2.42 ¡À 0.82 & 2.39 ¡À 0.75 & 2.1 ¡À 0.83 & 1.63 ¡À 0.64\\
+\end{tabular}
+\end{center}
+
+
+
+\begin{center}
+\begin{tabular}{lllll}
+ & Group A, N=3151 & Group B, N=1233 & Group C, N=2246 & Group AH (stratified), N=3029\\
+\hline
+Demographics & Mean ± SD or N (\%) & Mean ± SD or N (\%) & Mean ± SD or N (\%) & Mean ± SD or N (\%)\\
+Age(years) & 31.49 ± 10.23 & 33.00 ± 11.45 & 35.49 ± 14.91 & 33.01 ± 7.85\\
+Sex &  &  &  & \\
+1 & 1670 (53.0) & 649 (52.6) & 1487 (66.2) & 1384 (45.7)\\
+2 & 1481 (47.0) & 584 (47.4) & 759 (33.8) & 1645 (54.3)\\
+Education &  &  &  & \\
+0 &  & 40 (3.2) & 92 (4.1) & \\
+1 &  & 91 (7.4) & 202 (9.0) & 40 (1.3)\\
+2 & 1220 (38.7) & 529 (42.9) & 882 (39.3) & 1599 (52.8)\\
+3 & 643 (20.4) & 505 (41.0) & 917 (40.8) & 1182 (39.0)\\
+4 & 1288 (40.9) & 68 (5.5) & 153 (6.8) & 208 (6.9)\\
+Marriage &  &  &  & \\
+1 & 1828 (58.0) & 730 (59.2) & 1347 (60.0) & 2029 (67.0)\\
+2 & 1290 (40.9) & 469 (38.0) & 872 (38.8) & 945 (31.2)\\
+3 &  &  & 10 (0.4) & \\
+4 & 33 (1.1) & 34 (2.8) & 17 (0.8) & 55 (1.8)\\
+SCL90 Result &  &  &  & \\
+Total Score & 205.38 ± 63.33 & 198.21 ± 56.71 & 177.78 ± 64.92 & 145.72 ± 52.10\\
+Somatization & 1.99 ± 0.76 & 1.98 ± 0.69 & 1.8 ± 0.74 & 1.69 ± 0.67\\
+Obsessive.compulsive & 2.52 ± 0.85 & 2.51 ± 0.79 & 2.17 ± 0.81 & 1.85 ± 0.67\\
+Interpersonal.sensitivity & 2.29 ± 0.87 & 2.24 ± 0.86 & 1.99 ± 0.86 & 1.6 ± 0.63\\
+Depression & 2.58 ± 0.91 & 2.45 ± 0.85 & 2.17 ± 0.94 & 1.68 ± 0.68\\
+Anxiety & 2.52 ± 0.9 & 2.34 ± 0.8 & 2.13 ± 0.91 & 1.65 ± 0.65\\
+Hostility & 2.21 ± 0.92 & 2.14 ± 0.8 & 1.91 ± 0.88 & 1.56 ± 0.68\\
+Phobic.anxiety & 1.89 ± 0.83 & 1.75 ± 0.72 & 1.74 ± 0.78 & 1.36 ± 0.53\\
+Paranoid.ideation & 2.07 ± 0.85 & 2.04 ± 0.8 & 1.79 ± 0.81 & 1.51 ± 0.62\\
+Psychoticism & 2.1 ± 0.77 & 1.98 ± 0.71 & 1.79 ± 0.73 & 1.48 ± 0.56\\
+Additional.items & 2.42 ± 0.82 & 2.39 ± 0.75 & 2.1 ± 0.83 & 1.63 ± 0.64\\
+\end{tabular}
+\end{center}
+
+
+\section{Analysis of same psychological characteristics among three locations}
+\label{sec:orgheadline15}
+\subsection{Analyze the locations separately}
+\label{sec:orgheadline13}
+
+\subsubsection{Indenpendecy tests}
+\label{sec:orgheadline9}
+   Use the chi square statistics to test whether the total score or
+psychological factors are independent with the basic identity factors:
+H0: the total score level (or psychological factor) and factor X are independent.
+H1: the total score level (or psychological factor) and factor X are not independent.
+(X = Age, Sex, Education, or Marriage)
+
+\begin{enumerate}
+\item Chi-square test p value table for Group A:
+\label{sec:orgheadline5}
+
+\begin{verbatim}
+(with-temp-buffer
+ (org-table-import "chiA.csv" nil) ;; MEMO on `nil' arg is in the footnotes.
+ (setq LST (org-table-to-lisp))
+ ;; comment out or cut below one line if you don't have column names in CSV file.
+ (append (list (car LST)) '(hline) (cdr (org-table-to-lisp)))
+ )
+\end{verbatim}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+p-value & Age level & Sex & Education & Marriage\\
+\hline
+Total Score & 0 & 0.0033 & 0.0603 & 0\\
+Somatization & 0.2423 & 0 & 0.1892 & 0.2584\\
+Obsessive.compulsive & 0 & 0.433 & 0.0299 & 0\\
+Interpersonal.sensitivity & 0 & 0.037 & 0.0184 & 0\\
+Depression & 0 & 0 & 0.5678 & 0\\
+Anxiety & 0 & 0.0045 & 0.7837 & 0\\
+Hostility & 0 & 0.0004 & 0.1002 & 0.0008\\
+Phobic.anxiety & 0 & 0.2402 & 0.0089 & 0\\
+Paranoid.ideation & 0 & 0.1774 & 0.0006 & 0\\
+Psychoticism & 0 & 0.1073 & 0.1456 & 0\\
+Additional.items & 0.0451 & 0.0115 & 0.2692 & 0.0236\\
+\end{tabular}
+\end{center}
+
+
+\item Chi-square test p value table for Group B
+\label{sec:orgheadline6}
+
+\begin{verbatim}
+(with-temp-buffer
+ (org-table-import "chiB.csv" nil) ;; MEMO on `nil' arg is in the footnotes.
+ (setq LST (org-table-to-lisp))
+ ;; comment out or cut below one line if you don't have column names in CSV file.
+ (append (list (car LST)) '(hline) (cdr (org-table-to-lisp)))
+ )
+\end{verbatim}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+p-value & Age level & Sex & Education & Marriage\\
+\hline
+Total Score & 0.0000 & 0.6114 & 0.0494 & 0.0001\\
+Somatization & 0.0026 & 0.0392 & 0.0000 & 0.2437\\
+Obsessive.compulsive & 0.0001 & 0.3652 & 0.3885 & 0.0000\\
+Interpersonal.sensitivity & 0.0000 & 0.3246 & 0.0032 & 0.0000\\
+Depression & 0.0007 & 0.0014 & 0.0868 & 0.0015\\
+Anxiety & 0.0219 & 0.8951 & 0.6791 & 0.0008\\
+Hostility & 0.0000 & 0.9585 & 0.3400 & 0.0352\\
+Phobic.anxiety & 0.0000 & 0.3260 & 0.0614 & 0.0000\\
+Paranoid.ideation & 0.0000 & 0.1360 & 0.0515 & 0.0000\\
+Psychoticism & 0.0018 & 0.0736 & 0.4308 & 0.0000\\
+Additional.items & 0.0016 & 0.7766 & 0.4779 & 0.3299\\
+\end{tabular}
+\end{center}
+
+
+\item Chi-square test p value table for Group C
+\label{sec:orgheadline7}
+
+\begin{verbatim}
+(with-temp-buffer
+ (org-table-import "chiC.csv" nil) ;; MEMO on `nil' arg is in the footnotes.
+ (setq LST (org-table-to-lisp))
+ ;; comment out or cut below one line if you don't have column names in CSV file.
+ (append (list (car LST)) '(hline) (cdr (org-table-to-lisp)))
+ )
+\end{verbatim}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+p-value & Age level & Sex & Education & Marriage\\
+\hline
+Total Score & 0.0040 & 0.6706 & 0.0000 & 0.0260\\
+Somatization & 0.0000 & 0.1135 & 0.0000 & 0.0000\\
+Obsessive.compulsive & 0.0000 & 0.0006 & 0.0000 & 0.0010\\
+Interpersonal.sensitivity & 0.0251 & 0.0321 & 0.0000 & 0.9315\\
+Depression & 0.9895 & 0.3135 & 0.0000 & 0.1692\\
+Anxiety & 0.0000 & 0.0049 & 0.0000 & 0.0000\\
+Hostility & 0.0000 & 0.0127 & 0.0000 & 0.0006\\
+Phobic.anxiety & 0.0209 & 0.0086 & 0.0000 & 0.0001\\
+Paranoid.ideation & 0.0000 & 0.0730 & 0.0000 & 0.0003\\
+Psychoticism & 0.0000 & 0.0000 & 0.0000 & 0.0000\\
+Additional.items & 0.0000 & 0.0175 & 0.0000 & 0.0000\\
+\end{tabular}
+\end{center}
+
+
+\item Chi-square summary
+\label{sec:orgheadline8}
+Settin the signaficant level at 0.05, the total score level is
+depedent on the most of the demographic factors. For the total
+score is dependent on  both age level and marriage factors in all
+three locations.
+
+Accorading to Chi square test, at location A, the Somatization is
+independent with age level and marriage; OCD is independent with
+sex; Depression is independent with education; phobic anxiety,
+paranoid ideation, and psychoticism are independent with sex;
+anxiety, hostility, and psychoticism are indepedent with
+education.
+
+At location B, OCD, IS, ANX, HO, PA, and PI are independent with
+sex; OCD, ANX, HO, and PSY are independent with education; only
+somatization is independent with marriage.
+
+At location C, only DEP is independent with age level; DEP and HO
+are independent with sex; IS and DEP are independent with
+marriage.
+\end{enumerate}
+
+
+\subsubsection{Differency tests}
+\label{sec:orgheadline12}
+Using the t-ststistic to test wheather the differences of the
+psychological factors between three locations are significant.
+H0: the difference between the scores from two locations are 0.
+H1: the difference between the scores from two locations are
+not 0.
+
+\begin{enumerate}
+\item t-test p-value table for the comparasions
+\label{sec:orgheadline10}
+\begin{center}
+\begin{tabular}{lrrr}
+p-values & A vs B & A vs C & B vs C\\
+\hline
+Score & 0 & 0 & 0\\
+So & 0.58 & 0 & 0\\
+OCD & 0.57 & 0 & 0\\
+IS & 0.11 & 0 & 0\\
+Dep & 0 & 0 & 0\\
+Anx & 0 & 0 & 0\\
+Ho & 0.0057 & 0 & 0\\
+PA & 0 & 0 & 0.82\\
+PI & 0.33 & 0 & 0\\
+Psy & 0 & 0 & 0\\
+AI & 0.38 & 0 & 0\\
+\end{tabular}
+\end{center}
+\item t-test sumamry
+\label{sec:orgheadline11}
+The psychological factors from the different locations have
+significant difference. It may caused by the location factor,
+however, it may also caused by the different demograohical
+factors distributions of the locations.
+Let us see whether the basic demographical factors are same from
+these locations:
+
+\begin{center}
+\begin{tabular}{lrrr}
+p-values & A vs B & A vs C & B vs C\\
+\hline
+Age & 0 & 0 & 0\\
+Sex & 0.83 & 0 & 0\\
+Education & 0 & 0 & 0.78\\
+Marriage & 0.29 & 0.17 & 0.046\\
+\end{tabular}
+\end{center}
+
+At the preivious sections, we find the most significant factors
+that the psychological scores dependent with are sex and
+marriage. From the abvoe t-test table, we find the age factor are
+different among three locations, but the marriage factor are
+same. Therefore, the analysis in the next section may answer the
+question: the significant differences among the locations is
+caused by the locations factor, or by the different demograohical
+factors distributions, or both?
+\end{enumerate}
+
+
+
+
+\subsection{Analyze the locations together}
+\label{sec:orgheadline14}
+\end{document}
