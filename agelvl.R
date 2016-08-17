@@ -1,0 +1,10 @@
+agelvl<-function(A){
+	res<-rep(5,length(A))
+	for(i in 1: length(A)){
+		if(A[i]<=25){res[i]<-1}
+		if(A[i]<=35 & A[i]>25){res[i]<-2}
+		if(A[i]<=45 & A[i]>35){res[i]<-3}
+		if(A[i]<=60 & A[i]>45){res[i]<-4}
+	}
+	return(as.factor(res))
+}

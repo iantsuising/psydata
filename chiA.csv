@@ -1,0 +1,12 @@
+p-value,Age level,Sex,Education,Marriage
+Total Score,0,0.0033,0.0603,0
+Somatization,0.2423,0,0.1892,0.2584
+Obsessive.compulsive,0,0.433,0.0299,0
+Interpersonal.sensitivity,0,0.037,0.0184,0
+Depression ,0,0,0.5678,0
+Anxiety ,0,0.0045,0.7837,0
+Hostility,0,0.0004,0.1002,0.0008
+Phobic.anxiety,0,0.2402,0.0089,0
+Paranoid.ideation,0,0.1774,0.0006,0
+Psychoticism,0,0.1073,0.1456,0
+Additional.items,0.0451,0.0115,0.2692,0.0236

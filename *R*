@@ -1,0 +1,861 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> > options(STERM='iESS', str.dendrogram.last="'", editor='emacsclient', show.error.locations=TRUE)
+> library(corrplot)
+> library(ggplot2)
+> library(scales)
+> library(reshape)
+> library(sampling)
+> source("totalScorId.R")
+> source("multiplot.R")
+> source("lvl.R")
+> source("agelvl.R")
+> source("age2.R")
+> source("edu2.R")
+> A<-read.csv("A.csv")
+> B<-read.csv("B.csv")
+> C<-read.csv("C.csv")
+> AH<-read.csv("AH.csv")
+> B<-B[,-18]
+> B<-B[-135,]
+> B<-B[-1203,]
+> B[61,10]<-2.67
+> B$Interpersonal.sensitivity<-as.numeric(as.character(B$Interpersonal.sensitivity))
+> A<-A[A$Age!=0,]
+> A<-A[A$Age!=290,]
+> t<-totalScorId(A$Total.score)
+> age.lvl<-agelvl(A$Age)
+> A<-cbind(A,t,age.lvl)
+> t<-totalScorId(B$Total.score)
+> age.lvl<-agelvl(B$Age)
+> B<-cbind(B,t,age.lvl)
+> t<-totalScorId(C$Total.score)
+> age.lvl<-agelvl(C$Age)
+> C<-cbind(C,t,age.lvl)
+> t<-totalScorId(AH$Total.score)
+> age.lvl<-agelvl(AH$Age)
+> AH<-cbind(AH,t,age.lvl)
+> data<-rbind(A,B,C,AH)
+> data$Age[data$Age==2]<-20
+> ##level##
+> so.lvl<-lvl(data$Somatization,3,1.85)
+> ocd.lvl<-(lvl(data$Obsessive.compulsive,3,2.2))
+> is.lvl<-(lvl(data$Interpersonal.sensitivity,2.16,2.16))
+> dep.lvl<-(lvl(data$Depression,4,3))
+> anx.lvl<-(lvl(data$Anxiety,3,1.82))
+> ho.lvl<-(lvl(data$Hostility,3,2.04))
+> pa.lvl<-(lvl(data$Phobic.anxiety,1.64,1.64))
+> pi.lvl<-(lvl(data$Paranoid.ideation,3,2))
+> psy.lvl<-(lvl(data$Psychoticism,3,1.17))
+> ai.lvl<-(lvl(data$Additional.items,3,2))
+> age2.lvl <- age2(data$Age)
+> edu2.lvl <- edu2(data$Education)
+> Group<-c(rep("A",dim(A)[1]),rep("B",dim(B)[1]),rep("C",dim(C)[1]),rep("AH",dim(AH)[1]))
+> data.lvled<-cbind(data,age2.lvl,edu2.lvl,Group,so.lvl,ocd.lvl,is.lvl,dep.lvl,anx.lvl,ho.lvl,pa.lvl,pa.lvl,pi.lvl,psy.lvl,ai.lvl)
+> A<-data.lvled[1:3151,]
+> B<-data.lvled[3152:(3151+1233),]
+> C<-data.lvled[(3151+1233+1):(3151+1233+2246),]
+> AH<-data.lvled[(3151+1233+2246+1):(3151+1233+2246+15578),]
+> A.1.1.1.1 <- A[A$age2.lvl==1 & A$edu2.lvl==1 & A$Sex==1 & A$Marriage==1, ]
+> A.1.1.1.2 <- A[A$age2.lvl==1 & A$edu2.lvl==1 & A$Sex==1 & A$Marriage==2, ]
+> A.1.1.2.1 <- A[A$age2.lvl==1 & A$edu2.lvl==1 & A$Sex==2 & A$Marriage==1, ]
+> A.1.1.2.2 <- A[A$age2.lvl==1 & A$edu2.lvl==1 & A$Sex==2 & A$Marriage==2, ]
+> A.1.2.1.1 <- A[A$age2.lvl==1 & A$edu2.lvl==2 & A$Sex==1 & A$Marriage==1, ]
+> A.1.2.1.2 <- A[A$age2.lvl==1 & A$edu2.lvl==2 & A$Sex==1 & A$Marriage==2, ]
+> A.1.2.2.1 <- A[A$age2.lvl==1 & A$edu2.lvl==2 & A$Sex==2 & A$Marriage==1, ]
+> A.1.2.2.2 <- A[A$age2.lvl==1 & A$edu2.lvl==2 & A$Sex==2 & A$Marriage==2, ]
+> A.2.1.1.1 <- A[A$age2.lvl==2 & A$edu2.lvl==1 & A$Sex==1 & A$Marriage==1, ]
+> A.2.1.1.2 <- A[A$age2.lvl==2 & A$edu2.lvl==1 & A$Sex==1 & A$Marriage==2, ]
+> A.2.1.2.1 <- A[A$age2.lvl==2 & A$edu2.lvl==1 & A$Sex==2 & A$Marriage==1, ]
+> A.2.1.2.2 <- A[A$age2.lvl==2 & A$edu2.lvl==1 & A$Sex==2 & A$Marriage==2, ]
+> A.2.2.1.1 <- A[A$age2.lvl==2 & A$edu2.lvl==2 & A$Sex==1 & A$Marriage==1, ]
+> A.2.2.1.2 <- A[A$age2.lvl==2 & A$edu2.lvl==2 & A$Sex==1 & A$Marriage==2, ]
+> A.2.2.2.1 <- A[A$age2.lvl==2 & A$edu2.lvl==2 & A$Sex==2 & A$Marriage==1, ]
+> A.2.2.2.2 <- A[A$age2.lvl==2 & A$edu2.lvl==2 & A$Sex==2 & A$Marriage==2, ]
+> B.1.1.1.1 <- B[B$age2.lvl==1 & B$edu2.lvl==1 & B$Sex==1 & B$Marriage==1, ]
+> B.1.1.1.2 <- B[B$age2.lvl==1 & B$edu2.lvl==1 & B$Sex==1 & B$Marriage==2, ]
+> B.1.1.2.1 <- B[B$age2.lvl==1 & B$edu2.lvl==1 & B$Sex==2 & B$Marriage==1, ]
+> B.1.1.2.2 <- B[B$age2.lvl==1 & B$edu2.lvl==1 & B$Sex==2 & B$Marriage==2, ]
+> B.1.2.1.1 <- B[B$age2.lvl==1 & B$edu2.lvl==2 & B$Sex==1 & B$Marriage==1, ]
+> B.1.2.1.2 <- B[B$age2.lvl==1 & B$edu2.lvl==2 & B$Sex==1 & B$Marriage==2, ]
+> B.1.2.2.1 <- B[B$age2.lvl==1 & B$edu2.lvl==2 & B$Sex==2 & B$Marriage==1, ]
+> B.1.2.2.2 <- B[B$age2.lvl==1 & B$edu2.lvl==2 & B$Sex==2 & B$Marriage==2, ]
+> B.2.1.1.1 <- B[B$age2.lvl==2 & B$edu2.lvl==1 & B$Sex==1 & B$Marriage==1, ]
+> B.2.1.1.2 <- B[B$age2.lvl==2 & B$edu2.lvl==1 & B$Sex==1 & B$Marriage==2, ]
+> B.2.1.2.1 <- B[B$age2.lvl==2 & B$edu2.lvl==1 & B$Sex==2 & B$Marriage==1, ]
+> B.2.1.2.2 <- B[B$age2.lvl==2 & B$edu2.lvl==1 & B$Sex==2 & B$Marriage==2, ]
+> B.2.2.1.1 <- B[B$age2.lvl==2 & B$edu2.lvl==2 & B$Sex==1 & B$Marriage==1, ]
+> B.2.2.1.2 <- B[B$age2.lvl==2 & B$edu2.lvl==2 & B$Sex==1 & B$Marriage==2, ]
+> B.2.2.2.1 <- B[B$age2.lvl==2 & B$edu2.lvl==2 & B$Sex==2 & B$Marriage==1, ]
+> B.2.2.2.2 <- B[B$age2.lvl==2 & B$edu2.lvl==2 & B$Sex==2 & B$Marriage==2, ]
+> C.1.1.1.1 <- C[C$age2.lvl==1 & C$edu2.lvl==1 & C$Sex==1 & C$Marriage==1, ]
+> C.1.1.1.2 <- C[C$age2.lvl==1 & C$edu2.lvl==1 & C$Sex==1 & C$Marriage==2, ]
+> C.1.1.2.1 <- C[C$age2.lvl==1 & C$edu2.lvl==1 & C$Sex==2 & C$Marriage==1, ]
+> C.1.1.2.2 <- C[C$age2.lvl==1 & C$edu2.lvl==1 & C$Sex==2 & C$Marriage==2, ]
+> C.1.2.1.1 <- C[C$age2.lvl==1 & C$edu2.lvl==2 & C$Sex==1 & C$Marriage==1, ]
+> C.1.2.1.2 <- C[C$age2.lvl==1 & C$edu2.lvl==2 & C$Sex==1 & C$Marriage==2, ]
+> C.1.2.2.1 <- C[C$age2.lvl==1 & C$edu2.lvl==2 & C$Sex==2 & C$Marriage==1, ]
+> C.1.2.2.2 <- C[C$age2.lvl==1 & C$edu2.lvl==2 & C$Sex==2 & C$Marriage==2, ]
+> C.2.1.1.1 <- C[C$age2.lvl==2 & C$edu2.lvl==1 & C$Sex==1 & C$Marriage==1, ]
+> C.2.1.1.2 <- C[C$age2.lvl==2 & C$edu2.lvl==1 & C$Sex==1 & C$Marriage==2, ]
+> C.2.1.2.1 <- C[C$age2.lvl==2 & C$edu2.lvl==1 & C$Sex==2 & C$Marriage==1, ]
+> C.2.1.2.2 <- C[C$age2.lvl==2 & C$edu2.lvl==1 & C$Sex==2 & C$Marriage==2, ]
+> C.2.2.1.1 <- C[C$age2.lvl==2 & C$edu2.lvl==2 & C$Sex==1 & C$Marriage==1, ]
+> C.2.2.1.2 <- C[C$age2.lvl==2 & C$edu2.lvl==2 & C$Sex==1 & C$Marriage==2, ]
+> C.2.2.2.1 <- C[C$age2.lvl==2 & C$edu2.lvl==2 & C$Sex==2 & C$Marriage==1, ]
+> C.2.2.2.2 <- C[C$age2.lvl==2 & C$edu2.lvl==2 & C$Sex==2 & C$Marriage==2, ]
+> c(dim(A.1.1.1.1)[1], 
++ dim(A.1.1.1.2)[1], 
++ dim(A.1.1.2.1)[1], 
++ dim(A.1.1.2.2)[1], 
++ dim(A.1.2.1.1)[1], 
++ dim(A.1.2.1.2)[1], 
++ dim(A.1.2.2.1)[1], 
++ dim(A.1.2.2.2)[1], 
++ dim(A.2.1.1.1)[1], 
++ dim(A.2.1.1.2)[1], 
++ dim(A.2.1.2.1)[1], 
++ dim(A.2.1.2.2)[1], 
++ dim(A.2.2.1.1)[1], 
++ dim(A.2.2.1.2)[1], 
++ dim(A.2.2.2.1)[1], 
++ dim(A.2.2.2.2)[1], 
++ dim(B.1.1.1.1)[1], 
++ dim(B.1.1.1.2)[1], 
++ dim(B.1.1.2.1)[1], 
++ dim(B.1.1.2.2)[1], 
++ dim(B.1.2.1.1)[1], 
++ dim(B.1.2.1.2)[1], 
++ dim(B.1.2.2.1)[1], 
++ dim(B.1.2.2.2)[1], 
++ dim(B.2.1.1.1)[1], 
++ dim(B.2.1.1.2)[1], 
++ dim(B.2.1.2.1)[1], 
++ dim(B.2.1.2.2)[1], 
++ dim(B.2.2.1.1)[1], 
++ dim(B.2.2.1.2)[1], 
++ dim(B.2.2.2.1)[1], 
++ dim(B.2.2.2.2)[1], 
++ dim(C.1.1.1.1)[1], 
++ dim(C.1.1.1.2)[1], 
++ dim(C.1.1.2.1)[1], 
++ dim(C.1.1.2.2)[1], 
++ dim(C.1.2.1.1)[1], 
++ dim(C.1.2.1.2)[1], 
++ dim(C.1.2.2.1)[1], 
++ dim(C.1.2.2.2)[1], 
++ dim(C.2.1.1.1)[1], 
++ dim(C.2.1.1.2)[1], 
++ dim(C.2.1.2.1)[1], 
++ dim(C.2.1.2.2)[1], 
++ dim(C.2.2.1.1)[1], 
++ dim(C.2.2.1.2)[1], 
++ dim(C.2.2.2.1)[1], 
++ dim(C.2.2.2.2)[1])
+ [1] 192 207 115 314 373 365 227 378 225   3 147   7 283   3 266  13 127  34  73
+[20] 111  75 151  56 159 183   5 104   4  54   3  58   2 144  95  56 115 177 460
+[39]  73 187 507   4 228   7  81   1  81   3
+> listA <- list(
++     A.1.1.1.1, 
++     A.1.1.1.2, 
++     A.1.1.2.1, 
++     A.1.1.2.2, 
++     A.1.2.1.1, 
++ A.1.2.1.2, 
++ A.1.2.2.1, 
++ A.1.2.2.2, 
++ A.2.1.1.1, 
++ A.2.1.1.2, 
++ A.2.1.2.1, 
++ A.2.1.2.2, 
++ A.2.2.1.1, 
++ A.2.2.1.2, 
++ A.2.2.2.1, 
++ A.2.2.2.2)
+> listB <- list(B.1.1.1.1, 
++ B.1.1.1.2, 
++ B.1.1.2.1, 
++ B.1.1.2.2, 
++ B.1.2.1.1, 
++ B.1.2.1.2, 
++ B.1.2.2.1, 
++ B.1.2.2.2, 
++ B.2.1.1.1, 
++ B.2.1.1.2, 
++ B.2.1.2.1, 
++ B.2.1.2.2, 
++ B.2.2.1.1, 
++ B.2.2.1.2, 
++ B.2.2.2.1, 
++ B.2.2.2.2)
+> listC <- list(
++ C.1.1.1.1, 
++ C.1.1.1.2, 
++ C.1.1.2.1, 
++ C.1.1.2.2, 
++ C.1.2.1.1, 
++ C.1.2.1.2, 
++ C.1.2.2.1, 
++ C.1.2.2.2, 
++ C.2.1.1.1, 
++ C.2.1.1.2, 
++ C.2.1.2.1, 
++ C.2.1.2.2, 
++ C.2.2.1.1, 
++ C.2.2.1.2, 
++ C.2.2.2.1, 
++ C.2.2.2.2)
+> # 1.1.1.2 
+> # 1.1.2.1 
+> # 1.1.2.2 
+> # 1.2.1.1 
+> # 1.2.1.2 
+> # 1.2.2.1 
+> # 1.2.2.2 
+> # 2.1.1.1 
+> # 2.1.1.2 
+> # 2.1.2.1 
+> # 2.1.2.2 
+> # 2.2.1.1 
+> # 2.2.1.2 
+> # 2.2.2.1 
+>                                         # 2.2.2.2
+> result <- matrix(rep(0,16*3),ncol=3)
+> for(i in 1:13){
++ temA <- listA[[i]]
++     temB <- listB[[i]]
++     temC <- listC[[i]]
++ (iii <- min(dim(temA)[1],dim(temB)[1],dim(temC)[1]))
++ result[i,1] <- signif(t.test(temA$Total.score,temB$Total.score)[[3]],digit=2)
++     result[i,2] <- signif(t.test(temA$Total.score,temC$Total.score)[[3]],digit=2)
++     result[i,3] <- signif(t.test(temB$Total.score,temC$Total.score)[[3]],digit=2)
++ }
+> result>=0.05
+       [,1]  [,2]  [,3]
+ [1,] FALSE FALSE  TRUE
+ [2,]  TRUE  TRUE  TRUE
+ [3,]  TRUE  TRUE  TRUE
+ [4,]  TRUE  TRUE  TRUE
+ [5,]  TRUE FALSE FALSE
+ [6,]  TRUE FALSE FALSE
+ [7,]  TRUE  TRUE  TRUE
+ [8,]  TRUE FALSE FALSE
+ [9,]  TRUE  TRUE  TRUE
+[10,]  TRUE  TRUE  TRUE
+[11,]  TRUE  TRUE FALSE
+[12,]  TRUE  TRUE  TRUE
+[13,] FALSE  TRUE  TRUE
+[14,] FALSE FALSE FALSE
+[15,] FALSE FALSE FALSE
+[16,] FALSE FALSE FALSE
+> summary(data.lvled)
+       ID             Age            Sex          Education        Marriage    
+ A0001  :    1   Min.   : 7.0   Min.   :1.000   Min.   :0.000   Min.   :1.000  
+ A0002  :    1   1st Qu.:26.0   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:1.000  
+ A0003  :    1   Median :31.0   Median :2.000   Median :3.000   Median :1.000  
+ A0004  :    1   Mean   :33.8   Mean   :1.558   Mean   :2.596   Mean   :1.372  
+ A0005  :    1   3rd Qu.:41.0   3rd Qu.:2.000   3rd Qu.:3.000   3rd Qu.:2.000  
+ A0006  :    1   Max.   :86.0   Max.   :2.000   Max.   :4.000   Max.   :4.000  
+ (Other):22202                                                                 
+       Y           Total.score     Somatization   Obsessive.compulsive
+ Min.   :0.0000   Min.   : 90.0   Min.   :1.000   Min.   :1.000       
+ 1st Qu.:0.0000   1st Qu.:114.0   1st Qu.:1.250   1st Qu.:1.400       
+ Median :0.0000   Median :145.0   Median :1.580   Median :1.900       
+ Mean   :0.2985   Mean   :160.3   Mean   :1.763   Mean   :2.014       
+ 3rd Qu.:1.0000   3rd Qu.:191.0   3rd Qu.:2.080   3rd Qu.:2.400       
+ Max.   :1.0000   Max.   :450.0   Max.   :5.000   Max.   :5.000       
+                                                                      
+ Interpersonal.sensitivity   Depression      Anxiety        Hostility    
+ Min.   :1.000             Min.   :1.00   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.220             1st Qu.:1.23   1st Qu.:1.300   1st Qu.:1.170  
+ Median :1.560             Median :1.69   Median :1.600   Median :1.500  
+ Mean   :1.766             Mean   :1.90   Mean   :1.863   Mean   :1.717  
+ 3rd Qu.:2.110             3rd Qu.:2.31   3rd Qu.:2.300   3rd Qu.:2.000  
+ Max.   :5.000             Max.   :5.00   Max.   :5.000   Max.   :5.000  
+                                                                         
+ Phobic.anxiety  Paranoid.ideation  Psychoticism  Additional.items
+ Min.   :1.000   Min.   :1.000     Min.   :1.00   Min.   :1.000   
+ 1st Qu.:1.000   1st Qu.:1.000     1st Qu.:1.10   1st Qu.:1.290   
+ Median :1.290   Median :1.330     Median :1.40   Median :1.570   
+ Mean   :1.503   Mean   :1.641     Mean   :1.63   Mean   :1.834   
+ 3rd Qu.:1.710   3rd Qu.:2.000     3rd Qu.:1.90   3rd Qu.:2.290   
+ Max.   :5.000   Max.   :5.000     Max.   :5.00   Max.   :5.000   
+                                                                  
+       t          age.lvl  age2.lvl  edu2.lvl  Group          so.lvl     
+ Min.   :0.0000   1:5142   1:13155   1:11075   A : 3151   Mild   : 5994  
+ 1st Qu.:0.0000   2:8013   2: 9053   2:11133   AH:15578   No     :14563  
+ Median :0.0000   3:6570                       B : 1233   Serious: 1651  
+ Mean   :0.5914   4:2239                       C : 2246                  
+ 3rd Qu.:1.0000   5: 244                                                 
+ Max.   :2.0000                                                          
+                                                                         
+    ocd.lvl          is.lvl         dep.lvl         anx.lvl     
+ Mild   : 4016   No     :16897   Mild   : 1920   Mild   : 6178  
+ No     :15290   Serious: 5311   No     :19724   No     :13480  
+ Serious: 2902                   Serious:  564   Serious: 2550  
+                                                                
+                                                                
+                                                                
+                                                                
+     ho.lvl          pa.lvl          pa.lvl          pi.lvl     
+ Mild   : 3144   No     :16021   No     :16021   Mild   : 3061  
+ No     :17058   Serious: 6187   Serious: 6187   No     :17570  
+ Serious: 2006                                   Serious: 1577  
+                                                                
+                                                                
+                                                                
+                                                                
+    psy.lvl          ai.lvl     
+ Mild   :14894   Mild   : 4520  
+ No     : 6055   No     :15334  
+ Serious: 1259   Serious: 2354  
+                                
+                                
+                                
+                                
+> P <- data.lvled[data.lvled$Group!="AH",]
+> AH <- data.lvled[data.lvled$Group=="AH",]
+> dim(P)
+[1] 6630   33
+> dim(AH)
+[1] 15578    33
+>
+> 
+> P0 <- P[P$t==0,]
+> P0 <- P[P$t==0,]
+> P1 <- P[P$t==1,]
+> P2 <- P[P$t==2,]
+> AH0 <- AH[AH$t==0,]
+> AH1 <- AH[AH$t==1,]
+> AH2 <- AH[AH$t==2,]
+> dim(P0,P1)
+Error in dim(P0, P1) : 2 arguments passed to 'dim' which requires 1
+> dim(c(P0,P1))
+NULL
+> dim(P0)
+[1] 2311   33
+> dim(P1)
+[1] 1737   33
+> dim(P2)
+[1] 2582   33
+> dim(AH1)
+[1] 2852   33
+> dim(AH2
++ )
+[1] 1690   33
+> dim(AH3)
+Error: object 'AH3' not found
+> dim(AH0)
+[1] 11036    33
+> c.t<-function(A){
++ 	return(paste(round(mean(A),2),"+-",round(sd(A),2)))
++ }
+> (c(c.t(P0$Age
++        )))
+[1] "33.78 +- 12.52"
+> (c(c.t(P0$Age),
++    c.t.(P1$Age),
++    c.t.(P2$Age),
++    c.t.(AH0$Age),
++    c.t.(AH1$Age),
++    c.t.(AH2$Age),
++    ))
+Error: could not find function "c.t."
+> (c(c.t(P0$Age),
++    c.t(P1$Age),
++    c.t(P2$Age),
++    c.t(AH0$Age),
++    c.t(AH1$Age),
++    c.t(AH2$Age),
++    ))
+Error in c(c.t(P0$Age), c.t(P1$Age), c.t(P2$Age), c.t(AH0$Age), c.t(AH1$Age),  : 
+  argument 7 is empty
+> 
++ + 
+> c.t<-function(A){
++ 	return(paste(round(mean(A),2),"+-",round(sd(A),2)))
++ }
+> (c(c.t(P0$Age),
++    c.t(P1$Age),
++    c.t(P2$Age),
++    c.t(AH0$Age),
++    c.t(AH1$Age),
++    c.t(AH2$Age),
++    ))
+Error in c(c.t(P0$Age), c.t(P1$Age), c.t(P2$Age), c.t(AH0$Age), c.t(AH1$Age),  : 
+  argument 7 is empty
+> (c(c.t(P0$Age),
++    c.t(P1$Age),
++    c.t(P2$Age),
++    c.t(AH0$Age),
++    c.t(AH1$Age),
++    c.t(AH2$Age)
++    ))
+[1] "33.78 +- 12.52" "35.24 +- 13"    "31.12 +- 11.42" "34.33 +- 8.51" 
+[5] "33.5 +- 8.19"   "33.46 +- 8.17" 
+> 
++ + + 
+> n.t <- function(A){
++     s <- length(A[,1])+length(A[,2])+length(A[,3])
++     return(paste(length(A[,1]),"(",round(length(A[,1])/s,2),") |",length(A[,2]),"(",round(length(A[,2])/s,2),") |",length(A[,3]),"(",round(length(A[,3])/s,2),") |"))
++ }
+> n.t(cbind(P0[,P]))
+Error in .subset(x, j) (from code2.R!3724sGD#2) : invalid subscript type 'list'
+> summary(P0)
+       ID            Age             Sex          Education        Marriage    
+ A0006  :   1   Min.   : 7.00   Min.   :1.000   Min.   :0.000   Min.   :1.000  
+ A0007  :   1   1st Qu.:24.00   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:1.000  
+ A0016  :   1   Median :30.00   Median :1.000   Median :3.000   Median :1.000  
+ A0022  :   1   Mean   :33.78   Mean   :1.406   Mean   :2.736   Mean   :1.428  
+ A0026  :   1   3rd Qu.:41.00   3rd Qu.:2.000   3rd Qu.:3.000   3rd Qu.:2.000  
+ A0035  :   1   Max.   :86.00   Max.   :2.000   Max.   :4.000   Max.   :4.000  
+ (Other):2305                                                                  
+       Y      Total.score     Somatization  Obsessive.compulsive
+ Min.   :1   Min.   : 90.0   Min.   :1.00   Min.   :1.000       
+ 1st Qu.:1   1st Qu.:113.5   1st Qu.:1.08   1st Qu.:1.300       
+ Median :1   Median :131.0   Median :1.25   Median :1.600       
+ Mean   :1   Mean   :129.3   Mean   :1.38   Mean   :1.615       
+ 3rd Qu.:1   3rd Qu.:146.5   3rd Qu.:1.58   3rd Qu.:1.800       
+ Max.   :1   Max.   :160.0   Max.   :3.42   Max.   :3.700       
+                                                                
+ Interpersonal.sensitivity   Depression       Anxiety        Hostility    
+ Min.   :1.000             Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.110             1st Qu.:1.150   1st Qu.:1.200   1st Qu.:1.170  
+ Median :1.330             Median :1.460   Median :1.400   Median :1.330  
+ Mean   :1.393             Mean   :1.494   Mean   :1.508   Mean   :1.421  
+ 3rd Qu.:1.560             3rd Qu.:1.770   3rd Qu.:1.700   3rd Qu.:1.670  
+ Max.   :2.670             Max.   :3.150   Max.   :3.400   Max.   :5.000  
+                                                                          
+ Phobic.anxiety  Paranoid.ideation  Psychoticism   Additional.items       t    
+ Min.   :1.000   Min.   :1.000     Min.   :1.000   Min.   :1.000    Min.   :0  
+ 1st Qu.:1.000   1st Qu.:1.000     1st Qu.:1.100   1st Qu.:1.140    1st Qu.:0  
+ Median :1.140   Median :1.170     Median :1.200   Median :1.570    Median :0  
+ Mean   :1.243   Mean   :1.291     Mean   :1.299   Mean   :1.648    Mean   :0  
+ 3rd Qu.:1.290   3rd Qu.:1.500     3rd Qu.:1.400   3rd Qu.:2.000    3rd Qu.:0  
+ Max.   :3.430   Max.   :3.670     Max.   :3.000   Max.   :3.430    Max.   :0  
+                                                                               
+ age.lvl age2.lvl edu2.lvl Group         so.lvl        ocd.lvl    
+ 1:721   1:1440   1: 944   A : 869   Mild   : 269   Mild   : 144  
+ 2:719   2: 871   2:1367   AH:   0   No     :2037   No     :2159  
+ 3:472                     B : 366   Serious:   5   Serious:   8  
+ 4:306                     C :1076                                
+ 5: 93                                                            
+                                                                  
+                                                                  
+     is.lvl        dep.lvl        anx.lvl         ho.lvl         pa.lvl    
+ No     :2242   Mild   :   1   Mild   : 434   Mild   : 140   No     :2085  
+ Serious:  69   No     :2310   No     :1872   No     :2148   Serious: 226  
+                Serious:   0   Serious:   5   Serious:  23                 
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+     pa.lvl         pi.lvl        psy.lvl         ai.lvl    
+ No     :2085   Mild   :  61   Mild   :1497   Mild   : 459  
+ Serious: 226   No     :2248   No     : 813   No     :1807  
+                Serious:   2   Serious:   1   Serious:  45  
+                                                            
+                                                            
+                                                            
+                                                            
+> 
+> n.t(cbind(P0[,P0$age2.lvl==1],P1[,P1$age2.lvl==1],P2[,P2$age2.lvl==2]))
+Error in `[.data.frame`(P0, , P0$age2.lvl == 1) (from code2.R!3724sGD#2) : 
+  undefined columns selected
+> n.t(cbind(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==2]))
+[1] "1440 ( 0.33 ) | 1440 ( 0.33 ) | 1440 ( 0.33 ) |"
+Warning message:
+In cbind(P0$age2.lvl[P0$age2.lvl == 1], P1$age2.lvl[P1$age2.lvl ==  :
+  number of rows of result is not a multiple of vector length (arg 2)
+> 
++ + 
+> n.t <- function(A,s){
++     return(paste(length(A),"(",round(length(A)/s,2)))
++ }
+> c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==2])
+   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+  [38] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [112] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [186] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [223] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [260] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [297] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [334] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [371] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [408] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [445] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [482] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [519] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [556] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [593] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [630] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [667] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [704] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [741] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [778] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [815] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [852] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [889] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [926] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [963] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1000] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1037] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1074] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1111] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1148] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1185] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1222] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1259] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1296] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1333] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1370] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1407] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1444] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1481] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1518] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1555] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1592] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1629] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1666] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1703] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1740] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1777] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1814] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1851] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1888] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1925] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1962] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[1999] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2036] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2073] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2110] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2147] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2184] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2221] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2258] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2295] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2332] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2369] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2406] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[2443] 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2480] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2517] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2554] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2591] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2628] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2665] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2702] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2739] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2776] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2813] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2850] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2887] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2924] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2961] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[2998] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[3035] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[3072] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[3109] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+[3146] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+> length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==2]))
+[1] 3161
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 ( 0.33"
+> 
++ + 
+> n.t <- function(A,s){
++     return(paste(length(A),"(",round(length(A)/s,2),")"))
++ }
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 ( 0.33 )"
+> 
++ + 
+> n.t <- function(A,s){
++     return(paste(length(A)," (",round(length(A)/s,2),")",sep=""))
++ }
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 (0.33)"
+> n.t(P0$age2.lvl[P0$age2.lvl==2],s)
+[1] "871 (0.2)"
+> n.t(P1$age2.lvl[P1$age2.lvl==2],s)
+[1] "732 (0.17)"
+> n.t(P2$age2.lvl[P2$age2.lvl==2],s)
+[1] "716 (0.17)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 (0.33)"
+> n.t(P1$age2.lvl[P1$age2.lvl==1],s)
+[1] "1005 (0.23)"
+> n.t(P2$age2.lvl[P2$age2.lvl==1],s)
+[1] "1866 (0.43)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==2],P1$age2.lvl[P1$age2.lvl==2],P2$age2.lvl[P2$age2.lvl==2]))
+> n.t(P0$age2.lvl[P0$age2.lvl==2],s)
+[1] "871 (0.38)"
+> n.t(P1$age2.lvl[P1$age2.lvl==2],s)
+[1] "732 (0.32)"
+> n.t(P2$age2.lvl[P2$age2.lvl==2],s)
+[1] "716 (0.31)"
+> 
++ + 
+> n.t <- function(A,s){
++     return(paste(length(A)," (",round(100*length(A)/s,2),")",sep=""))
++ }
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 (33.4)"
+> n.t(P1$age2.lvl[P1$age2.lvl==1],s)
+[1] "1005 (23.31)"
+> n.t(P2$age2.lvl[P2$age2.lvl==1],s)
+[1] "1866 (43.28)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==2],P1$age2.lvl[P1$age2.lvl==2],P2$age2.lvl[P2$age2.lvl==2]))
+> n.t(P0$age2.lvl[P0$age2.lvl==2],s)
+[1] "871 (37.56)"
+> n.t(P1$age2.lvl[P1$age2.lvl==2],s)
+[1] "732 (31.57)"
+> n.t(P2$age2.lvl[P2$age2.lvl==2],s)
+[1] "716 (30.88)"
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==2],P1$edu2.lvl[P1$edu2.lvl==2],P2$edu2.lvl[P2$edu2.lvl==2]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==2],s)
+[1] "1367 (38.25)"
+> n.t(P1$edu2.lvl[P1$edu2.lvl==2],s)
+[1] "903 (25.27)"
+> n.t(P2$edu2.lvl[P2$edu2.lvl==2],s)
+[1] "1304 (36.49)"
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==2],P1$edu2.lvl[P1$edu2.lvl==2],P2$edu2.lvl[P2$edu2.lvl==2]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==2],s)
+[1] "1367 (38.25)"
+> n.t(P1$edu2.lvl[P1$edu2.lvl==2],s)
+[1] "903 (25.27)"
+> n.t(P2$edu2.lvl[P2$edu2.lvl==2],s)
+[1] "1304 (36.49)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl[P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 (33.4)"
+> n.t(P1$age2.lvl[P1$age2.lvl==1],s)
+[1] "1005 (23.31)"
+> n.t(P2$age2.lvl[P2$age2.lvl==1],s)
+[1] "1866 (43.28)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==2],P1$age2.lvl[P1$age2.lvl==2],P2$age2.lvl[P2$age2.lvl==2]))
+> n.t(P0$age2.lvl[P0$age2.lvl==2],s)
+[1] "871 (37.56)"
+> n.t(P1$age2.lvl[P1$age2.lvl==2],s)
+[1] "732 (31.57)"
+> n.t(P2$age2.lvl[P2$age2.lvl==2],s)
+[1] "716 (30.88)"
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==1],P1$edu2.lvl[P1$edu2.lvl==1],P2$edu2.lvl[P2$edu2.lvl==1]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==1],s)
+[1] "944 (30.89)"
+> n.t(P1$edu2.lvl[P1$edu2.lvl==1],s)
+[1] "834 (27.29)"
+> n.t(P2$edu2.lvl[P2$edu2.lvl==1],s)
+[1] "1278 (41.82)"
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==2],P1$edu2.lvl[P1$edu2.lvl==2],P2$edu2.lvl[P2$edu2.lvl==2]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==2],s)
+[1] "1367 (38.25)"
+> n.t(P1$edu2.lvl[P1$edu2.lvl==2],s)
+[1] "903 (25.27)"
+> n.t(P2$edu2.lvl[P2$edu2.lvl==2],s)
+[1] "1304 (36.49)"
+> s <- length(c(P0$Marriage[P0$Marriage==1],P1$Marriage[P1$Marriage==1],P2$Marriage[P2$Marriage==1]))
+> n.t(P0$Marriage[P0$Marriage==1],s)
+[1] "1369 (35.06)"
+> n.t(P1$Marriage[P1$Marriage==1],s)
+[1] "1145 (29.32)"
+> n.t(P2$Marriage[P2$Marriage==1],s)
+[1] "1391 (35.62)"
+> s <- length(c(P0$Marriage[P0$Marriage==2],P1$Marriage[P1$Marriage==2],P2$Marriage[P2$Marriage==2]))
+> n.t(P0$Marriage[P0$Marriage==2],s)
+[1] "916 (34.82)"
+> n.t(P1$Marriage[P1$Marriage==2],s)
+[1] "563 (21.4)"
+> n.t(P2$Marriage[P2$Marriage==2],s)
+[1] "1152 (43.79)"
+> n.t(P0$Marriage[P0$Marriage==2],s)
+[1] "916 (34.82)"
+> n.t(P1$Marriage[P1$Marriage==2],s)
+[1] "563 (21.4)"
+> n.t(P2$Marriage[P2$Marriage==2],s)
+[1] "1152 (43.79)"
+> n.t(P0$Marriage[P0$Marriage==2],s)
+[1] "916 (34.82)"
+> n.t(P1$Marriage[P1$Marriage==2],s)
+[1] "563 (21.4)"
+> n.t(P2$Marriage[P2$Marriage==2],s)
+[1] "1152 (43.79)"
+> n.t(P0$Marriage[P0$Marriage==2],s)
+[1] "916 (34.82)"
+> n.t(P1$Marriage[P1$Marriage==2],s)
+[1] "563 (21.4)"
+> n.t(P2$Marriage[P2$Marriage==2],s)
+[1] "1152 (43.79)"
+> s <- length(c(P0$Marriage[P0$Marriage==3],P1$Marriage[P1$Marriage==3],P2$Marriage[P2$Marriage==3]))
+> n.t(P0$Marriage[P0$Marriage==3],s)
+[1] "4 (40)"
+> n.t(P1$Marriage[P1$Marriage==3],s)
+[1] "3 (30)"
+> n.t(P2$Marriage[P2$Marriage==3],s)
+[1] "3 (30)"
+> s <- length(c(P0$Marriage[P0$Marriage==4],P1$Marriage[P1$Marriage==4],P2$Marriage[P2$Marriage==4]))
+> n.t(P0$Marriage[P0$Marriage==4],s)
+[1] "22 (26.19)"
+> n.t(P1$Marriage[P1$Marriage==4],s)
+[1] "26 (30.95)"
+> n.t(P2$Marriage[P2$Marriage==4],s)
+[1] "36 (42.86)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl [P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+[1] "1440 (33.4)"
+> n.t(P1$age2.lvl[P1$age2.lvl==1],s)
+[1] "1005 (23.31)"
+> n.t(P2$age2.lvl[P2$age2.lvl==1],s)
+[1] "1866 (43.28)"
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl [P2$age2.lvl==1]))
+> sink(rrr.txt)
+Error in sink(rrr.txt) : object 'rrr.txt' not found
+> sink("rrr.txt")
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl [P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+> n.t(P1$age2.lvl[P1$age2.lvl==1],s)
+> n.t(P2$age2.lvl[P2$age2.lvl==1],s)
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==2],P1$age2.lvl[P1$age2.lvl==2],P2$age2.lvl[P2$age2.lvl==2]))
+> n.t(P0$age2.lvl[P0$age2.lvl==2],s)
+> n.t(P1$age2.lvl[P1$age2.lvl==2],s)
+> n.t(P2$age2.lvl[P2$age2.lvl==2],s)
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==1],P1$edu2.lvl[P1$edu2.lvl==1],P2$edu2.lvl[P2$edu2.lvl==1]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==1],s)
+> n.t(P1$edu2.lvl[P1$edu2.lvl==1],s)
+> n.t(P2$edu2.lvl[P2$edu2.lvl==1],s)
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==2],P1$edu2.lvl[P1$edu2.lvl==2],P2$edu2.lvl[P2$edu2.lvl==2]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==2],s)
+> n.t(P1$edu2.lvl[P1$edu2.lvl==2],s)
+> n.t(P2$edu2.lvl[P2$edu2.lvl==2],s)
+> s <- length(c(P0$Marriage[P0$Marriage==1],P1$Marriage[P1$Marriage==1],P2$Marriage[P2$Marriage==1]))
+> n.t(P0$Marriage[P0$Marriage==1],s)
+> n.t(P1$Marriage[P1$Marriage==1],s)
+> n.t(P2$Marriage[P2$Marriage==1],s)
+> s <- length(c(P0$Marriage[P0$Marriage==2],P1$Marriage[P1$Marriage==2],P2$Marriage[P2$Marriage==2]))
+> n.t(P0$Marriage[P0$Marriage==2],s)
+> n.t(P1$Marriage[P1$Marriage==2],s)
+> n.t(P2$Marriage[P2$Marriage==2],s)
+> s <- length(c(P0$Marriage[P0$Marriage==3],P1$Marriage[P1$Marriage==3],P2$Marriage[P2$Marriage==3]))
+> n.t(P0$Marriage[P0$Marriage==3],s)
+> n.t(P1$Marriage[P1$Marriage==3],s)
+> n.t(P2$Marriage[P2$Marriage==3],s)
+> s <- length(c(P0$Marriage[P0$Marriage==4],P1$Marriage[P1$Marriage==4],P2$Marriage[P2$Marriage==4]))
+> n.t(P0$Marriage[P0$Marriage==4],s)
+> n.t(P1$Marriage[P1$Marriage==4],s)
+> n.t(P2$Marriage[P2$Marriage==4],s)
+> sink()
+> sink("rrr.txt")
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl [P2$age2.lvl==1]))
+> n.t(P0$age2.lvl[P0$age2.lvl==1],s)
+> n.t(P1$age2.lvl[P1$age2.lvl==1],s)
+> n.t(P2$age2.lvl[P2$age2.lvl==1],s)
+> s <- length(c(P0$age2.lvl[P0$age2.lvl==2],P1$age2.lvl[P1$age2.lvl==2],P2$age2.lvl[P2$age2.lvl==2]))
+> n.t(P0$age2.lvl[P0$age2.lvl==2],s)
+> n.t(P1$age2.lvl[P1$age2.lvl==2],s)
+> n.t(P2$age2.lvl[P2$age2.lvl==2],s)
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==1],P1$edu2.lvl[P1$edu2.lvl==1],P2$edu2.lvl[P2$edu2.lvl==1]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==1],s)
+> n.t(P1$edu2.lvl[P1$edu2.lvl==1],s)
+> n.t(P2$edu2.lvl[P2$edu2.lvl==1],s)
+> s <- length(c(P0$edu2.lvl[P0$edu2.lvl==2],P1$edu2.lvl[P1$edu2.lvl==2],P2$edu2.lvl[P2$edu2.lvl==2]))
+> n.t(P0$edu2.lvl[P0$edu2.lvl==2],s)
+> n.t(P1$edu2.lvl[P1$edu2.lvl==2],s)
+> n.t(P2$edu2.lvl[P2$edu2.lvl==2],s)
+> s <- length(c(P0$Marriage[P0$Marriage==1],P1$Marriage[P1$Marriage==1],P2$Marriage[P2$Marriage==1]))
+> n.t(P0$Marriage[P0$Marriage==1],s)
+> n.t(P1$Marriage[P1$Marriage==1],s)
+> n.t(P2$Marriage[P2$Marriage==1],s)
+> s <- length(c(P0$Marriage[P0$Marriage==2],P1$Marriage[P1$Marriage==2],P2$Marriage[P2$Marriage==2]))
+> n.t(P0$Marriage[P0$Marriage==2],s)
+> n.t(P1$Marriage[P1$Marriage==2],s)
+> n.t(P2$Marriage[P2$Marriage==2],s)
+> s <- length(c(P0$Marriage[P0$Marriage==3],P1$Marriage[P1$Marriage==3],P2$Marriage[P2$Marriage==3]))
+> n.t(P0$Marriage[P0$Marriage==3],s)
+> n.t(P1$Marriage[P1$Marriage==3],s)
+> n.t(P2$Marriage[P2$Marriage==3],s)
+> s <- length(c(P0$Marriage[P0$Marriage==4],P1$Marriage[P1$Marriage==4],P2$Marriage[P2$Marriage==4]))
+> n.t(P0$Marriage[P0$Marriage==4],s)
+> n.t(P1$Marriage[P1$Marriage==4],s)
+> n.t(P2$Marriage[P2$Marriage==4],s)
+> sink()
+> sink("rrr.txt")
+> 
+> s <- length(c(AH0$age2.lvl[AH0$age2.lvl==1],AH1$age2.lvl[AH1$age2.lvl==1],AH2$age2.lvl [AH2$age2.lvl==1]))
+> 
+> n.t(AH0$age2.lvl[AH0$age2.lvl==1],s)
+> n.t(AH1$age2.lvl[AH1$age2.lvl==1],s)
+> n.t(AH2$age2.lvl[AH2$age2.lvl==1],s)
+> 
+> s <- length(c(AH0$age2.lvl[AH0$age2.lvl==2],AH1$age2.lvl[AH1$age2.lvl==2],AH2$age2.lvl[AH2$age2.lvl==2]))
+> 
+> n.t(AH0$age2.lvl[AH0$age2.lvl==2],s)
+> n.t(AH1$age2.lvl[AH1$age2.lvl==2],s)
+> n.t(AH2$age2.lvl[AH2$age2.lvl==2],s)
+> 
+> 
+> s <- length(c(AH0$edu2.lvl[AH0$edu2.lvl==1],AH1$edu2.lvl[AH1$edu2.lvl==1],AH2$edu2.lvl[AH2$edu2.lvl==1]))
+> 
+> n.t(AH0$edu2.lvl[AH0$edu2.lvl==1],s)
+> n.t(AH1$edu2.lvl[AH1$edu2.lvl==1],s)
+> n.t(AH2$edu2.lvl[AH2$edu2.lvl==1],s)
+> 
+> 
+> s <- length(c(AH0$edu2.lvl[AH0$edu2.lvl==2],AH1$edu2.lvl[AH1$edu2.lvl==2],AH2$edu2.lvl[AH2$edu2.lvl==2]))
+> 
+> n.t(AH0$edu2.lvl[AH0$edu2.lvl==2],s)
+> n.t(AH1$edu2.lvl[AH1$edu2.lvl==2],s)
+> n.t(AH2$edu2.lvl[AH2$edu2.lvl==2],s)
+> 
+> 
+> s <- length(c(AH0$Marriage[AH0$Marriage==1],AH1$Marriage[AH1$Marriage==1],AH2$Marriage[AH2$Marriage==1]))
+> 
+> n.t(AH0$Marriage[AH0$Marriage==1],s)
+> n.t(AH1$Marriage[AH1$Marriage==1],s)
+> n.t(AH2$Marriage[AH2$Marriage==1],s)
+> 
+> s <- length(c(AH0$Marriage[AH0$Marriage==2],AH1$Marriage[AH1$Marriage==2],AH2$Marriage[AH2$Marriage==2]))
+> 
+> n.t(AH0$Marriage[AH0$Marriage==2],s)
+> n.t(AH1$Marriage[AH1$Marriage==2],s)
+> n.t(AH2$Marriage[AH2$Marriage==2],s)
+> 
+> s <- length(c(AH0$Marriage[AH0$Marriage==3],AH1$Marriage[AH1$Marriage==3],AH2$Marriage[AH2$Marriage==3]))
+> 
+> n.t(AH0$Marriage[AH0$Marriage==3],s)
+> n.t(AH1$Marriage[AH1$Marriage==3],s)
+> n.t(AH2$Marriage[AH2$Marriage==3],s)
+> 
+> s <- length(c(AH0$Marriage[AH0$Marriage==4],AH1$Marriage[AH1$Marriage==4],AH2$Marriage[AH2$Marriage==4]))
+> 
+> n.t(AH0$Marriage[AH0$Marriage==4],s)
+> n.t(AH1$Marriage[AH1$Marriage==4],s)
+> n.t(AH2$Marriage[AH2$Marriage==4],s)
+> 
+> sink()
+> 

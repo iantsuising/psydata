@@ -1,0 +1,297 @@
+library(corrplot)
+library(ggplot2)
+library(scales)
+library(reshape)
+library(sampling)
+
+source("totalScorId.R")
+source("multiplot.R")
+source("lvl.R")
+source("agelvl.R")
+
+A<-read.csv("A.csv")
+B<-read.csv("B.csv")
+C<-read.csv("C.csv")
+AH<-read.csv("AH.csv")
+
+B<-B[,-18]
+B<-B[-135,]
+B<-B[-1203,]
+B[61,10]<-2.67
+B$Interpersonal.sensitivity<-as.numeric(as.character(B$Interpersonal.sensitivity))
+
+A<-A[A$Age!=0,]
+A<-A[A$Age!=290,]
+
+t<-totalScorId(A$Total.score)
+age.lvl<-agelvl(A$Age)
+A<-cbind(A,t,age.lvl)
+t<-totalScorId(B$Total.score)
+age.lvl<-agelvl(B$Age)
+B<-cbind(B,t,age.lvl)
+t<-totalScorId(C$Total.score)
+age.lvl<-agelvl(C$Age)
+C<-cbind(C,t,age.lvl)
+t<-totalScorId(AH$Total.score)
+age.lvl<-agelvl(AH$Age)
+AH<-cbind(AH,t,age.lvl)
+
+data<-rbind(A,B,C,AH)
+
+data$Age[data$Age==2]<-20
+
+##level##
+so.lvl<-lvl(data$Somatization,3,1.85)
+ocd.lvl<-(lvl(data$Obsessive.compulsive,3,2.2))
+is.lvl<-(lvl(data$Interpersonal.sensitivity,2.16,2.16))
+dep.lvl<-(lvl(data$Depression,4,3))
+anx.lvl<-(lvl(data$Anxiety,3,1.82))
+ho.lvl<-(lvl(data$Hostility,3,2.04))
+pa.lvl<-(lvl(data$Phobic.anxiety,1.64,1.64))
+pi.lvl<-(lvl(data$Paranoid.ideation,3,2))
+psy.lvl<-(lvl(data$Psychoticism,3,1.17))
+ai.lvl<-(lvl(data$Additional.items,3,2))
+
+Group<-c(rep("A",dim(A)[1]),rep("B",dim(B)[1]),rep("C",dim(C)[1]),rep("AH",dim(AH)[1]))
+
+data.lvled<-cbind(data,Group,so.lvl,ocd.lvl,is.lvl,dep.lvl,anx.lvl,ho.lvl,pa.lvl,pa.lvl,pi.lvl,psy.lvl,ai.lvl)
+
+A<-data.lvled[1:3151,]
+B<-data.lvled[3152:(3151+1233),]
+C<-data.lvled[(3151+1233+1):(3151+1233+2246),]
+AH<-data.lvled[(3151+1233+2246+1):(3151+1233+2246+15578),]
+
+data.long<-melt(data.lvled[,-(8:17)],id=c("ID","Age","Sex","Education","Marriage","Group"))
+
+p.so<-ggplot(data.long[data.long$variable=="so.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill') +
+	scale_x_discrete(limits=c("A","B","C","AH")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") 
+
+p.ocd<-ggplot(data.long[data.long$variable=="ocd.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill') +
+	scale_x_discrete(limits=c("A","B","C","AH")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") 
+
+
+data.lvled<-cbind(data,Group,so.lvl,ocd.lvl,is.lvl,dep.lvl,anx.lvl,ho.lvl,pa.lvl,pa.lvl,pi.lvl,psy.lvl,ai.lvl)
+
+A<-data.lvled[1:3151,]
+B<-data.lvled[3152:(3151+1233),]
+C<-data.lvled[(3151+1233+1):(3151+1233+2246),]
+AH<-data.lvled[(3151+1233+2246+1):(3151+1233+2246+15578),]
+
+######stratified AH
+set.seed(2016)
+AH.st<-strata(AH,stratanames=c("age.lvl","Sex"),size=c(443,705,363,134,25,489,554,316,106,16),method="srswor")
+AH.st<-getdata(AH,AH.st)
+summary(AH.st$Age)
+data.long<-melt(data.lvled[,-(8:17)],id=c("ID","Age","Sex","Education","Marriage","Group"))
+
+#####Demographic summary
+c(mean(A$Age),sd(A$Age),mean(A$Sex),sd(A$Sex),mean(A$Education),sd(A$Education),mean(A$Marriage),sd(A$Marriage))
+c(mean(B$Age),sd(B$Age),mean(B$Sex),sd(B$Sex),mean(B$Education),sd(B$Education),mean(B$Marriage),sd(B$Marriage))
+c(mean(C$Age),sd(C$Age),mean(C$Sex),sd(C$Sex),mean(C$Education),sd(C$Education),mean(C$Marriage),sd(C$Marriage))
+c(mean(AH.st$Age),sd(AH.st$Age),mean(AH.st$Sex),sd(AH.st$Sex),mean(AH.st$Education),sd(AH.st$Education),mean(AH.st$Marriage),sd(AH.st$Marriage))
+
+
+c.t<-function(A){
+	return(paste(round(mean(A),2),"¡À",round(sd(A),2)))
+}
+
+
+p.so<-ggplot(data.long[data.long$variable=="so.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Somatization")
+
+p.ocd<-ggplot(data.long[data.long$variable=="ocd.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title=" Obsessive Compulsive")
+
+p.is<-ggplot(data.long[data.long$variable=="is.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Interpersonal Sensitivity")
+
+p.dep<-ggplot(data.long[data.long$variable=="dep.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Depression")
+
+p.anx<-ggplot(data.long[data.long$variable=="anx.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Anxiety")
+
+p.ho<-ggplot(data.long[data.long$variable=="ho.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Hostility")
+
+p.pa<-ggplot(data.long[data.long$variable=="pa.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Phobic Anxiety")
+
+p.pi<-ggplot(data.long[data.long$variable=="pi.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Paranoid Ideation")
+
+p.psy<-ggplot(data.long[data.long$variable=="psy.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Psychoyicism")
+
+p.ai<-ggplot(data.long[data.long$variable=="ai.lvl",],aes(x=Group))+
+	geom_bar(aes(fill = factor(value,levels=c("No","Mild","Serious"))), position = 'fill',width=0.5) +
+	scale_x_discrete(limits=c("AH","C","B","A")) +
+	scale_fill_brewer(palette = "Reds",name="Illness Levels") + coord_flip() +
+	labs(y = "",title="Additional Items")
+
+multiplot(p.so,p.ocd,p.is,p.dep,p.anx,p.ho,p.pa,p.pi,p.psy,p.ai,cols=4)
+
+multiplot(p.so,p.ocd,p.is,p.dep,p.anx,cols=2)
+
+
+###ABC vs AH
+con.tb<-table(data$Y,data$t)
+chisq.test(con.tb)
+#p value is less than .05,reject H0.
+chisq.test(table(data$Y,data$Sex))
+chisq.test(table(data$Y,data$Education))
+chisq.test(table(data$Y,data$Marriage))
+
+chisq.test(table(data$t,data$Sex))
+chisq.test(table(data$t,data$Education))
+chisq.test(table(data$t,data$Marriage))
+
+
+chisq.test(table(AH$t,AH$Sex))
+chisq.test(table(AH$t,AH$Education))
+chisq.test(table(AH$t,AH$Marriage))
+
+
+##sign diff?
+t.test(A$Total.score,B$Total.score)
+t.test(A$Total.score,C$Total.score)
+t.test(B$Total.score,C$Total.score)
+t.test(A$Total.score,AH$Total.score)
+
+hd.tb<-table(data$Sex,data$Education,data$Marriage)
+ftable(hd.tb)
+temA<-A[A$Age<40 & A$Age>25 & A$Sex==1 & A$Education==1 & A$Marriage==1,]
+temB<-B[B$Age<40 & B$Age>25 & B$Sex==1 & B$Education==1 & B$Marriage==1,]
+temC<-C[C$Age<40 & C$Age>25 & C$Sex==1 & C$Education==1 & C$Marriage==1,]
+dim(temA);dim(temB);dim(temC)
+t.test(temA$Total.score[1:100],temB$Total.score)
+t.test(temA$Total.score,temC$Total.score[1:100])
+t.test(temB$Total.score,temC$Total.score)
+cord<-c(0,0.75)
+
+##Soma
+A.so<-ggplot(A, aes(Somatization, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=1.85),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord) +
+	ggtitle("A")
+
+B.so<-ggplot(B, aes(Somatization, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=1.85),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord) +
+	ggtitle("B")
+
+C.so<-ggplot(C, aes(Somatization, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=1.85),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord) +
+	ggtitle("C")
+
+AH.so<-ggplot(AH, aes(Somatization, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=1.85),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord) +
+	ggtitle("AH")
+
+##OCD
+A.ocd<-ggplot(A, aes(Obsessive.compulsive, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.2),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+	
+B.ocd<-ggplot(B, aes(Obsessive.compulsive, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.2),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+	
+
+C.ocd<-ggplot(C, aes(Obsessive.compulsive, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.2),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+	
+
+AH.ocd<-ggplot(AH, aes(Obsessive.compulsive, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.2),color="red", linetype="dashed", size=1) +
+	geom_vline(aes(xintercept=3),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+
+##interpersonal
+A.is<-ggplot(A, aes(Interpersonal.sensitivity, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.16),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+	
+B.is<-ggplot(B, aes(Interpersonal.sensitivity,..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.16),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+	
+
+C.is<-ggplot(C, aes(Interpersonal.sensitivity, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.16),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+	
+
+AH.is<-ggplot(AH, aes(Interpersonal.sensitivity, ..density..)  ) +
+	geom_histogram(binwidth=.5,colour="black", fill="cadetblue3") +
+	geom_freqpoly(binwidth=.5,colour="black") +
+	geom_vline(aes(xintercept=2.16),color="red", linetype="dashed", size=1) +
+	scale_y_continuous(limits = cord)
+
+	
+
+
+multiplot(A.so, A.ocd, A.is, B.so, B.ocd, B.is, C.so, C.ocd, C.is,AH.so, AH.ocd, AH.is, cols=4)

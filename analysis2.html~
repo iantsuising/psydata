@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Data Analysis</title>
+<!-- 2016-08-16 Tue 05:24 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="XU Sheng" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Data Analysis</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Re-assign values to the demographically information</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Age</a></li>
+<li><a href="#sec-1-2">1.2. Education</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Grouping</a></li>
+<li><a href="#sec-3">3. Total score comparisons</a></li>
+<li><a href="#sec-4">4. Analysis after combining ABC together</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Demographic factors difference</a></li>
+<li><a href="#sec-4-2">4.2. Psychological factors difference</a></li>
+<li><a href="#sec-4-3">4.3. Psychological factors correlations</a>
+<ul>
+<li><a href="#sec-4-3-1">4.3.1. Sub-group P0</a></li>
+<li><a href="#sec-4-3-2">4.3.2. Sub-group P1</a></li>
+<li><a href="#sec-4-3-3">4.3.3. Sub-group P2</a></li>
+<li><a href="#sec-4-3-4">4.3.4. Sub-group AH0</a></li>
+<li><a href="#sec-4-3-5">4.3.5. Sub-group AH1</a></li>
+<li><a href="#sec-4-3-6">4.3.6. Sub-group AH2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Re-assign values to the demographically information</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Age</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Age = 1, for age &lt;= 35; Age = 2, otherwise
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Education</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Education = 1 for Education &lt;= 2; Education = 2, otherwise
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Grouping</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Group name</th>
+<th scope="col" class="left">location</th>
+<th scope="col" class="right">Age</th>
+<th scope="col" class="right">Edu</th>
+<th scope="col" class="right">Sex</th>
+<th scope="col" class="right">Marriage</th>
+<th scope="col" class="right">Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">A.1.1.1.1</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">192</td>
+</tr>
+
+<tr>
+<td class="left">A.1.1.1.2</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">207</td>
+</tr>
+
+<tr>
+<td class="left">A.1.1.2.1</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">115</td>
+</tr>
+
+<tr>
+<td class="left">A.1.1.2.2</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">314</td>
+</tr>
+
+<tr>
+<td class="left">A.1.2.1.1</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">373</td>
+</tr>
+
+<tr>
+<td class="left">A.1.2.1.2</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">365</td>
+</tr>
+
+<tr>
+<td class="left">A.1.2.2.1</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">227</td>
+</tr>
+
+<tr>
+<td class="left">A.1.2.2.2</td>
+<td class="left">A</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">378</td>
+</tr>
+
+<tr>
+<td class="left">A.2.1.1.1</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">22</td>
+</tr>
+
+<tr>
+<td class="left">A.2.1.1.2</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">3</td>
+</tr>
+
+<tr>
+<td class="left">A.2.1.2.1</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">147</td>
+</tr>
+
+<tr>
+<td class="left">A.2.1.2.2</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">7</td>
+</tr>
+
+<tr>
+<td class="left">A.2.2.1.1</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">283</td>
+</tr>
+
+<tr>
+<td class="left">A.2.2.1.2</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">3</td>
+</tr>
+
+<tr>
+<td class="left">A.2.2.2.1</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">266</td>
+</tr>
+
+<tr>
+<td class="left">A.2.2.2.2</td>
+<td class="left">A</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">13</td>
+</tr>
+
+<tr>
+<td class="left">B.1.1.1.1</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">127</td>
+</tr>
+
+<tr>
+<td class="left">B.1.1.1.2</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">34</td>
+</tr>
+
+<tr>
+<td class="left">B.1.1.2.1</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">73</td>
+</tr>
+
+<tr>
+<td class="left">B.1.1.2.2</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">111</td>
+</tr>
+
+<tr>
+<td class="left">B.1.2.1.1</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">75</td>
+</tr>
+
+<tr>
+<td class="left">B.1.2.1.2</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">151</td>
+</tr>
+
+<tr>
+<td class="left">B.1.2.2.1</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">56</td>
+</tr>
+
+<tr>
+<td class="left">B.1.2.2.2</td>
+<td class="left">B</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">159</td>
+</tr>
+
+<tr>
+<td class="left">B.2.1.1.1</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">183</td>
+</tr>
+
+<tr>
+<td class="left">B.2.1.1.2</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">5</td>
+</tr>
+
+<tr>
+<td class="left">B.2.1.1.1</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">104</td>
+</tr>
+
+<tr>
+<td class="left">B.2.1.1.2</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">4</td>
+</tr>
+
+<tr>
+<td class="left">B.2.2.2.1</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">54</td>
+</tr>
+
+<tr>
+<td class="left">B.2.2.2.2</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">3</td>
+</tr>
+
+<tr>
+<td class="left">B.2.2.1.1</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">58</td>
+</tr>
+
+<tr>
+<td class="left">B.2.2.1.2</td>
+<td class="left">B</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+</tr>
+
+<tr>
+<td class="left">C.1.1.2.1</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">114</td>
+</tr>
+
+<tr>
+<td class="left">C.1.1.2.2</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">95</td>
+</tr>
+
+<tr>
+<td class="left">C.1.1.1.1</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">56</td>
+</tr>
+
+<tr>
+<td class="left">C.1.1.1.2</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">115</td>
+</tr>
+
+<tr>
+<td class="left">C.1.2.2.1</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">177</td>
+</tr>
+
+<tr>
+<td class="left">C.1.2.2.2</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">460</td>
+</tr>
+
+<tr>
+<td class="left">C.1.2.1.1</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">73</td>
+</tr>
+
+<tr>
+<td class="left">C.1.2.1.2</td>
+<td class="left">C</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">187</td>
+</tr>
+
+<tr>
+<td class="left">C.2.1.2.1</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">507</td>
+</tr>
+
+<tr>
+<td class="left">C.2.1.2.2</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">4</td>
+</tr>
+
+<tr>
+<td class="left">C.2.1.1.1</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">228</td>
+</tr>
+
+<tr>
+<td class="left">C.2.1.1.2</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">7</td>
+</tr>
+
+<tr>
+<td class="left">C.2.2.2.1</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">81</td>
+</tr>
+
+<tr>
+<td class="left">C.2.2.2.2</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">2</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="left">C.2.2.1.1</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">1</td>
+<td class="right">81</td>
+</tr>
+
+<tr>
+<td class="left">C.2.2.1.2</td>
+<td class="left">C</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">2</td>
+<td class="right">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Total score comparisons</h2>
+<div class="outline-text-2" id="text-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">p-value</th>
+<th scope="col" class="left">A vs B</th>
+<th scope="col" class="left">A vs C</th>
+<th scope="col" class="left">B vs C</th>
+</tr>
+
+<tr>
+<th scope="col" class="right">Groups:</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">1.1.1.1</td>
+<td class="left">0.01</td>
+<td class="left">0.00</td>
+<td class="left"><b>0.45</b></td>
+</tr>
+
+<tr>
+<td class="right">1.1.1.2</td>
+<td class="left"><b>0.18</b></td>
+<td class="left"><b>0.39</b></td>
+<td class="left"><b>0.07</b></td>
+</tr>
+
+<tr>
+<td class="right">1.1.2.1</td>
+<td class="left"><b>0.15</b></td>
+<td class="left"><b>0.72</b></td>
+<td class="left"><b>0.12</b></td>
+</tr>
+
+<tr>
+<td class="right">1.1.2.2</td>
+<td class="left"><b>0.55</b></td>
+<td class="left"><b>0.22</b></td>
+<td class="left"><b>0.61</b></td>
+</tr>
+
+<tr>
+<td class="right">1.2.1.1</td>
+<td class="left"><b>0.58</b></td>
+<td class="left">0.00</td>
+<td class="left">0.00</td>
+</tr>
+
+<tr>
+<td class="right">1.2.1.2</td>
+<td class="left"><b>0.20</b></td>
+<td class="left">0.00</td>
+<td class="left">0.00</td>
+</tr>
+
+<tr>
+<td class="right">1.2.2.1</td>
+<td class="left"><b>0.09</b></td>
+<td class="left"><b>0.21</b></td>
+<td class="left"><b>0.81</b></td>
+</tr>
+
+<tr>
+<td class="right">1.2.2.2</td>
+<td class="left"><b>0.51</b></td>
+<td class="left">0.00</td>
+<td class="left">0.00</td>
+</tr>
+
+<tr>
+<td class="right">2.1.1.1</td>
+<td class="left"><b>0.92</b></td>
+<td class="left"><b>0.94</b></td>
+<td class="left"><b>0.97</b></td>
+</tr>
+
+<tr>
+<td class="right">2.1.1.2</td>
+<td class="left"><b>0.72</b></td>
+<td class="left"><b>0.67</b></td>
+<td class="left"><b>0.88</b></td>
+</tr>
+
+<tr>
+<td class="right">2.1.2.1</td>
+<td class="left"><b>0.08</b></td>
+<td class="left"><b>0.44</b></td>
+<td class="left">0.01</td>
+</tr>
+
+<tr>
+<td class="right">2.1.2.2</td>
+<td class="left"><b>0.58</b></td>
+<td class="left"><b>0.64</b></td>
+<td class="left"><b>0.93</b></td>
+</tr>
+
+<tr>
+<td class="right">2.2.1.1</td>
+<td class="left">0.00</td>
+<td class="left"><b>0.13</b></td>
+<td class="left"><b>0.12</b></td>
+</tr>
+
+<tr>
+<td class="right">2.2.1.2</td>
+<td class="left"><b>0.68</b></td>
+<td class="left">-</td>
+<td class="left">-</td>
+</tr>
+
+<tr>
+<td class="right">2.2.2.1</td>
+<td class="left"><b>0.27</b></td>
+<td class="left"><b>0.39</b></td>
+<td class="left"><b>0.48</b></td>
+</tr>
+
+<tr>
+<td class="right">2.2.2.2</td>
+<td class="left">0.01</td>
+<td class="left">0.00</td>
+<td class="left">0.00</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The bold p-value numbers show that the total scores of the majority groups have no significant difference among location A, B, and C.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Analysis after combining ABC together</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Combine the group A, B, and C into one group names group P. The following results are based on the comparison between group P and AH.
+Sub group naming rule: The Capital letter(s) means the group name, the number mean the total score level. For example, the sub-group AH1 means the observations in it think themselves have no psychological illness and the total score level is 1.
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Demographic factors difference</h3>
+<div class="outline-text-3" id="text-4-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">Sub-groups:</th>
+<th scope="col" class="left">P0, N=2311</th>
+<th scope="col" class="left">P1, N=1737</th>
+<th scope="col" class="left">P2, N=2582</th>
+<th scope="col" class="left">AH0, N=11036</th>
+<th scope="col" class="left">AH1, N=2852</th>
+<th scope="col" class="left">AH2, N=1690</th>
+</tr>
+
+<tr>
+<th scope="col" class="right">Demographics</th>
+<th scope="col" class="left">Mean ± SD or N (%)</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">Sex</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">1372 (36.05)</td>
+<td class="left">943 (24.78)</td>
+<td class="left">1491 (39.17)</td>
+<td class="left">4418 (73.41)</td>
+<td class="left">1010 (16.78)</td>
+<td class="left">590 (9.8)</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="left">939 (33.25)</td>
+<td class="left">794 (28.12)</td>
+<td class="left">1091 (38.63)</td>
+<td class="left">6618 (69.23)</td>
+<td class="left">1842 (19.27)</td>
+<td class="left">1100 (11.51)</td>
+</tr>
+
+<tr>
+<td class="right">Age (years)</td>
+<td class="left">33.78 +- 12.52</td>
+<td class="left">35.24 +- 13</td>
+<td class="left">31.12 +- 11.42</td>
+<td class="left">34.33 +- 8.51</td>
+<td class="left">33.5 +- 8.19</td>
+<td class="left">33.46 +- 8.17</td>
+</tr>
+
+<tr>
+<td class="right">Age level</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">1440 (33.4)</td>
+<td class="left">1005 (23.31)</td>
+<td class="left">1866 (43.28)</td>
+<td class="left">6104 (69.02)</td>
+<td class="left">1711 (19.35)</td>
+<td class="left">1029 (11.64)</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="left">871 (37.56)</td>
+<td class="left">732 (31.57)</td>
+<td class="left">716 (30.88)</td>
+<td class="left">4932 (73.24)</td>
+<td class="left">1141 (16.94)</td>
+<td class="left">661 (9.82)</td>
+</tr>
+
+<tr>
+<td class="right">Edu level</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">944 (30.89)</td>
+<td class="left">834 (27.29)</td>
+<td class="left">1278 (41.82)</td>
+<td class="left">5731 (71.47)</td>
+<td class="left">1478 (18.43)</td>
+<td class="left">810 (10.1)</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="left">1367 (38.25)</td>
+<td class="left">903 (25.27)</td>
+<td class="left">1304 (36.49)</td>
+<td class="left">5305 (70.18)</td>
+<td class="left">1374 (18.18)</td>
+<td class="left">880 (11.64)</td>
+</tr>
+
+<tr>
+<td class="right">Marriage</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">1369 (35.06)</td>
+<td class="left">1145 (29.32)</td>
+<td class="left">1391 (35.62)</td>
+<td class="left">7783 (71.87)</td>
+<td class="left">1913 (17.66)</td>
+<td class="left">1134 (10.47)</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="left">916 (34.82)</td>
+<td class="left">563 (21.4)</td>
+<td class="left">1152 (43.79)</td>
+<td class="left">3070 (69.07)</td>
+<td class="left">867 (19.51)</td>
+<td class="left">508 (11.43)</td>
+</tr>
+
+<tr>
+<td class="right">3</td>
+<td class="left">4 (40)</td>
+<td class="left">3 (30)</td>
+<td class="left">3 (30)</td>
+<td class="left">0 (NaN)</td>
+<td class="left">0 (NaN)</td>
+<td class="left">0 (NaN)</td>
+</tr>
+
+<tr>
+<td class="right">4</td>
+<td class="left">22 (26.19)</td>
+<td class="left">26 (30.95)</td>
+<td class="left">36 (42.86)</td>
+<td class="left">183 (60.4)</td>
+<td class="left">72 (23.76)</td>
+<td class="left">48 (15.84)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Psychological factors difference</h3>
+<div class="outline-text-3" id="text-4-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sub-groups:</th>
+<th scope="col" class="left">P0, N=2311</th>
+<th scope="col" class="left">P1, N=1737</th>
+<th scope="col" class="left">P2, N=2582</th>
+<th scope="col" class="left">AH0, N=11036</th>
+<th scope="col" class="left">AH1, N=2852</th>
+<th scope="col" class="left">AH2, N=1690</th>
+</tr>
+
+<tr>
+<th scope="col" class="left">Psychological factors</th>
+<th scope="col" class="left">Mean ± SD or N (%)</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">So</td>
+<td class="left">1.38 +- 0.39</td>
+<td class="left">1.82 +- 0.5</td>
+<td class="left">2.48 +- 0.74</td>
+<td class="left">1.39 +- 0.35</td>
+<td class="left">2.09 +- 0.45</td>
+<td class="left">2.98 +- 0.77</td>
+</tr>
+
+<tr>
+<td class="left">Ocd</td>
+<td class="left">1.62 +- 0.39</td>
+<td class="left">2.3 +- 0.47</td>
+<td class="left">3.17 +- 0.62</td>
+<td class="left">1.54 +- 0.36</td>
+<td class="left">2.29 +- 0.35</td>
+<td class="left">3.12 +- 0.6</td>
+</tr>
+
+<tr>
+<td class="left">IS</td>
+<td class="left">1.39 +- 0.34</td>
+<td class="left">2.03 +- 0.49</td>
+<td class="left">2.99 +- 0.7</td>
+<td class="left">1.3 +- 0.29</td>
+<td class="left">1.98 +- 0.34</td>
+<td class="left">2.85 +- 0.64</td>
+</tr>
+
+<tr>
+<td class="left">Dep</td>
+<td class="left">1.49 +- 0.37</td>
+<td class="left">2.3 +- 0.43</td>
+<td class="left">3.32 +- 0.62</td>
+<td class="left">1.35 +- 0.31</td>
+<td class="left">2.14 +- 0.32</td>
+<td class="left">3.07 +- 0.62</td>
+</tr>
+
+<tr>
+<td class="left">Anx</td>
+<td class="left">1.51 +- 0.4</td>
+<td class="left">2.25 +- 0.48</td>
+<td class="left">3.19 +- 0.66</td>
+<td class="left">1.34 +- 0.27</td>
+<td class="left">2.05 +- 0.3</td>
+<td class="left">3 +- 0.65</td>
+</tr>
+
+<tr>
+<td class="left">Ho</td>
+<td class="left">1.42 +- 0.42</td>
+<td class="left">1.97 +- 0.59</td>
+<td class="left">2.79 +- 0.88</td>
+<td class="left">1.27 +- 0.29</td>
+<td class="left">1.9 +- 0.44</td>
+<td class="left">2.86 +- 0.83</td>
+</tr>
+
+<tr>
+<td class="left">PA</td>
+<td class="left">1.24 +- 0.33</td>
+<td class="left">1.65 +- 0.54</td>
+<td class="left">2.44 +- 0.8</td>
+<td class="left">1.15 +- 0.21</td>
+<td class="left">1.61 +- 0.38</td>
+<td class="left">2.43 +- 0.81</td>
+</tr>
+
+<tr>
+<td class="left">PI</td>
+<td class="left">1.29 +- 0.33</td>
+<td class="left">1.79 +- 0.47</td>
+<td class="left">2.7 +- 0.76</td>
+<td class="left">1.23 +- 0.28</td>
+<td class="left">1.82 +- 0.39</td>
+<td class="left">2.7 +- 0.74</td>
+</tr>
+
+<tr>
+<td class="left">Psy</td>
+<td class="left">1.3 +- 0.27</td>
+<td class="left">1.81 +- 0.36</td>
+<td class="left">2.69 +- 0.62</td>
+<td class="left">1.23 +- 0.22</td>
+<td class="left">1.8 +- 0.3</td>
+<td class="left">2.63 +- 0.67</td>
+</tr>
+
+<tr>
+<td class="left">Ai</td>
+<td class="left">1.65 +- 0.54</td>
+<td class="left">2.23 +- 0.56</td>
+<td class="left">2.94 +- 0.68</td>
+<td class="left">1.35 +- 0.34</td>
+<td class="left">2.01 +- 0.44</td>
+<td class="left">2.83 +- 0.69</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Psychological factors correlations</h3>
+<div class="outline-text-3" id="text-4-3">
+</div><div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Sub-group P0</h4>
+<div class="outline-text-4" id="text-4-3-1">
+
+<div id="P0-corrplot" class="figure">
+<p><img src="./corr1.png" alt="corr1.png" /> 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> Sub-group P1</h4>
+<div class="outline-text-4" id="text-4-3-2">
+
+<div id="P2-corrplot" class="figure">
+<p><img src="./corr2.png" alt="corr2.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3-3" class="outline-4">
+<h4 id="sec-4-3-3"><span class="section-number-4">4.3.3</span> Sub-group P2</h4>
+<div class="outline-text-4" id="text-4-3-3">
+
+<div id="P3-corrplot" class="figure">
+<p><img src="./corr3.png" alt="corr3.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3-4" class="outline-4">
+<h4 id="sec-4-3-4"><span class="section-number-4">4.3.4</span> Sub-group AH0</h4>
+<div class="outline-text-4" id="text-4-3-4">
+
+<div id="AH0-corrplot" class="figure">
+<p><img src="./corr4.png" alt="corr4.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3-5" class="outline-4">
+<h4 id="sec-4-3-5"><span class="section-number-4">4.3.5</span> Sub-group AH1</h4>
+<div class="outline-text-4" id="text-4-3-5">
+
+<div id="AH1-corrplot" class="figure">
+<p><img src="./corr5.png" alt="corr5.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3-6" class="outline-4">
+<h4 id="sec-4-3-6"><span class="section-number-4">4.3.6</span> Sub-group AH2</h4>
+<div class="outline-text-4" id="text-4-3-6">
+
+<div id="AH2-corrplot" class="figure">
+<p><img src="./corr6.png" alt="corr6.png" /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 8 Aug 2016</p>
+<p class="author">Author: XU Sheng</p>
+<p class="date">Created: 2016-08-16 Tue 05:24</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
