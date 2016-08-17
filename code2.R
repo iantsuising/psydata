@@ -537,3 +537,53 @@ dev.off()
 png(file="corr6.png", bg="transparent")
 corrplot(cor(AH2[,8:17]),type="upper",method="number" )
 dev.off()
+
+
+##########PAC
+pca1 <- prcomp(P2[,8:17], scale=T)
+predict(pca1)
+
+
+##########ANOVA
+
+
+P0[,3] <- as.factor(P0[,3])
+P0[,5] <- as.factor(P0[,5])
+P1[,3] <- as.factor(P1[,3])
+P1[,5] <- as.factor(P1[,5])
+P2[,3] <- as.factor(P2[,3])
+P2[,5] <- as.factor(P2[,5])
+AH0[,3] <- as.factor(AH0[,3])
+AH0[,5] <- as.factor(AH0[,5])
+AH1[,3] <- as.factor(AH1[,3])
+AH1[,5] <- as.factor(AH1[,5])
+AH2[,3] <- as.factor(AH2[,3])
+AH2[,5] <- as.factor(AH2[,5])
+
+sink("posthoc.txt")
+fit1 <- aov(Somatization~age2.lvl+Sex+edu2.lvl+Marriage,data=P0)
+summary(fit1)
+TukeyHSD(fit1)
+
+fit2 <- aov(Somatization~age2.lvl+Sex+edu2.lvl+Marriage,data=P1)
+summary(fit2)
+TukeyHSD(fit2)
+
+fit3 <- aov(Somatization~age2.lvl+Sex+edu2.lvl+Marriage,data=P2)
+summary(fit3)
+TukeyHSD(fit3)
+
+fit4 <- aov(Somatization~age2.lvl+Sex+edu2.lvl+Marriage,data=AH0)
+summary(fit4)
+TukeyHSD(fit4)
+
+fit5 <- aov(Somatization~age2.lvl+Sex+edu2.lvl+Marriage,data=AH1)
+summary(fit5)
+TukeyHSD(fit5)
+
+fit6 <- aov(Somatization~age2.lvl+Sex+edu2.lvl+Marriage,data=AH2)
+summary(fit6)
+TukeyHSD(fit6)
+sink()
+
+

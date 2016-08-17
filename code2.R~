@@ -311,6 +311,20 @@ n.t <- function(A,s){
 
 sink("rrr.txt")
 
+
+s <- length(c(P0$Sex[P0$Sex==1],P1$Sex[P1$Sex==1],P2$Sex [P2$Sex==1]))
+
+n.t(P0$Sex[P0$Sex==1],s)
+n.t(P1$Sex[P1$Sex==1],s)
+n.t(P2$Sex[P2$Sex==1],s)
+
+s <- length(c(P0$Sex[P0$Sex==2],P1$Sex[P1$Sex==2],P2$Sex[P2$Sex==2]))
+
+n.t(P0$Sex[P0$Sex==2],s)
+n.t(P1$Sex[P1$Sex==2],s)
+n.t(P2$Sex[P2$Sex==2],s)
+
+
 s <- length(c(P0$age2.lvl[P0$age2.lvl==1],P1$age2.lvl[P1$age2.lvl==1],P2$age2.lvl [P2$age2.lvl==1]))
 
 n.t(P0$age2.lvl[P0$age2.lvl==1],s)
@@ -369,6 +383,19 @@ sink()
 
 sink("rrr.txt")
 
+s <- length(c(AH0$Sex[AH0$Sex==1],AH1$Sex[AH1$Sex==1],AH2$Sex [AH2$Sex==1]))
+
+n.t(AH0$Sex[AH0$Sex==1],s)
+n.t(AH1$Sex[AH1$Sex==1],s)
+n.t(AH2$Sex[AH2$Sex==1],s)
+
+s <- length(c(AH0$Sex[AH0$Sex==2],AH1$Sex[AH1$Sex==2],AH2$Sex[AH2$Sex==2]))
+
+n.t(AH0$Sex[AH0$Sex==2],s)
+n.t(AH1$Sex[AH1$Sex==2],s)
+n.t(AH2$Sex[AH2$Sex==2],s)
+
+
 s <- length(c(AH0$age2.lvl[AH0$age2.lvl==1],AH1$age2.lvl[AH1$age2.lvl==1],AH2$age2.lvl [AH2$age2.lvl==1]))
 
 n.t(AH0$age2.lvl[AH0$age2.lvl==1],s)
@@ -421,3 +448,92 @@ n.t(AH1$Marriage[AH1$Marriage==4],s)
 n.t(AH2$Marriage[AH2$Marriage==4],s)
 
 sink()
+#################
+
+res2 <- c(
+    c.t(P0$Somatization),
+    c.t(P0$Obsessive.compulsive),
+    c.t(P0$Interpersonal.sensitivity),
+    c.t(P0$Depression),
+    c.t(P0$Anxiety),
+    c.t(P0$Hostility),
+    c.t(P0$Phobic.anxiety),
+    c.t(P0$Paranoid.ideation),
+    c.t(P0$Psychoticism),
+    c.t(P0$Additional.items),
+    c.t(P1$Somatization),
+    c.t(P1$Obsessive.compulsive),
+    c.t(P1$Interpersonal.sensitivity),
+    c.t(P1$Depression),
+    c.t(P1$Anxiety),
+    c.t(P1$Hostility),
+    c.t(P1$Phobic.anxiety),
+    c.t(P1$Paranoid.ideation),
+    c.t(P1$Psychoticism),
+    c.t(P1$Additional.items),
+    c.t(P2$Somatization),
+    c.t(P2$Obsessive.compulsive),
+    c.t(P2$Interpersonal.sensitivity),
+    c.t(P2$Depression),
+    c.t(P2$Anxiety),
+    c.t(P2$Hostility),
+    c.t(P2$Phobic.anxiety),
+    c.t(P2$Paranoid.ideation),
+    c.t(P2$Psychoticism),
+    c.t(P2$Additional.items),    
+    c.t(AH0$Somatization),
+    c.t(AH0$Obsessive.compulsive),
+    c.t(AH0$Interpersonal.sensitivity),
+    c.t(AH0$Depression),
+    c.t(AH0$Anxiety),
+    c.t(AH0$Hostility),
+    c.t(AH0$Phobic.anxiety),
+    c.t(AH0$Paranoid.ideation),
+    c.t(AH0$Psychoticism),
+    c.t(AH0$Additional.items),
+    c.t(AH1$Somatization),
+    c.t(AH1$Obsessive.compulsive),
+    c.t(AH1$Interpersonal.sensitivity),
+    c.t(AH1$Depression),
+    c.t(AH1$Anxiety),
+    c.t(AH1$Hostility),
+    c.t(AH1$Phobic.anxiety),
+    c.t(AH1$Paranoid.ideation),
+    c.t(AH1$Psychoticism),
+    c.t(AH1$Additional.items),    
+    c.t(AH2$Somatization),
+    c.t(AH2$Obsessive.compulsive),
+    c.t(AH2$Interpersonal.sensitivity),
+    c.t(AH2$Depression),
+    c.t(AH2$Anxiety),
+    c.t(AH2$Hostility),
+    c.t(AH2$Phobic.anxiety),
+    c.t(AH2$Paranoid.ideation),
+    c.t(AH2$Psychoticism),
+    c.t(AH2$Additional.items)      
+    )
+
+library(zoo)
+
+rest2 <- matrix(res2,10,6)
+
+write.csv(coredata(rest2),"rrr.csv")
+
+png(file="corr1.png", bg="transparent")
+corrplot(cor(P0[,8:17]),type="upper",method="number")
+dev.off()
+png(file="corr2.png", bg="transparent")
+corrplot(cor(P1[,8:17]),type="upper",method="number")
+dev.off()
+png(file="corr3.png", bg="transparent")
+corrplot(cor(P2[,8:17]),type="upper",method="number")
+dev.off()
+png(file="corr4.png", bg="transparent")
+corrplot(cor(AH0[,8:17]),type="upper",method="number")
+dev.off()
+png(file="corr5.png", bg="transparent")
+corrplot(cor(AH1[,8:17]),type="upper",method="number" )
+dev.off()
+png(file="corr6.png", bg="transparent")
+corrplot(cor(AH2[,8:17]),type="upper",method="number" )
+dev.off()
