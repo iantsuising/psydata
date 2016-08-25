@@ -1,0 +1,264 @@
+
+Call:
+lm(formula = Total.score ~ age2.lvl + Sex + edu2.lvl + marr2.lvl + 
+    Somatization + Interpersonal.sensitivity + Depression + Anxiety + 
+    Hostility + Phobic.anxiety + Paranoid.ideation + Psychoticism + 
+    Additional.items, data = P0, x = TRUE)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.5139 -2.1285 -0.4393  1.7230 18.2149 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                3.13075    0.54644   5.729 1.14e-08 ***
+age2.lvl2                 -0.37620    0.18391  -2.046  0.04091 *  
+Sex2                       0.34557    0.14270   2.422  0.01553 *  
+edu2.lvl2                 -0.48688    0.15399  -3.162  0.00159 ** 
+marr2.lvl2                 0.75003    0.18295   4.100 4.28e-05 ***
+marr2.lvl3                -0.01431    0.65649  -0.022  0.98261    
+Somatization              12.22686    0.20847  58.651  < 2e-16 ***
+Interpersonal.sensitivity 11.20658    0.26733  41.921  < 2e-16 ***
+Depression                15.18209    0.23816  63.748  < 2e-16 ***
+Anxiety                   11.03837    0.21992  50.192  < 2e-16 ***
+Hostility                  6.42032    0.19448  33.013  < 2e-16 ***
+Phobic.anxiety             7.31999    0.23389  31.297  < 2e-16 ***
+Paranoid.ideation          6.82917    0.27018  25.276  < 2e-16 ***
+Psychoticism              11.34593    0.32319  35.106  < 2e-16 ***
+Additional.items           7.60665    0.14915  50.999  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.292 on 2296 degrees of freedom
+Multiple R-squared:  0.9725,	Adjusted R-squared:  0.9723 
+F-statistic:  5794 on 14 and 2296 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = Total.score ~ age2.lvl + Sex + edu2.lvl + marr2.lvl + 
+    Somatization + Interpersonal.sensitivity + Depression + Anxiety + 
+    Hostility + Phobic.anxiety + Paranoid.ideation + Psychoticism + 
+    Additional.items, data = AH0, x = TRUE)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.2611 -1.5694 -0.2956  1.3681 15.7220 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               -0.05454    0.16476  -0.331  0.74063    
+age2.lvl2                 -0.58794    0.05504 -10.681  < 2e-16 ***
+Sex2                      -0.18334    0.04854  -3.777  0.00016 ***
+edu2.lvl2                  0.03471    0.05004   0.694  0.48787    
+marr2.lvl2                 0.07417    0.06002   1.236  0.21658    
+marr2.lvl3                -0.26114    0.17868  -1.461  0.14392    
+Somatization              13.03408    0.08646 150.754  < 2e-16 ***
+Interpersonal.sensitivity 11.07175    0.12156  91.080  < 2e-16 ***
+Depression                15.60836    0.12152 128.442  < 2e-16 ***
+Anxiety                   12.44418    0.13243  93.970  < 2e-16 ***
+Hostility                  6.66504    0.10100  65.990  < 2e-16 ***
+Phobic.anxiety             7.41382    0.12771  58.050  < 2e-16 ***
+Paranoid.ideation          6.34602    0.10678  59.432  < 2e-16 ***
+Psychoticism              11.23764    0.14692  76.489  < 2e-16 ***
+Additional.items           8.18639    0.08395  97.511  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.38 on 11021 degrees of freedom
+Multiple R-squared:  0.9858,	Adjusted R-squared:  0.9857 
+F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = Total.score ~ age2.lvl + Sex + edu2.lvl + marr2.lvl + 
+    Somatization + Interpersonal.sensitivity + Depression + Anxiety + 
+    Hostility + Phobic.anxiety + Paranoid.ideation + Psychoticism + 
+    Additional.items, data = P1, x = TRUE)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-13.300  -3.087  -0.293   2.757  15.830 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               19.60005    1.42776  13.728  < 2e-16 ***
+age2.lvl2                 -0.08013    0.26929  -0.298  0.76607    
+Sex2                       1.16439    0.21848   5.330 1.11e-07 ***
+edu2.lvl2                 -0.22332    0.21865  -1.021  0.30723    
+marr2.lvl2                 0.87897    0.27790   3.163  0.00159 ** 
+marr2.lvl3                -0.35942    0.82875  -0.434  0.66457    
+Somatization              11.89236    0.23912  49.733  < 2e-16 ***
+Interpersonal.sensitivity 10.51521    0.27933  37.645  < 2e-16 ***
+Depression                13.95479    0.26293  53.073  < 2e-16 ***
+Anxiety                    9.51442    0.24254  39.228  < 2e-16 ***
+Hostility                  5.10091    0.19967  25.547  < 2e-16 ***
+Phobic.anxiety             6.26091    0.21841  28.666  < 2e-16 ***
+Paranoid.ideation          6.60157    0.27384  24.108  < 2e-16 ***
+Psychoticism              10.60639    0.32012  33.133  < 2e-16 ***
+Additional.items           6.82445    0.20674  33.009  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.395 on 1722 degrees of freedom
+Multiple R-squared:  0.8941,	Adjusted R-squared:  0.8932 
+F-statistic:  1039 on 14 and 1722 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = Total.score ~ age2.lvl + Sex + edu2.lvl + marr2.lvl + 
+    Somatization + Interpersonal.sensitivity + Depression + Anxiety + 
+    Hostility + Phobic.anxiety + Paranoid.ideation + Psychoticism + 
+    Additional.items, data = AH1, x = TRUE)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-12.9052  -2.2079  -0.2439   1.9285  15.0159 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               13.824396   0.839986  16.458  < 2e-16 ***
+age2.lvl2                 -0.589467   0.154794  -3.808 0.000143 ***
+Sex2                      -0.544493   0.138814  -3.922 8.97e-05 ***
+edu2.lvl2                  0.009947   0.136961   0.073 0.942110    
+marr2.lvl2                 0.172834   0.161176   1.072 0.283663    
+marr2.lvl3                -0.424646   0.404529  -1.050 0.293931    
+Somatization              12.653613   0.155608  81.317  < 2e-16 ***
+Interpersonal.sensitivity 10.335236   0.213781  48.345  < 2e-16 ***
+Depression                15.196406   0.211381  71.891  < 2e-16 ***
+Anxiety                   11.179038   0.225547  49.564  < 2e-16 ***
+Hostility                  5.871076   0.147052  39.925  < 2e-16 ***
+Phobic.anxiety             6.842145   0.175873  38.904  < 2e-16 ***
+Paranoid.ideation          5.582102   0.179054  31.176  < 2e-16 ***
+Psychoticism               9.630932   0.235794  40.845  < 2e-16 ***
+Additional.items           7.195742   0.151072  47.631  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.346 on 2837 degrees of freedom
+Multiple R-squared:  0.9349,	Adjusted R-squared:  0.9346 
+F-statistic:  2911 on 14 and 2837 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = Total.score ~ age2.lvl + Sex + edu2.lvl + marr2.lvl + 
+    Somatization + Interpersonal.sensitivity + Depression + Anxiety + 
+    Hostility + Phobic.anxiety + Paranoid.ideation + Psychoticism + 
+    Additional.items, data = P2, x = TRUE)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-15.8703  -3.1682  -0.0614   3.1664  16.1842 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                8.55093    0.65730  13.009  < 2e-16 ***
+age2.lvl2                 -0.39562    0.26171  -1.512 0.130747    
+Sex2                       1.07164    0.20240   5.295 1.29e-07 ***
+edu2.lvl2                 -0.03668    0.19694  -0.186 0.852276    
+marr2.lvl2                 0.89177    0.23478   3.798 0.000149 ***
+marr2.lvl3                 0.36541    0.79085   0.462 0.644085    
+Somatization              12.93791    0.16112  80.298  < 2e-16 ***
+Interpersonal.sensitivity 10.61528    0.21549  49.262  < 2e-16 ***
+Depression                15.88800    0.21781  72.943  < 2e-16 ***
+Anxiety                   10.34788    0.20512  50.447  < 2e-16 ***
+Hostility                  5.86002    0.13282  44.121  < 2e-16 ***
+Phobic.anxiety             7.22360    0.14945  48.334  < 2e-16 ***
+Paranoid.ideation          6.64923    0.19506  34.089  < 2e-16 ***
+Psychoticism              10.76478    0.22621  47.587  < 2e-16 ***
+Additional.items           7.22336    0.17449  41.398  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.853 on 2567 degrees of freedom
+Multiple R-squared:  0.9864,	Adjusted R-squared:  0.9863 
+F-statistic: 1.332e+04 on 14 and 2567 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = Total.score ~ age2.lvl + Sex + edu2.lvl + marr2.lvl + 
+    Somatization + Interpersonal.sensitivity + Depression + Anxiety + 
+    Hostility + Phobic.anxiety + Paranoid.ideation + Psychoticism + 
+    Additional.items, data = AH2, x = TRUE)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.1733  -2.3811  -0.2684   2.4338  17.4324 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                 6.8474     0.5684  12.047   <2e-16 ***
+age2.lvl2                  -0.5302     0.2300  -2.305   0.0213 *  
+Sex2                        0.1542     0.2090   0.738   0.4609    
+edu2.lvl2                   0.3783     0.2035   1.859   0.0632 .  
+marr2.lvl2                  0.5095     0.2380   2.141   0.0325 *  
+marr2.lvl3                  0.4387     0.5756   0.762   0.4461    
+Somatization               13.4261     0.1758  76.380   <2e-16 ***
+Interpersonal.sensitivity  10.9912     0.2643  41.582   <2e-16 ***
+Depression                 14.6343     0.2679  54.618   <2e-16 ***
+Anxiety                    11.8416     0.2761  42.892   <2e-16 ***
+Hostility                   6.4386     0.1623  39.660   <2e-16 ***
+Phobic.anxiety              6.9425     0.1791  38.757   <2e-16 ***
+Paranoid.ideation           6.3451     0.2184  29.056   <2e-16 ***
+Psychoticism               10.0521     0.2596  38.727   <2e-16 ***
+Additional.items            7.5103     0.2104  35.687   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.875 on 1675 degrees of freedom
+Multiple R-squared:  0.994,	Adjusted R-squared:  0.9939 
+F-statistic: 1.976e+04 on 14 and 1675 DF,  p-value: < 2.2e-16
+
+  [1] "AH"           "p.is"         "C.2.1.1.1"    "p.ai"         "C.2.1.1.2"   
+  [6] ".Random.seed" "multiplot"    "A.is"         "p.A"          "p.ocd"       
+ [11] "age2"         "dep.lvl"      "AH.ocd"       "C.so"         "C.1.1.2.1"   
+ [16] "C.1.2.1.1"    "C.1.1.2.2"    "p.dep"        "C.1.2.1.2"    "anx.lvl"     
+ [21] "B.2.2.2.1"    "p.so"         "B.2.2.2.2"    "age2.lvl"     "A.so"        
+ [26] "pi.lvl"       "A.2.2.1.1"    "so.lvl"       "A.2.2.1.2"    "iii"         
+ [31] "agelvl"       "edu2"         "con.tb"       "Group"        "B.1.1.2.1"   
+ [36] "B.1.1.2.2"    "lvl"          "temA"         "temB"         "A.2.2.2.1"   
+ [41] "temC"         "A.2.2.2.2"    "pa.lvl"       "A.1.1.1.1"    "A.1.1.1.2"   
+ [46] "B.2.2.1.1"    "AH0"          "B.2.2.1.2"    "AH1"          "ho.lvl"      
+ [51] "C.ocd"        "AH2"          "A.ocd"        "data.so"      "data.lvled"  
+ [56] "result"       "A.1.1.2.1"    "res"          "A.1.1.2.2"    "ctable"      
+ [61] "data.long"    "data"         "c.t"          "fitP0"        "B.1.1.1.1"   
+ [66] "A"            "fitP1"        "B.1.1.1.2"    "ai.lvl"       "B"           
+ [71] "fitP2"        "C"            "C.2.1.2.1"    "C.2.2.1.1"    "B.is"        
+ [76] "C.2.1.2.2"    "C.2.2.1.2"    "marr.lvl"     "temset"       "P0"          
+ [81] "P1"           "P2"           "cord"         "P"            "C.1.2.2.1"   
+ [86] "C.1.2.2.2"    "B.so"         "C.1.1.1.1"    "C.1.1.1.2"    "AH.is"       
+ [91] "B.2.1.2.1"    "B.2.1.2.2"    "hd.tb"        "p.anx"        "p.pa"        
+ [96] "A.2.1.1.1"    "A.2.1.1.2"    "B.1.2.2.1"    "B.1.2.2.2"    "p.pi"        
+[101] "totalScorId"  "i"            "AH.so"        "listA"        "listB"       
+[106] "A.1.2.1.1"    "AH.st"        "listC"        "A.1.2.1.2"    "A.2.1.2.1"   
+[111] "A.2.1.2.2"    "t"            "fitAH0"       "fitAH1"       "B.2.1.1.1"   
+[116] "fitAH2"       "p.ho"         "B.2.1.1.2"    "B.ocd"        "p.psy"       
+[121] "A.1.2.2.1"    "psy.lvl"      "edu2.lvl"     "A.1.2.2.2"    "B.1.2.1.1"   
+[126] "B.1.2.1.2"    "marr2.lvl"    "C.is"         "C.2.2.2.1"    "ocd.lvl"     
+[131] "C.2.2.2.2"    "age.lvl"      "is.lvl"      
+  [1] ".Random.seed" "A"            "A.1.1.1.1"    "A.1.1.1.2"    "A.1.1.2.1"   
+  [6] "A.1.1.2.2"    "A.1.2.1.1"    "A.1.2.1.2"    "A.1.2.2.1"    "A.1.2.2.2"   
+ [11] "A.2.1.1.1"    "A.2.1.1.2"    "A.2.1.2.1"    "A.2.1.2.2"    "A.2.2.1.1"   
+ [16] "A.2.2.1.2"    "A.2.2.2.1"    "A.2.2.2.2"    "A.is"         "A.ocd"       
+ [21] "A.so"         "age.lvl"      "age2"         "age2.lvl"     "agelvl"      
+ [26] "AH"           "AH.is"        "AH.ocd"       "AH.so"        "AH.st"       
+ [31] "AH0"          "AH1"          "AH2"          "ai.lvl"       "anx.lvl"     
+ [36] "B"            "B.1.1.1.1"    "B.1.1.1.2"    "B.1.1.2.1"    "B.1.1.2.2"   
+ [41] "B.1.2.1.1"    "B.1.2.1.2"    "B.1.2.2.1"    "B.1.2.2.2"    "B.2.1.1.1"   
+ [46] "B.2.1.1.2"    "B.2.1.2.1"    "B.2.1.2.2"    "B.2.2.1.1"    "B.2.2.1.2"   
+ [51] "B.2.2.2.1"    "B.2.2.2.2"    "B.is"         "B.ocd"        "B.so"        
+ [56] "C"            "C.1.1.1.1"    "C.1.1.1.2"    "C.1.1.2.1"    "C.1.1.2.2"   
+ [61] "C.1.2.1.1"    "C.1.2.1.2"    "C.1.2.2.1"    "C.1.2.2.2"    "C.2.1.1.1"   
+ [66] "C.2.1.1.2"    "C.2.1.2.1"    "C.2.1.2.2"    "C.2.2.1.1"    "C.2.2.1.2"   
+ [71] "C.2.2.2.1"    "C.2.2.2.2"    "C.is"         "C.ocd"        "C.so"        
+ [76] "c.t"          "con.tb"       "cord"         "ctable"       "data"        
+ [81] "data.long"    "data.lvled"   "data.so"      "dep.lvl"      "edu2"        
+ [86] "edu2.lvl"     "fitAH0"       "fitAH1"       "fitAH2"       "fitP0"       
+ [91] "fitP1"        "fitP2"        "Group"        "hd.tb"        "ho.lvl"      
+ [96] "i"            "iii"          "is.lvl"       "listA"        "listB"       
+[101] "listC"        "lvl"          "marr.lvl"     "marr2.lvl"    "multiplot"   
+[106] "ocd.lvl"      "P"            "p.A"          "p.ai"         "p.anx"       
+[111] "p.dep"        "p.ho"         "p.is"         "p.ocd"        "p.pa"        
+[116] "p.pi"         "p.psy"        "p.so"         "P0"           "P1"          
+[121] "P2"           "pa.lvl"       "pi.lvl"       "psy.lvl"      "res"         
+[126] "result"       "so.lvl"       "t"            "temA"         "temB"        
+[131] "temC"         "temset"       "totalScorId" 

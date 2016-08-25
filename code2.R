@@ -43,6 +43,10 @@ data<-rbind(A,B,C,AH)
 
 data$Age[data$Age==2]<-20
 
+marr2.lvl <- marr.lvl(data$Marriage)
+
+data <- cbind(data,marr2.lvl)
+
 ##level##
 so.lvl<-lvl(data$Somatization,3,1.85)
 ocd.lvl<-(lvl(data$Obsessive.compulsive,3,2.2))
@@ -125,108 +129,108 @@ C.2.2.2.2 <- C[C$age2.lvl==2 & C$edu2.lvl==2 & C$Sex==2 & C$Marriage==2, ]
 
 ##################
 
-c(dim(A.1.1.1.1)[1], 
-dim(A.1.1.1.2)[1], 
-dim(A.1.1.2.1)[1], 
-dim(A.1.1.2.2)[1], 
-dim(A.1.2.1.1)[1], 
-dim(A.1.2.1.2)[1], 
-dim(A.1.2.2.1)[1], 
-dim(A.1.2.2.2)[1], 
-dim(A.2.1.1.1)[1], 
-dim(A.2.1.1.2)[1], 
-dim(A.2.1.2.1)[1], 
-dim(A.2.1.2.2)[1], 
-dim(A.2.2.1.1)[1], 
-dim(A.2.2.1.2)[1], 
-dim(A.2.2.2.1)[1], 
-dim(A.2.2.2.2)[1], 
-dim(B.1.1.1.1)[1], 
-dim(B.1.1.1.2)[1], 
-dim(B.1.1.2.1)[1], 
-dim(B.1.1.2.2)[1], 
-dim(B.1.2.1.1)[1], 
-dim(B.1.2.1.2)[1], 
-dim(B.1.2.2.1)[1], 
-dim(B.1.2.2.2)[1], 
-dim(B.2.1.1.1)[1], 
-dim(B.2.1.1.2)[1], 
-dim(B.2.1.2.1)[1], 
-dim(B.2.1.2.2)[1], 
-dim(B.2.2.1.1)[1], 
-dim(B.2.2.1.2)[1], 
-dim(B.2.2.2.1)[1], 
-dim(B.2.2.2.2)[1], 
-dim(C.1.1.1.1)[1], 
-dim(C.1.1.1.2)[1], 
-dim(C.1.1.2.1)[1], 
-dim(C.1.1.2.2)[1], 
-dim(C.1.2.1.1)[1], 
-dim(C.1.2.1.2)[1], 
-dim(C.1.2.2.1)[1], 
-dim(C.1.2.2.2)[1], 
-dim(C.2.1.1.1)[1], 
-dim(C.2.1.1.2)[1], 
-dim(C.2.1.2.1)[1], 
-dim(C.2.1.2.2)[1], 
-dim(C.2.2.1.1)[1], 
-dim(C.2.2.1.2)[1], 
-dim(C.2.2.2.1)[1], 
+c(dim(A.1.1.1.1)[1],
+dim(A.1.1.1.2)[1],
+dim(A.1.1.2.1)[1],
+dim(A.1.1.2.2)[1],
+dim(A.1.2.1.1)[1],
+dim(A.1.2.1.2)[1],
+dim(A.1.2.2.1)[1],
+dim(A.1.2.2.2)[1],
+dim(A.2.1.1.1)[1],
+dim(A.2.1.1.2)[1],
+dim(A.2.1.2.1)[1],
+dim(A.2.1.2.2)[1],
+dim(A.2.2.1.1)[1],
+dim(A.2.2.1.2)[1],
+dim(A.2.2.2.1)[1],
+dim(A.2.2.2.2)[1],
+dim(B.1.1.1.1)[1],
+dim(B.1.1.1.2)[1],
+dim(B.1.1.2.1)[1],
+dim(B.1.1.2.2)[1],
+dim(B.1.2.1.1)[1],
+dim(B.1.2.1.2)[1],
+dim(B.1.2.2.1)[1],
+dim(B.1.2.2.2)[1],
+dim(B.2.1.1.1)[1],
+dim(B.2.1.1.2)[1],
+dim(B.2.1.2.1)[1],
+dim(B.2.1.2.2)[1],
+dim(B.2.2.1.1)[1],
+dim(B.2.2.1.2)[1],
+dim(B.2.2.2.1)[1],
+dim(B.2.2.2.2)[1],
+dim(C.1.1.1.1)[1],
+dim(C.1.1.1.2)[1],
+dim(C.1.1.2.1)[1],
+dim(C.1.1.2.2)[1],
+dim(C.1.2.1.1)[1],
+dim(C.1.2.1.2)[1],
+dim(C.1.2.2.1)[1],
+dim(C.1.2.2.2)[1],
+dim(C.2.1.1.1)[1],
+dim(C.2.1.1.2)[1],
+dim(C.2.1.2.1)[1],
+dim(C.2.1.2.2)[1],
+dim(C.2.2.1.1)[1],
+dim(C.2.2.1.2)[1],
+dim(C.2.2.2.1)[1],
 dim(C.2.2.2.2)[1])
 
 
 
 listA <- list(
-    A.1.1.1.1, 
-    A.1.1.1.2, 
-    A.1.1.2.1, 
-    A.1.1.2.2, 
-    A.1.2.1.1, 
-A.1.2.1.2, 
-A.1.2.2.1, 
-A.1.2.2.2, 
-A.2.1.1.1, 
-A.2.1.1.2, 
-A.2.1.2.1, 
-A.2.1.2.2, 
-A.2.2.1.1, 
-A.2.2.1.2, 
-A.2.2.2.1, 
+    A.1.1.1.1,
+    A.1.1.1.2,
+    A.1.1.2.1,
+    A.1.1.2.2,
+    A.1.2.1.1,
+A.1.2.1.2,
+A.1.2.2.1,
+A.1.2.2.2,
+A.2.1.1.1,
+A.2.1.1.2,
+A.2.1.2.1,
+A.2.1.2.2,
+A.2.2.1.1,
+A.2.2.1.2,
+A.2.2.2.1,
 A.2.2.2.2)
 
-listB <- list(B.1.1.1.1, 
-B.1.1.1.2, 
-B.1.1.2.1, 
-B.1.1.2.2, 
-B.1.2.1.1, 
-B.1.2.1.2, 
-B.1.2.2.1, 
-B.1.2.2.2, 
-B.2.1.1.1, 
-B.2.1.1.2, 
-B.2.1.2.1, 
-B.2.1.2.2, 
-B.2.2.1.1, 
-B.2.2.1.2, 
-B.2.2.2.1, 
+listB <- list(B.1.1.1.1,
+B.1.1.1.2,
+B.1.1.2.1,
+B.1.1.2.2,
+B.1.2.1.1,
+B.1.2.1.2,
+B.1.2.2.1,
+B.1.2.2.2,
+B.2.1.1.1,
+B.2.1.1.2,
+B.2.1.2.1,
+B.2.1.2.2,
+B.2.2.1.1,
+B.2.2.1.2,
+B.2.2.2.1,
 B.2.2.2.2)
 
 listC <- list(
-C.1.1.1.1, 
-C.1.1.1.2, 
-C.1.1.2.1, 
-C.1.1.2.2, 
-C.1.2.1.1, 
-C.1.2.1.2, 
-C.1.2.2.1, 
-C.1.2.2.2, 
-C.2.1.1.1, 
-C.2.1.1.2, 
-C.2.1.2.1, 
-C.2.1.2.2, 
-C.2.2.1.1, 
-C.2.2.1.2, 
-C.2.2.2.1, 
+C.1.1.1.1,
+C.1.1.1.2,
+C.1.1.2.1,
+C.1.1.2.2,
+C.1.2.1.1,
+C.1.2.1.2,
+C.1.2.2.1,
+C.1.2.2.2,
+C.2.1.1.1,
+C.2.1.1.2,
+C.2.1.2.1,
+C.2.1.2.2,
+C.2.2.1.1,
+C.2.2.1.2,
+C.2.2.2.1,
 C.2.2.2.2)
 
 
@@ -236,20 +240,20 @@ C.2.2.2.2)
 
 
 
-                                        # 1.1.1.2 
-# 1.1.2.1 
-# 1.1.2.2 
-# 1.2.1.1 
-# 1.2.1.2 
-# 1.2.2.1 
-# 1.2.2.2 
-# 2.1.1.1 
-# 2.1.1.2 
-# 2.1.2.1 
-# 2.1.2.2 
-# 2.2.1.1 
-# 2.2.1.2 
-# 2.2.2.1 
+                                        # 1.1.1.2
+# 1.1.2.1
+# 1.1.2.2
+# 1.2.1.1
+# 1.2.1.2
+# 1.2.2.1
+# 1.2.2.2
+# 2.1.1.1
+# 2.1.1.2
+# 2.1.2.1
+# 2.1.2.2
+# 2.2.1.1
+# 2.2.1.2
+# 2.2.2.1
                                         # 2.2.2.2
 result <- matrix(rep(0,16*3),ncol=3)
 
@@ -480,7 +484,7 @@ res2 <- c(
     c.t(P2$Phobic.anxiety),
     c.t(P2$Paranoid.ideation),
     c.t(P2$Psychoticism),
-    c.t(P2$Additional.items),    
+    c.t(P2$Additional.items),
     c.t(AH0$Somatization),
     c.t(AH0$Obsessive.compulsive),
     c.t(AH0$Interpersonal.sensitivity),
@@ -500,7 +504,7 @@ res2 <- c(
     c.t(AH1$Phobic.anxiety),
     c.t(AH1$Paranoid.ideation),
     c.t(AH1$Psychoticism),
-    c.t(AH1$Additional.items),    
+    c.t(AH1$Additional.items),
     c.t(AH2$Somatization),
     c.t(AH2$Obsessive.compulsive),
     c.t(AH2$Interpersonal.sensitivity),
@@ -510,7 +514,7 @@ res2 <- c(
     c.t(AH2$Phobic.anxiety),
     c.t(AH2$Paranoid.ideation),
     c.t(AH2$Psychoticism),
-    c.t(AH2$Additional.items)      
+    c.t(AH2$Additional.items)
     )
 
 library(zoo)
@@ -586,4 +590,54 @@ summary(fit6)
 TukeyHSD(fit6)
 sink()
 
+#####Reg
+sink("reg.txt")
+P0$edu2.lvl <- factor(P0$edu2.lvl)
+P0$age2.lvl <- factor(P0$age2.lvl)
+P0$Sex <- factor(P0$Sex)
 
+AH0$edu2.lvl <- factor(AH0$edu2.lvl)
+AH0$age2.lvl <- factor(AH0$age2.lvl)
+AH0$Sex <- factor(AH0$Sex)
+
+fitP0 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interpersonal.sensitivity+Depression+Anxiety+Hostility+Phobic.anxiety+Paranoid.ideation+Psychoticism+Additional.items,data=P0,x=TRUE)
+
+fitAH0 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interpersonal.sensitivity+Depression+Anxiety+Hostility+Phobic.anxiety+Paranoid.ideation+Psychoticism+Additional.items,data=AH0,x=TRUE)
+
+summary(fitP0)
+summary(fitAH0)
+
+
+
+P1$edu2.lvl <- factor(P1$edu2.lvl)
+P1$age2.lvl <- factor(P1$age2.lvl)
+P1$Sex <- factor(P1$Sex)
+
+AH1$edu2.lvl <- factor(AH1$edu2.lvl)
+AH1$age2.lvl <- factor(AH1$age2.lvl)
+AH1$Sex <- factor(AH1$Sex)
+
+fitP1 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interpersonal.sensitivity+Depression+Anxiety+Hostility+Phobic.anxiety+Paranoid.ideation+Psychoticism+Additional.items,data=P1,x=TRUE)
+
+fitAH1 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interpersonal.sensitivity+Depression+Anxiety+Hostility+Phobic.anxiety+Paranoid.ideation+Psychoticism+Additional.items,data=AH1,x=TRUE)
+
+summary(fitP1)
+summary(fitAH1)
+
+
+P2$edu2.lvl <- factor(P2$edu2.lvl)
+P2$age2.lvl <- factor(P2$age2.lvl)
+P2$Sex <- factor(P2$Sex)
+
+AH2$edu2.lvl <- factor(AH2$edu2.lvl)
+AH2$age2.lvl <- factor(AH2$age2.lvl)
+AH2$Sex <- factor(AH2$Sex)
+
+fitP2 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interpersonal.sensitivity+Depression+Anxiety+Hostility+Phobic.anxiety+Paranoid.ideation+Psychoticism+Additional.items,data=P2,x=TRUE)
+
+fitAH2 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interpersonal.sensitivity+Depression+Anxiety+Hostility+Phobic.anxiety+Paranoid.ideation+Psychoticism+Additional.items,data=AH2,x=TRUE)
+
+summary(fitP2)
+summary(fitAH2)
+
+sink()
