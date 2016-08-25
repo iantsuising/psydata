@@ -591,7 +591,7 @@ TukeyHSD(fit6)
 sink()
 
 #####Reg
-sink("reg.txt")
+
 P0$edu2.lvl <- factor(P0$edu2.lvl)
 P0$age2.lvl <- factor(P0$age2.lvl)
 P0$Sex <- factor(P0$Sex)
@@ -640,4 +640,4 @@ fitAH2 <- lm(Total.score~age2.lvl+Sex+edu2.lvl+marr2.lvl+Somatization+Interperso
 summary(fitP2)
 summary(fitAH2)
 
-sink()
+
