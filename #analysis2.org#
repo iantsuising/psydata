@@ -88,7 +88,7 @@ The bold p-value numbers show that the total scores of the majority groups have 
 * Analysis after combining ABC together
   Combine the group A, B, and C into one group names group P. The following results are based on the comparison between group P and AH.
   Sub group naming rule: The Capital letter(s) means the group name, the
-  number mean the total score level. For example, the sub-group AH1 
+  number mean the total score level. For example, the sub-group AH1
   means the observations in it think themselves have no psychological illness and the total score level is 1.
 
 ** Demographic factors difference
@@ -156,15 +156,15 @@ The bold p-value numbers show that the total scores of the majority groups have 
 *** Summary
 	/If the plots above are unreadable, please refer to the pdf file
 	"corr.plot.pdf"./
- 
-	From these six corr-plots, we found an interesting phenomenon: 
+
+	From these six corr-plots, we found an interesting phenomenon:
 	the correlations among the ten psychology factors in sub-groups
-	AH2 are higher than the others obviously. 
-	This imples that the ten psychology factors of people ,who think 
-	themselves are psychologically healthy but actually has serious 
-	psychological illness, are high correlated compare with the 
-	factors of people, who has psychological illness subjectively 
-	and objectively. 
+	AH2 are higher than the others obviously.
+	This imples that the ten psychology factors of people ,who think
+	themselves are psychologically healthy but actually has serious
+	psychological illness, are high correlated compare with the
+	factors of people, who has psychological illness subjectively
+	and objectively.
 
 	/I think, it may be explained in some psychology theories./
 ** Corresponding groups comparisons
@@ -201,7 +201,6 @@ Coefficients:
 | Psychoticism              | 11.34593 |    0.32319 |  35.106 | *< 2e-16 *  |
 | Additional.items          |  7.60665 |    0.14915 |  50.999 | *< 2e-16 *  |
 
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 3.292 on 2296 degrees of freedom
 Multiple R-squared:  0.9725,	Adjusted R-squared:  0.9723
@@ -236,7 +235,6 @@ Coefficients:
 | Psychoticism              | 11.23764 |    0.14692 |  76.489 | *< 2e-16*   |
 | Additional.items          |  8.18639 |    0.08395 |  97.511 | *< 2e-16*   |
 ---
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 2.38 on 11021 degrees of freedom
 Multiple R-squared:  0.9858,	Adjusted R-squared:  0.9857
@@ -256,7 +254,13 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 	levels, marriage stages, et c) are categorical, we use ANOVA to
 	seek the relationship between DV and IV. The ANOVA tests an
 	hypothesis with a categorical explanatory variable and a
-	quantitative response variable.\
+	quantitative response variable.
+
+	The regression results above seem to be meaningless. Intuitively,
+	the reason is that the total score it itself is derived from the
+	ten psychology scores. Therefore, we take out the ten psychology
+	score, thus to seek the relationship between the demographic
+	factors and each psychology score. 
 
 *** Why use Turkey's HSD & What does Turkey's HSD do?
 
@@ -341,7 +345,7 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 	 except sex have significant influences on the score of
 	 somatization. In group AH0, all the four demographical factors
 	 have are significant four the score of somatization.
-	 
+
 	 In group P0, the somatization score difference are significant
 	 between the two age levels, the two education levels, and the
 	 marriage levels 1 and 2.
@@ -349,7 +353,7 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 	 In group AH0,  the somatization score difference are significant
 	 between the two age levels, the two education levels, the two sex
 	 groups, and the marriage levels 1 and 2.
- 
+
 **** Sub-group P1
 |           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)     |
 | age2.lvl  |    1 |   27.7 |  27.679 | 119.190 | *< 2e-16* |
@@ -414,8 +418,8 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 	 between the two age levels, the two education levels, the two sex
 	 groups, and the marriage levels 1 and 2.
 
-	 
- 
+
+
 **** Sub-group P2
 | Df        | Sum Sq | Mean Sq |      F |  value | Pr(>F)     |
 | age2.lvl  |      1 |    26.6 | 26.558 | 50.419 | *1.60e-12* |
@@ -482,7 +486,7 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 
 	 In group AH2, the somatization score difference are only
 	 significant between the two age levels, and the marriage levels 1 and 2.
-	 
+
 
 
 *** OCD
