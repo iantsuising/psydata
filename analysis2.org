@@ -86,8 +86,10 @@ Education = 1 for Education <= 2; Education = 2, otherwise
 The bold p-value numbers show that the total scores of the majority groups have no significant difference among location A, B, and C.
 
 * Analysis after combining ABC together
-Combine the group A, B, and C into one group names group P. The following results are based on the comparison between group P and AH.
-Sub group naming rule: The Capital letter(s) means the group name, the number mean the total score level. For example, the sub-group AH1 means the observations in it think themselves have no psychological illness and the total score level is 1.
+  Combine the group A, B, and C into one group names group P. The following results are based on the comparison between group P and AH.
+  Sub group naming rule: The Capital letter(s) means the group name, the
+  number mean the total score level. For example, the sub-group AH1 
+  means the observations in it think themselves have no psychological illness and the total score level is 1.
 
 ** Demographic factors difference
    |  Sub-groups: | P0, N=2311         | P1, N=1737   | P2, N=2582     | AH0, N=11036  | AH1, N=2852  | AH2, N=1690   |
@@ -229,16 +231,16 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 ** ANOVA Post-hoc testings
 *** So
 **** Sub-group P0
-|           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)  |     |
-| age2.lvl  |    1 |  36.46 |   36.46 |  291.66 | < 2e-16 | *** |
-| Sex       |    1 |   0.01 |    0.01 |    0.07 | 0.792   |     |
-| edu2.lvl  |    1 |   9.52 |    9.52 |   76.14 | < 2e-16 | *** |
-| Marriage  |    3 |   9.19 |    3.06 |   24.52 | 1.3e-15 | *** |
-| Residuals | 2304 | 288.00 |    0.13 |         |         |     |
+|           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)    |
+| age2.lvl  |    1 |  36.46 |   36.46 |  291.66 | *< 2e-16* |
+| Sex       |    1 |   0.01 |    0.01 |    0.07 | *0.792    |
+| edu2.lvl  |    1 |   9.52 |    9.52 |   76.14 | *< 2e-16* |
+| Marriage  |    3 |   9.19 |    3.06 |   24.52 | *1.3e-15* |
+| Residuals | 2304 | 288.00 |    0.13 |         |           |
 
-| $age2.lvl     |           |           |       |
-| diff          |       lwr |       upr | p adj |
-| 2-1 0.2591813 | 0.2294206 | 0.2889421 |     0 |
+| $age2.lvl |           |           |           |       |
+|           |      diff |       lwr |       upr | p adj |
+|       2-1 | 0.2591813 | 0.2294206 | 0.2889421 |     0 |
 
 | $Sex |              |             |            |          |
 |      |         diff |         lwr |        upr |    p adj |
@@ -258,16 +260,16 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 |       4-3 |  0.1775191349 | -0.3165526 |  0.67159090 | 0.7921569 |
 
 **** Sub-group AH0
-| Df        |   Sum | Sq Mean |  Sq F |  value |   Pr(>F) |     |
-| age2.lvl  |     1 |     2.1 |  2.13 |  18.68 | 1.56e-05 | *** |
-| Sex       |     1 |    42.3 | 42.27 | 369.89 |  < 2e-16 | *** |
-| edu2.lvl  |     1 |     6.0 |  6.02 |  52.66 | 4.23e-13 | *** |
-| Marriage  |     2 |     5.1 |  2.56 |  22.44 | 1.89e-10 | *** |
-| Residuals | 11030 |  1260.4 |  0.11 |        |          |     |
+| Df        |   Sum | Sq Mean |  Sq F |  value | Pr(>F)     |
+| age2.lvl  |     1 |     2.1 |  2.13 |  18.68 | *1.56e-05* |
+| Sex       |     1 |    42.3 | 42.27 | 369.89 | * < 2e-16* |
+| edu2.lvl  |     1 |     6.0 |  6.02 |  52.66 | *4.23e-13* |
+| Marriage  |     2 |     5.1 |  2.56 |  22.44 | *1.89e-10* |
+| Residuals | 11030 |  1260.4 |  0.11 |        |            |
 
-| $age2.lvl      |            |            |          |       |
-|                |       diff |        lwr |      upr | p adj |
-| 2-1 0.02797284 | 0.01528609 | 0.04065959 | 1.56e-05 |       |
+| $age2.lvl      |            |            |          |
+| diff           |        lwr |        upr |    p adj |
+| 2-1 0.02797284 | 0.01528609 | 0.04065959 | 1.56e-05 |
 
 | $Sex |           |           |           |       |
 |      |      diff |       lwr |       upr | p adj |
@@ -283,13 +285,28 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 |       4-1 | -0.05281859 | -0.11207694 |  0.006439758 | 0.0920759 |
 |       4-2 | -0.01231261 | -0.07260684 |  0.047981625 | 0.8813856 |
 
+**** Summary for P0 and AH0
+
+	 For the somatization in group P0, all four demographical factors
+	 except sex have significant influences on the score of
+	 somatization. In group AH0, all the four demographical factors
+	 have are significant four the score of somatization.
+	 
+	 In group P0, the somatization score difference are significant
+	 between the two age levels, the two education levels, and the
+	 marriage levels 1 and 2.
+
+	 In group AH0,  the somatization score difference are significant
+	 between the two age levels, the two education levels, the two sex
+	 groups, and the marriage levels 1 and 2.
+ 
 **** Sub-group P1
-|           |   Df | Sum Sq | Mean Sq | F value |   Pr(>F) |     |
-| age2.lvl  |    1 |   27.7 |  27.679 | 119.190 |  < 2e-16 | *** |
-| Sex       |    1 |    3.0 |   2.965 |  12.766 | 0.000363 | *** |
-| edu2.lvl  |    1 |    1.8 |   1.793 |   7.719 | 0.005522 | **  |
-| Marriage  |    3 |    5.0 |   1.679 |   7.229 | 8.06e-05 | *** |
-| Residuals | 1730 |  401.8 |   0.232 |         |          |     |
+|           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)     |
+| age2.lvl  |    1 |   27.7 |  27.679 | 119.190 | * < 2e-16* |
+| Sex       |    1 |    3.0 |   2.965 |  12.766 | *0.000363* |
+| edu2.lvl  |    1 |    1.8 |   1.793 |   7.719 | *0.005522* |
+| Marriage  |    3 |    5.0 |   1.679 |   7.229 | *8.06e-05* |
+| Residuals | 1730 |  401.8 |   0.232 |         |            |
 
 | $age2.lvl |           |           |           |       |
 |           |      diff |       lwr |       upr | p adj |
@@ -312,12 +329,12 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 |       4-2 |  0.08192412 | -0.1666546 |  0.33050284 | 0.8316747 |
 |       4-3 |  0.04886567 | -0.7067464 |  0.80447770 | 0.9983644 |
 **** Sub-group AH1
-|           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)   |     |
-| age2.lvl  |    1 |   27.6 |  27.625 |  149.54 | < 2e-16  | *** |
-| Sex       |    1 |   18.1 |  18.059 |   97.76 | < 2e-16  | *** |
-| edu2.lvl  |    1 |    5.0 |   4.964 |   26.87 | 2.33e-07 | *** |
-| Marriage  |    2 |    8.5 |   4.244 |   22.97 | 1.27e-10 | *** |
-| Residuals | 2846 |  525.8 |   0.185 |         |          |     |
+|           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)     |
+| age2.lvl  |    1 |   27.6 |  27.625 |  149.54 | *< 2e-16 * |
+| Sex       |    1 |   18.1 |  18.059 |   97.76 | *< 2e-16 * |
+| edu2.lvl  |    1 |    5.0 |   4.964 |   26.87 | *2.33e-07* |
+| Marriage  |    2 |    8.5 |   4.244 |   22.97 | *1.27e-10* |
+| Residuals | 2846 |  525.8 |   0.185 |         |            |
 
 | $age2.lvl |           |           |           |       |
 |           |      diff |       lwr |       upr | p adj |
@@ -337,13 +354,25 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
  | 4-1 -0.07329521 | -0.19428778 |  0.04769736 | 0.3303983 |
  | 4-2  0.02956160 | -0.09404999 |  0.15317318 | 0.8409205 |
 
+**** Summary for P1 and AH1
+	 For the somatization in group P1, all four demographical factors
+	 have significant influences on the score of
+	 somatization. But education level has a less significance. In group AH1, all the four demographical factors
+	 have are significant four the score of somatization.
+
+	 In both group P1 nad AH1,  the somatization score difference are significant
+	 between the two age levels, the two education levels, the two sex
+	 groups, and the marriage levels 1 and 2.
+
+	 
+ 
 **** Sub-group P2
-| Df        | Sum Sq | Mean Sq |      F |  value |   Pr(>F) |     |
-| age2.lvl  |      1 |    26.6 | 26.558 | 50.419 | 1.60e-12 | *** |
-| Sex       |      1 |     8.6 |  8.628 | 16.380 | 5.34e-05 | *** |
-| edu2.lvl  |      1 |     1.6 |  1.623 |  3.081 | 0.079349 | .   |
-| Marriage  |      3 |    10.2 |  3.406 |  6.467 | 0.000233 | *** |
-| Residuals |   2575 |  1356.4 |  0.527 |        |          |     |
+| Df        | Sum Sq | Mean Sq |      F |  value | Pr(>F)     |
+| age2.lvl  |      1 |    26.6 | 26.558 | 50.419 | *1.60e-12* |
+| Sex       |      1 |     8.6 |  8.628 | 16.380 | *5.34e-05* |
+| edu2.lvl  |      1 |     1.6 |  1.623 |  3.081 | *0.079349* |
+| Marriage  |      3 |    10.2 |  3.406 |  6.467 | *0.000233* |
+| Residuals |   2575 |  1356.4 |  0.527 |        |            |
 
 | $age2.lvl |           |           |           |       |
 |           |      diff |       lwr |       upr | p adj |
@@ -367,11 +396,11 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 |       4-3 |  0.13201398 | -0.9891714 |  1.25319939 | 0.9903720 |
 
 **** Sub-group AH2
-|          | Df | Sum Sq | Mean Sq | F value |   Pr(>F) |     |
-| age2.lvl |  1 |   25.6 |  25.596 |  44.778 |    3e-11 | *** |
-| Sex      |  1 |    0.9 |   0.852 |   1.491 | 0.222177 |     |
-| edu2.lvl |  1 |    1.2 |   1.203 |   2.104 | 0.147111 |     |
-| Marriage |  2 |    8.5 |   4.237 |   7.413 | 0.000623 | *** |
+|          | Df | Sum Sq | Mean Sq | F value | Pr(>F)     |
+| age2.lvl |  1 |   25.6 |  25.596 |  44.778 | *3e-11*    |
+| Sex      |  1 |    0.9 |   0.852 |   1.491 | 0.222177   |
+| edu2.lvl |  1 |    1.2 |   1.203 |   2.104 | 0.147111   |
+| Marriage |  2 |    8.5 |   4.237 |   7.413 | *0.000623* |
 
 | $age2.lvl |           |           |           |       |
 |           |      diff |       lwr |       upr | p adj |
@@ -391,87 +420,19 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 |       4-1 |  0.05486768 | -0.20648146 |  0.31621682 | 0.8749096 |
 |       4-2 |  0.18614287 | -0.08166566 |  0.45395139 | 0.2330664 |
 
+**** Summary for P2 and AH2
+	 For the somatization in group P2, all four demographical factors
+	 except sex have significant influences on the score of
+	 somatization. But education level has less significance. In group
+	 AH2, the four demographical factors age level and marriage have
+	 are significant four the score of somatization.
 
+ 	 In group P2, the somatization score difference are significant
+	 between the two age levels, and the marriage levels 1 and 2.
 
-
-**** Sub-group AH0
-| Df        |   Sum | Sq Mean |  Sq F |  value |   Pr(>F) |     |
-| age2.lvl  |     1 |     2.1 |  2.13 |  18.68 | 1.56e-05 | *** |
-| Sex       |     1 |    42.3 | 42.27 | 369.89 |  < 2e-16 | *** |
-| edu2.lvl  |     1 |     6.0 |  6.02 |  52.66 | 4.23e-13 | *** |
-| Marriage  |     2 |     5.1 |  2.56 |  22.44 | 1.89e-10 | *** |
-| Residuals | 11030 |  1260.4 |  0.11 |        |          |     |
-
-| $age2.lvl      |            |            |          |       |
-|                |       diff |        lwr |      upr | p adj |
-| 2-1 0.02797284 | 0.01528609 | 0.04065959 | 1.56e-05 |       |
-
-| $Sex |           |           |           |       |
-|      |      diff |       lwr |       upr | p adj |
-|  2-1 | 0.1257047 | 0.1128313 | 0.1385781 |     0 |
-
-| $edu2.lvl |            |            |            |       |
-|           |       diff |        lwr |        upr | p adj |
-|       2-1 | 0.04325349 | 0.03062908 | 0.05587791 |     0 |
-
-| $Marriage |             |             |              |           |
-|           |        diff |         lwr |          upr |     p adj |
-|       2-1 | -0.04050599 | -0.05739330 | -0.023618669 | 0.0000001 |
-|       4-1 | -0.05281859 | -0.11207694 |  0.006439758 | 0.0920759 |
-|       4-2 | -0.01231261 | -0.07260684 |  0.047981625 | 0.8813856 |
-
-**** Sub-group AH1
-|           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)   |     |
-| age2.lvl  |    1 |   27.6 |  27.625 |  149.54 | < 2e-16  | *** |
-| Sex       |    1 |   18.1 |  18.059 |   97.76 | < 2e-16  | *** |
-| edu2.lvl  |    1 |    5.0 |   4.964 |   26.87 | 2.33e-07 | *** |
-| Marriage  |    2 |    8.5 |   4.244 |   22.97 | 1.27e-10 | *** |
-| Residuals | 2846 |  525.8 |   0.185 |         |          |     |
-
-| $age2.lvl |           |           |           |       |
-|           |      diff |       lwr |       upr | p adj |
-|       2-1 | 0.2008898 | 0.1686782 | 0.2331014 |     0 |
-
-| $Sex |               |           |           |       |
-|      | diff          |       lwr |       upr | p adj |
-|      | 2-1 0.1662306 | 0.1332336 | 0.1992276 |     0 |
-
-| $edu2.lvl |               |           |           |         |
-|           | diff          |       lwr |       upr |   p adj |
-|           | 2-1 0.0783211 | 0.0467384 | 0.1099038 | 1.2e-06 |
-
- | $Marriage       |             |             |           |
- | diff            |         lwr |         upr |     p adj |
- | 2-1 -0.10285681 | -0.14411950 | -0.06159412 | 0.0000000 |
- | 4-1 -0.07329521 | -0.19428778 |  0.04769736 | 0.3303983 |
- | 4-2  0.02956160 | -0.09404999 |  0.15317318 | 0.8409205 |
-
-
-**** Sub-group AH2
-|          | Df | Sum Sq | Mean Sq | F value |   Pr(>F) |     |
-| age2.lvl |  1 |   25.6 |  25.596 |  44.778 |    3e-11 | *** |
-| Sex      |  1 |    0.9 |   0.852 |   1.491 | 0.222177 |     |
-| edu2.lvl |  1 |    1.2 |   1.203 |   2.104 | 0.147111 |     |
-| Marriage |  2 |    8.5 |   4.237 |   7.413 | 0.000623 | *** |
-
-| $age2.lvl |           |           |           |       |
-|           |      diff |       lwr |       upr | p adj |
-|       2-1 | 0.2521858 | 0.1782682 | 0.3261034 |     0 |
-
-| $Sex |            |             |           |          |
-|      |       diff |         lwr |       upr |    p adj |
-|  2-1 | 0.04699385 | -0.02867791 | 0.1226656 | 0.223373 |
-
-| $edu2.lvl |            |             |           |           |
-|           |       diff |         lwr |       upr |     p adj |
-|       2-1 | 0.05012466 | -0.02208118 | 0.1223305 | 0.1735163 |
-
-| $Marriage |             |             |             |           |
-|           |        diff |         lwr |         upr |     p adj |
-|       2-1 | -0.13127519 | -0.22596160 | -0.03658877 | 0.0033457 |
-|       4-1 |  0.05486768 | -0.20648146 |  0.31621682 | 0.8749096 |
-|       4-2 |  0.18614287 | -0.08166566 |  0.45395139 | 0.2330664 |
-
+	 In group AH2, the somatization score difference are only
+	 significant between the two age levels, and the marriage levels 1 and 2.
+	 
 
 
 *** OCD
