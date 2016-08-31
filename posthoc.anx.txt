@@ -1,0 +1,195 @@
+              Df Sum Sq Mean Sq F value   Pr(>F)    
+age2.lvl       1    6.7   6.664  42.808 7.42e-11 ***
+Sex            1    2.2   2.199  14.123 0.000175 ***
+edu2.lvl       1    1.5   1.538   9.878 0.001694 ** 
+Marriage       3    6.3   2.091  13.433 1.09e-08 ***
+Residuals   2304  358.7   0.156                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
+
+$age2.lvl
+        diff       lwr       upr p adj
+2-1 0.110812 0.0775996 0.1440243     0
+
+$Sex
+          diff        lwr       upr     p adj
+2-1 0.06276381 0.02999353 0.0955341 0.0001771
+
+$edu2.lvl
+           diff         lwr         upr     p adj
+2-1 -0.04903124 -0.08177435 -0.01628814 0.0033523
+
+$Marriage
+           diff        lwr         upr     p adj
+2-1 -0.08451420 -0.1278148 -0.04121361 0.0000034
+3-1 -0.18669660 -0.6946265  0.32123330 0.7805427
+4-1 -0.09760442 -0.3156015  0.12039269 0.6578069
+3-2 -0.10218240 -0.6104781  0.40611328 0.9550843
+4-2 -0.01309022 -0.2319382  0.20575778 0.9987050
+4-3  0.08909218 -0.4622809  0.64046528 0.9758485
+
+               Df Sum Sq Mean Sq F value   Pr(>F)    
+age2.lvl        1    5.2   5.180  71.834  < 2e-16 ***
+Sex             1    2.9   2.887  40.033 2.59e-10 ***
+edu2.lvl        1    0.1   0.065   0.896  0.34379    
+Marriage        2    0.7   0.372   5.159  0.00576 ** 
+Residuals   11030  795.4   0.072                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
+
+$age2.lvl
+           diff         lwr         upr p adj
+2-1 -0.04357591 -0.05365396 -0.03349786     0
+
+$Sex
+          diff        lwr        upr p adj
+2-1 0.03285104 0.02262473 0.04307735     0
+
+$edu2.lvl
+            diff         lwr         upr     p adj
+2-1 -0.004482657 -0.01451119 0.005545873 0.3809506
+
+$Marriage
+            diff          lwr        upr     p adj
+2-1  0.015720595  0.002305719 0.02913547 0.0165949
+4-1  0.007250560 -0.039822838 0.05432396 0.9306743
+4-2 -0.008470035 -0.056366312 0.03942624 0.9096481
+
+              Df Sum Sq Mean Sq F value  Pr(>F)   
+age2.lvl       1    0.0  0.0089   0.039 0.84402   
+Sex            1    0.0  0.0274   0.119 0.72962   
+edu2.lvl       1    1.5  1.5327   6.696 0.00974 **
+Marriage       3    0.7  0.2448   1.070 0.36079   
+Residuals   1730  396.0  0.2289                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
+
+$age2.lvl
+           diff        lwr        upr    p adj
+2-1 0.004574668 -0.0410212 0.05017053 0.844021
+
+$Sex
+           diff         lwr        upr     p adj
+2-1 -0.00793143 -0.05312722 0.03726436 0.7307409
+
+$edu2.lvl
+          diff        lwr       upr     p adj
+2-1 0.05823563 0.01317086 0.1033004 0.0113462
+
+$Marriage
+           diff         lwr       upr     p adj
+2-1 -0.01845816 -0.08178542 0.0448691 0.8768885
+3-1  0.14077544 -0.57045656 0.8520074 0.9569677
+4-1 -0.14368565 -0.38768728 0.1003160 0.4290595
+3-2  0.15923360 -0.55295842 0.8714256 0.9395807
+4-2 -0.12522749 -0.37201347 0.1215585 0.5599030
+4-3 -0.28446108 -1.03462368 0.4657015 0.7636654
+
+              Df Sum Sq Mean Sq F value Pr(>F)  
+age2.lvl       1   0.25  0.2496   2.783 0.0954 .
+Sex            1   0.25  0.2457   2.740 0.0980 .
+edu2.lvl       1   0.43  0.4290   4.784 0.0288 *
+Marriage       2   0.32  0.1616   1.802 0.1652  
+Residuals   2846 255.24  0.0897                 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
+
+$age2.lvl
+           diff         lwr         upr     p adj
+2-1 -0.01909483 -0.04153854 0.003348884 0.0953816
+
+$Sex
+         diff          lwr        upr     p adj
+2-1 0.0193913 -0.003599657 0.04238226 0.0982787
+
+$edu2.lvl
+           diff         lwr          upr     p adj
+2-1 -0.02302409 -0.04502963 -0.001018554 0.0403042
+
+$Marriage
+           diff         lwr        upr     p adj
+2-1 0.007478809 -0.02127135 0.03622896 0.8146744
+4-1 0.066407762 -0.01789491 0.15071043 0.1545922
+4-2 0.058928952 -0.02719854 0.14505645 0.2438907
+
+              Df Sum Sq Mean Sq F value  Pr(>F)   
+age2.lvl       1    3.4   3.385   7.778 0.00533 **
+Sex            1    0.7   0.670   1.539 0.21493   
+edu2.lvl       1    0.0   0.044   0.102 0.74975   
+Marriage       3    2.5   0.836   1.922 0.12387   
+Residuals   2575 1120.6   0.435                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
+
+$age2.lvl
+           diff        lwr         upr     p adj
+2-1 -0.08088179 -0.1377489 -0.02401472 0.0053266
+
+$Sex
+           diff         lwr        upr     p adj
+2-1 -0.03253521 -0.08407255 0.01900213 0.2158678
+
+$edu2.lvl
+           diff         lwr        upr     p adj
+2-1 0.008121633 -0.04279609 0.05903936 0.7544799
+
+$Marriage
+           diff         lwr       upr     p adj
+2-1  0.03300482 -0.03455357 0.1005632 0.5912194
+3-1 -0.65835336 -1.63852715 0.3218204 0.3099382
+4-1  0.06382750 -0.22245385 0.3501089 0.9401057
+3-2 -0.69135818 -1.67175075 0.2890344 0.2674203
+4-2  0.03082269 -0.25620687 0.3178522 0.9926543
+4-3  0.72218087 -0.29691799 1.7412797 0.2632410
+
+              Df Sum Sq Mean Sq F value  Pr(>F)   
+age2.lvl       1    2.8  2.8008   6.664 0.00992 **
+Sex            1    0.8  0.7552   1.797 0.18027   
+edu2.lvl       1    0.0  0.0001   0.000 0.98564   
+Marriage       2    0.7  0.3495   0.832 0.43553   
+Residuals   1684  707.8  0.4203                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2)
+
+$age2.lvl
+          diff        lwr       upr     p adj
+2-1 0.08342103 0.02003869 0.1468034 0.0099218
+
+$Sex
+           diff        lwr        upr     p adj
+2-1 -0.04423135 -0.1091179 0.02065514 0.1813984
+
+$edu2.lvl
+            diff         lwr       upr     p adj
+2-1 0.0005333348 -0.06138123 0.0624479 0.9865221
+
+$Marriage
+            diff         lwr        upr     p adj
+2-1 -0.001539948 -0.08273101 0.07965111 0.9989092
+4-1  0.120237780 -0.10386210 0.34433766 0.4189412
+4-2  0.121777728 -0.10786090 0.35141636 0.4274171
+
