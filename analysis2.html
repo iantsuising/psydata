@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-08-28 Sun 10:04 -->
+<!-- 2016-08-31 Wed 16:14 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Analysis</title>
@@ -156,7 +156,7 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#orgheadline4">2. Grouping</a></li>
 <li><a href="#orgheadline5">3. Total score comparisons</a></li>
-<li><a href="#orgheadline94">4. Analysis after combining ABC together</a>
+<li><a href="#orgheadline121">4. Analysis after combining ABC together</a>
 <ul>
 <li><a href="#orgheadline6">4.1. Demographic factors difference</a></li>
 <li><a href="#orgheadline7">4.2. Psychological factors difference</a></li>
@@ -176,20 +176,20 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline16">4.4.1. P0 and AH0</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline93">4.5. ANOVA Post-hoc testings</a>
+<li><a href="#orgheadline120">4.5. ANOVA Post-hoc testings</a>
 <ul>
 <li><a href="#orgheadline18">4.5.1. Why use ANOVA?</a></li>
 <li><a href="#orgheadline19">4.5.2. Why use Turkey's HSD &amp; What does Turkey's HSD do?</a></li>
 <li><a href="#orgheadline29">4.5.3. So</a></li>
-<li><a href="#orgheadline36">4.5.4. OCD</a></li>
-<li><a href="#orgheadline43">4.5.5. IS</a></li>
-<li><a href="#orgheadline50">4.5.6. Dep</a></li>
-<li><a href="#orgheadline57">4.5.7. Anx</a></li>
-<li><a href="#orgheadline64">4.5.8. Ho</a></li>
-<li><a href="#orgheadline71">4.5.9. PA</a></li>
-<li><a href="#orgheadline78">4.5.10. PI</a></li>
-<li><a href="#orgheadline85">4.5.11. Psy</a></li>
-<li><a href="#orgheadline92">4.5.12. AI</a></li>
+<li><a href="#orgheadline39">4.5.4. OCD</a></li>
+<li><a href="#orgheadline49">4.5.5. IS</a></li>
+<li><a href="#orgheadline59">4.5.6. Dep</a></li>
+<li><a href="#orgheadline69">4.5.7. Anx</a></li>
+<li><a href="#orgheadline79">4.5.8. Ho</a></li>
+<li><a href="#orgheadline89">4.5.9. PA</a></li>
+<li><a href="#orgheadline99">4.5.10. PI</a></li>
+<li><a href="#orgheadline109">4.5.11. Psy</a></li>
+<li><a href="#orgheadline119">4.5.12. AI</a></li>
 </ul>
 </li>
 </ul>
@@ -887,16 +887,23 @@ The bold p-value numbers show that the total scores of the majority groups have 
 </div>
 </div>
 
-<div id="outline-container-orgheadline94" class="outline-2">
-<h2 id="orgheadline94"><span class="section-number-2">4</span> Analysis after combining ABC together</h2>
+<div id="outline-container-orgheadline121" class="outline-2">
+<h2 id="orgheadline121"><span class="section-number-2">4</span> Analysis after combining ABC together</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Combine the group A, B, and C into one group names group P. The following results are based on the comparison between group P and AH.
+Combine the group A, B, and C into one group names group P. The
+following results are based on the comparison between group P and
+AH.
+</p>
+
+<p>
 Sub group naming rule: The Capital letter(s) means the group name, the
 number mean the total score level. For example, the sub-group AH1
-means the observations in it think themselves have no psychological illness and the total score level is 1.
+means the observations in it think themselves have no psychological
+illness and the total score level is 1.
 </p>
 </div>
+
 
 <div id="outline-container-orgheadline6" class="outline-3">
 <h3 id="orgheadline6"><span class="section-number-3">4.1</span> Demographic factors difference</h3>
@@ -1680,8 +1687,8 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: &lt; 2.2e-16
 </div>
 </div>
 
-<div id="outline-container-orgheadline93" class="outline-3">
-<h3 id="orgheadline93"><span class="section-number-3">4.5</span> ANOVA Post-hoc testings</h3>
+<div id="outline-container-orgheadline120" class="outline-3">
+<h3 id="orgheadline120"><span class="section-number-3">4.5</span> ANOVA Post-hoc testings</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Even through the sample size for marriage = 3 is small, we will not
@@ -1702,7 +1709,15 @@ Practically, when we meet the continuous DV/dependent variable
 levels, marriage stages, et c) are categorical, we use ANOVA to
 seek the relationship between DV and IV. The ANOVA tests an
 hypothesis with a categorical explanatory variable and a
-quantitative response variable.\
+quantitative response variable.
+</p>
+
+<p>
+The regression results above seem to be meaningless. Intuitively,
+the reason is that the total score it itself is derived from the
+ten psychology scores. Therefore, we take out the ten psychology
+score, thus to seek the relationship between the demographic
+factors and each psychology score.
 </p>
 </div>
 </div>
@@ -2715,8 +2730,8 @@ groups, and the marriage levels 1 and 2.
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">2-1 0.1662306</td>
+<td class="org-left">2-1</td>
+<td class="org-left">0.1662306</td>
 <td class="org-left">0.1332336</td>
 <td class="org-left">0.1992276</td>
 <td class="org-left">0</td>
@@ -2756,8 +2771,8 @@ groups, and the marriage levels 1 and 2.
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">2-1 0.0783211</td>
+<td class="org-left">2-1</td>
+<td class="org-left">0.0783211</td>
 <td class="org-left">0.0467384</td>
 <td class="org-left">0.1099038</td>
 <td class="org-left">1.2e-06</td>
@@ -2769,7 +2784,9 @@ groups, and the marriage levels 1 and 2.
 
 
 <colgroup>
-<col  class="org-left" />
+<col  class="org-right" />
+
+<col  class="org-right" />
 
 <col  class="org-right" />
 
@@ -2779,35 +2796,40 @@ groups, and the marriage levels 1 and 2.
 </colgroup>
 <tbody>
 <tr>
-<td class="org-left">$Marriage</td>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
 <td class="org-right">&#xa0;</td>
 <td class="org-right">&#xa0;</td>
 <td class="org-right">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">diff</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
 <td class="org-right">lwr</td>
 <td class="org-right">upr</td>
 <td class="org-right">p adj</td>
 </tr>
 
 <tr>
-<td class="org-left">2-1 -0.10285681</td>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.10285681</td>
 <td class="org-right">-0.14411950</td>
 <td class="org-right">-0.06159412</td>
 <td class="org-right">0.0000000</td>
 </tr>
 
 <tr>
-<td class="org-left">4-1 -0.07329521</td>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.07329521</td>
 <td class="org-right">-0.19428778</td>
 <td class="org-right">0.04769736</td>
 <td class="org-right">0.3303983</td>
 </tr>
 
 <tr>
-<td class="org-left">4-2  0.02956160</td>
+<td class="org-right">4-2</td>
+<td class="org-right">0.02956160</td>
 <td class="org-right">-0.09404999</td>
 <td class="org-right">0.15317318</td>
 <td class="org-right">0.8409205</td>
@@ -3380,96 +3402,7940 @@ significant between the two age levels, and the marriage levels 1 and 2.
 </div>
 
 
-
-<div id="outline-container-orgheadline36" class="outline-4">
-<h4 id="orgheadline36"><span class="section-number-4">4.5.4</span> OCD</h4>
+<div id="outline-container-orgheadline39" class="outline-4">
+<h4 id="orgheadline39"><span class="section-number-4">4.5.4</span> OCD</h4>
 <div class="outline-text-4" id="text-4-5-4">
-</div><ol class="org-ol"><li><a id="orgheadline30"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline31"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline32"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline33"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline34"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline35"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline30"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-4-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.3</td>
+<td class="org-right">0.319</td>
+<td class="org-right">2.117</td>
+<td class="org-left">0.1459</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">4.4</td>
+<td class="org-right">4.393</td>
+<td class="org-right">29.160</td>
+<td class="org-left">7.35e-08 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">4.8</td>
+<td class="org-right">4.751</td>
+<td class="org-right">31.536</td>
+<td class="org-left">2.19e-08 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">1.1</td>
+<td class="org-right">0.369</td>
+<td class="org-right">2.450</td>
+<td class="org-left">0.0619 .</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2304</td>
+<td class="org-right">347.1</td>
+<td class="org-right">0.151</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.0242389</td>
+<td class="org-left">-0.05691102</td>
+<td class="org-left">0.008433219</td>
+<td class="org-left">0.1458529</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.08871788</td>
+<td class="org-left">0.05648065</td>
+<td class="org-left">0.1209551</td>
+<td class="org-left">1e-07</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08618259</td>
+<td class="org-left">-0.1183931</td>
+<td class="org-left">-0.0539721</td>
+<td class="org-left">2e-07</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.004710563</td>
+<td class="org-right">-0.037885695</td>
+<td class="org-right">0.04730682</td>
+<td class="org-right">0.9919893</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.415360823</td>
+<td class="org-right">-0.915028617</td>
+<td class="org-right">0.08430697</td>
+<td class="org-right">0.1417057</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.132995775</td>
+<td class="org-right">-0.081455341</td>
+<td class="org-right">0.34744689</td>
+<td class="org-right">0.3819808</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.420071386</td>
+<td class="org-right">-0.920099001</td>
+<td class="org-right">0.07995623</td>
+<td class="org-right">0.1349179</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.128285212</td>
+<td class="org-right">-0.087002950</td>
+<td class="org-right">0.34357337</td>
+<td class="org-right">0.4184527</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.548356598</td>
+<td class="org-right">0.005952269</td>
+<td class="org-right">1.09076093</td>
+<td class="org-right">0.0463794</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline31"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-4-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">23.8</td>
+<td class="org-right">23.805</td>
+<td class="org-right">184.286</td>
+<td class="org-left">&lt; 2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">1.0</td>
+<td class="org-right">1.014</td>
+<td class="org-right">7.853</td>
+<td class="org-left">0.00508 **</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.010</td>
+<td class="org-right">0.074</td>
+<td class="org-left">0.78606</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">1.5</td>
+<td class="org-right">0.774</td>
+<td class="org-right">5.989</td>
+<td class="org-left">0.00251 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">11030</td>
+<td class="org-right">1424.8</td>
+<td class="org-right">0.129</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+
+<p>
+Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.0934152</td>
+<td class="org-left">-0.1069038</td>
+<td class="org-left">-0.07992661</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.01947399</td>
+<td class="org-left">0.005786958</td>
+<td class="org-left">0.03316102</td>
+<td class="org-left">0.0052969</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.001720147</td>
+<td class="org-left">-0.01170217</td>
+<td class="org-left">0.01514247</td>
+<td class="org-left">0.8016579</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.02183672</td>
+<td class="org-right">0.003882068</td>
+<td class="org-right">0.03979138</td>
+<td class="org-right">0.0121532</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.01365234</td>
+<td class="org-right">-0.076656018</td>
+<td class="org-right">0.04935134</td>
+<td class="org-right">0.8674837</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.03548906</td>
+<td class="org-right">-0.099594093</td>
+<td class="org-right">0.02861597</td>
+<td class="org-right">0.3964947</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline32"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline33"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-4-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">5.0</td>
+<td class="org-right">5.035</td>
+<td class="org-right">24.176</td>
+<td class="org-left">9.63e-07 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">6.2</td>
+<td class="org-right">6.172</td>
+<td class="org-right">29.638</td>
+<td class="org-left">5.95e-08 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.4</td>
+<td class="org-right">0.409</td>
+<td class="org-right">1.965</td>
+<td class="org-left">0.161</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">4.7</td>
+<td class="org-right">1.553</td>
+<td class="org-right">7.456</td>
+<td class="org-left">5.84e-05 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1730</td>
+<td class="org-right">360.3</td>
+<td class="org-right">0.208</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.1090336</td>
+<td class="org-left">-0.1525268</td>
+<td class="org-left">-0.06554036</td>
+<td class="org-left">1e-06</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.119149</td>
+<td class="org-left">0.07603735</td>
+<td class="org-left">0.1622606</td>
+<td class="org-left">1e-07</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-</td>
+<td class="org-left">1 -0.03009281</td>
+<td class="org-left">-0.07307944</td>
+<td class="org-left">0.01289382</td>
+<td class="org-left">0.1699196</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.09100407</td>
+<td class="org-right">0.0305971</td>
+<td class="org-right">0.1514110</td>
+<td class="org-right">0.0006415</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.09797902</td>
+<td class="org-right">-0.7764130</td>
+<td class="org-right">0.5804549</td>
+<td class="org-right">0.9825189</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.01763554</td>
+<td class="org-right">-0.2151141</td>
+<td class="org-right">0.2503852</td>
+<td class="org-right">0.9973795</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.18898308</td>
+<td class="org-right">-0.8683328</td>
+<td class="org-right">0.4903666</td>
+<td class="org-right">0.8910302</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.07336852</td>
+<td class="org-right">-0.3087741</td>
+<td class="org-right">0.1620371</td>
+<td class="org-right">0.8537535</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.11561456</td>
+<td class="org-right">-0.5999547</td>
+<td class="org-right">0.8311839</td>
+<td class="org-right">0.9758351</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline34"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-4-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.8</td>
+<td class="org-right">1.8450</td>
+<td class="org-right">15.104</td>
+<td class="org-right">0.000104 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.7</td>
+<td class="org-right">0.7340</td>
+<td class="org-right">6.009</td>
+<td class="org-right">0.014293 *</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0098</td>
+<td class="org-right">0.080</td>
+<td class="org-right">0.776884</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.2</td>
+<td class="org-right">0.1243</td>
+<td class="org-right">1.018</td>
+<td class="org-right">0.361581</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2846</td>
+<td class="org-right">347.6</td>
+<td class="org-right">0.1222</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.05191602</td>
+<td class="org-left">-0.07810934</td>
+<td class="org-left">-0.02572269</td>
+<td class="org-left">0.0001041</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.03351307</td>
+<td class="org-left">-0.06034506</td>
+<td class="org-left">-0.006681074</td>
+<td class="org-left">0.0143841</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.003481909</td>
+<td class="org-left">-0.02916385</td>
+<td class="org-left">0.02220003</td>
+<td class="org-left">0.7903807</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.01377298</td>
+<td class="org-right">-0.01978039</td>
+<td class="org-right">0.04732635</td>
+<td class="org-right">0.6006616</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.02916854</td>
+<td class="org-right">-0.12755544</td>
+<td class="org-right">0.06921835</td>
+<td class="org-right">0.7663162</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.04294152</td>
+<td class="org-right">-0.14345811</td>
+<td class="org-right">0.05757506</td>
+<td class="org-right">0.5757855</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline35"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline36"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-4-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">15.0</td>
+<td class="org-right">14.966</td>
+<td class="org-right">40.531</td>
+<td class="org-left">2.28e-10 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">2.0</td>
+<td class="org-right">2.042</td>
+<td class="org-right">5.531</td>
+<td class="org-left">0.0188 *</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.022</td>
+<td class="org-right">0.061</td>
+<td class="org-left">0.8055</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">8.9</td>
+<td class="org-right">2.964</td>
+<td class="org-right">8.028</td>
+<td class="org-left">2.53e-05 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2575</td>
+<td class="org-right">950.8</td>
+<td class="org-right">0.369</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.170064</td>
+<td class="org-left">-0.2224445</td>
+<td class="org-left">-0.1176835</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.05681648</td>
+<td class="org-left">0.009345197</td>
+<td class="org-left">0.1042878</td>
+<td class="org-left">0.0190054</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.005774962</td>
+<td class="org-left">-0.04112559</td>
+<td class="org-left">0.05267551</td>
+<td class="org-left">0.8092272</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.09618674</td>
+<td class="org-right">0.0339584</td>
+<td class="org-right">0.1584151</td>
+<td class="org-right">0.0004226</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">0.48498116</td>
+<td class="org-right">-0.4178614</td>
+<td class="org-right">1.3878237</td>
+<td class="org-right">0.5114556</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.12568277</td>
+<td class="org-right">-0.1380123</td>
+<td class="org-right">0.3893778</td>
+<td class="org-right">0.6107985</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">0.38879442</td>
+<td class="org-right">-0.5142496</td>
+<td class="org-right">1.2918385</td>
+<td class="org-right">0.6853820</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.02949604</td>
+<td class="org-right">-0.2348882</td>
+<td class="org-right">0.2938803</td>
+<td class="org-right">0.9917812</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">-0.35929839</td>
+<td class="org-right">-1.2979950</td>
+<td class="org-right">0.5793982</td>
+<td class="org-right">0.7586208</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline37"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-4-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0081</td>
+<td class="org-right">0.023</td>
+<td class="org-right">0.880</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.1</td>
+<td class="org-right">0.1016</td>
+<td class="org-right">0.286</td>
+<td class="org-right">0.593</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.6</td>
+<td class="org-right">0.6463</td>
+<td class="org-right">1.821</td>
+<td class="org-right">0.177</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">1.4</td>
+<td class="org-right">0.6918</td>
+<td class="org-right">1.949</td>
+<td class="org-right">0.143</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1684</td>
+<td class="org-right">597.7</td>
+<td class="org-right">0.3549</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2)
+</p>
+</div></li>
+
+
+<li><a id="orgheadline38"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline43" class="outline-4">
-<h4 id="orgheadline43"><span class="section-number-4">4.5.5</span> IS</h4>
+
+<div id="outline-container-orgheadline49" class="outline-4">
+<h4 id="orgheadline49"><span class="section-number-4">4.5.5</span> IS</h4>
 <div class="outline-text-4" id="text-4-5-5">
-</div><ol class="org-ol"><li><a id="orgheadline37"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline38"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline39"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline40"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline41"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline42"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline40"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-5-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">3.98</td>
+<td class="org-right">3.977</td>
+<td class="org-right">35.821</td>
+<td class="org-left">2.5e-09 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.59</td>
+<td class="org-right">0.593</td>
+<td class="org-right">5.338</td>
+<td class="org-left">0.02095 *</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.04</td>
+<td class="org-right">1.044</td>
+<td class="org-right">9.403</td>
+<td class="org-left">0.00219 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">0.20</td>
+<td class="org-right">0.068</td>
+<td class="org-right">0.611</td>
+<td class="org-left">0.60755</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2304</td>
+<td class="org-right">255.83</td>
+<td class="org-right">0.111</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+
+<p>
+Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08560738</td>
+<td class="org-left">-0.1136566</td>
+<td class="org-left">-0.05755812</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.03258838</td>
+<td class="org-left">0.00491247</td>
+<td class="org-left">0.06026428</td>
+<td class="org-left">0.0210278</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04040056</td>
+<td class="org-left">-0.06805351</td>
+<td class="org-left">-0.01274761</td>
+<td class="org-left">0.0042081</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.008467721</td>
+<td class="org-right">-0.02810148</td>
+<td class="org-right">0.04503692</td>
+<td class="org-right">0.9335189</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.019383561</td>
+<td class="org-right">-0.44835207</td>
+<td class="org-right">0.40958495</td>
+<td class="org-right">0.9994396</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.083128240</td>
+<td class="org-right">-0.10097964</td>
+<td class="org-right">0.26723612</td>
+<td class="org-right">0.6516875</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.027851282</td>
+<td class="org-right">-0.45712870</td>
+<td class="org-right">0.40142614</td>
+<td class="org-right">0.9983500</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.074660519</td>
+<td class="org-right">-0.11016597</td>
+<td class="org-right">0.25948701</td>
+<td class="org-right">0.7267959</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.102511801</td>
+<td class="org-right">-0.36314634</td>
+<td class="org-right">0.56816995</td>
+<td class="org-right">0.9421547</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline41"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-5-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">6.7</td>
+<td class="org-right">6.708</td>
+<td class="org-right">80.270</td>
+<td class="org-left">&lt;2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.035</td>
+<td class="org-right">0.416</td>
+<td class="org-left">0.5190</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.5</td>
+<td class="org-right">0.519</td>
+<td class="org-right">6.213</td>
+<td class="org-left">0.0127 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">6.7</td>
+<td class="org-right">3.363</td>
+<td class="org-right">40.244</td>
+<td class="org-left">&lt;2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">11030</td>
+<td class="org-right">921.7</td>
+<td class="org-right">0.084</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04958734</td>
+<td class="org-left">-0.06043634</td>
+<td class="org-left">-0.03873834</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.003604949</td>
+<td class="org-left">-0.00740366</td>
+<td class="org-left">0.01461356</td>
+<td class="org-left">0.5209562</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.01270442</td>
+<td class="org-left">-0.02350012</td>
+<td class="org-left">-0.001908721</td>
+<td class="org-left">0.0210874</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.047145433</td>
+<td class="org-right">0.03270434</td>
+<td class="org-right">0.06158653</td>
+<td class="org-right">0.0000000</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.037960259</td>
+<td class="org-right">-0.01271419</td>
+<td class="org-right">0.08863471</td>
+<td class="org-right">0.1847119</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.009185173</td>
+<td class="org-right">-0.06074545</td>
+<td class="org-right">0.04237510</td>
+<td class="org-right">0.9083752</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline42"></a>Summary for P0 and AH0<br  /></li>
+
+<li><a id="orgheadline43"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-5-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">23.3</td>
+<td class="org-right">23.288</td>
+<td class="org-right">106.622</td>
+<td class="org-left">&lt; 2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.2</td>
+<td class="org-right">0.229</td>
+<td class="org-right">1.048</td>
+<td class="org-left">0.30606</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.9</td>
+<td class="org-right">1.896</td>
+<td class="org-right">8.681</td>
+<td class="org-left">0.00326 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">5.9</td>
+<td class="org-right">1.953</td>
+<td class="org-right">8.944</td>
+<td class="org-left">7.03e-06 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1730</td>
+<td class="org-right">377.9</td>
+<td class="org-right">0.218</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.2344894</td>
+<td class="org-left">-0.2790295</td>
+<td class="org-left">-0.1899492</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.02294695</td>
+<td class="org-left">-0.06709629</td>
+<td class="org-left">0.02120239</td>
+<td class="org-left">0.3081465</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.06477005</td>
+<td class="org-left">-0.1087914</td>
+<td class="org-left">-0.02074869</td>
+<td class="org-left">0.0039529</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.09951747</td>
+<td class="org-right">0.03765646</td>
+<td class="org-right">0.1613785</td>
+<td class="org-right">0.0002158</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.28557496</td>
+<td class="org-right">-0.98033940</td>
+<td class="org-right">0.4091895</td>
+<td class="org-right">0.7157493</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.03013354</td>
+<td class="org-right">-0.20821859</td>
+<td class="org-right">0.2684857</td>
+<td class="org-right">0.9881316</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.38509243</td>
+<td class="org-right">-1.08079467</td>
+<td class="org-right">0.3106098</td>
+<td class="org-right">0.4847964</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.06938393</td>
+<td class="org-right">-0.31045594</td>
+<td class="org-right">0.1716881</td>
+<td class="org-right">0.8808689</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.31570850</td>
+<td class="org-right">-0.41708517</td>
+<td class="org-right">1.0485022</td>
+<td class="org-right">0.6847186</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline44"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-5-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">3.0</td>
+<td class="org-right">2.9509</td>
+<td class="org-right">26.023</td>
+<td class="org-left">3.60e-07 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">1.8</td>
+<td class="org-right">1.8379</td>
+<td class="org-right">16.208</td>
+<td class="org-left">5.82e-05 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.1</td>
+<td class="org-right">0.0590</td>
+<td class="org-right">0.520</td>
+<td class="org-left">0.470816</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">2.0</td>
+<td class="org-right">0.9828</td>
+<td class="org-right">8.666</td>
+<td class="org-left">0.000177 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2846</td>
+<td class="org-right">322.7</td>
+<td class="org-right">0.1134</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr p adj</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.06565746</td>
+<td class="org-left">-0.09089468</td>
+<td class="org-left">-0.04042024</td>
+<td class="org-left">4e-07</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.05303014</td>
+<td class="org-left">-0.07888272</td>
+<td class="org-left">-0.02717756</td>
+<td class="org-left">5.92e-05</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.008537673</td>
+<td class="org-left">-0.03328218</td>
+<td class="org-left">0.01620683</td>
+<td class="org-left">0.4987527</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.048560129</td>
+<td class="org-right">0.01623152</td>
+<td class="org-right">0.08088874</td>
+<td class="org-right">0.0012631</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.006332941</td>
+<td class="org-right">-0.10112854</td>
+<td class="org-right">0.08846265</td>
+<td class="org-right">0.9865617</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.054893070</td>
+<td class="org-right">-0.15174062</td>
+<td class="org-right">0.04195448</td>
+<td class="org-right">0.3790659</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline45"></a>Summary for P1 and AH1<br  /></li>
+
+<li><a id="orgheadline46"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-5-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">51.6</td>
+<td class="org-right">51.61</td>
+<td class="org-right">110.802</td>
+<td class="org-left">&lt; 2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.6</td>
+<td class="org-right">0.58</td>
+<td class="org-right">1.241</td>
+<td class="org-left">0.265</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.2</td>
+<td class="org-right">1.18</td>
+<td class="org-right">2.541</td>
+<td class="org-left">0.111</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">14.4</td>
+<td class="org-right">4.81</td>
+<td class="org-right">10.318</td>
+<td class="org-left">9.48e-07 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2575</td>
+<td class="org-right">1199.3</td>
+<td class="org-right">0.47</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+
+<p>
+Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.3158056</td>
+<td class="org-left">-0.3746355</td>
+<td class="org-left">-0.2569756</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.03023206</td>
+<td class="org-left">-0.02308419</td>
+<td class="org-left">0.08354831</td>
+<td class="org-left">0.2662908</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04198255</td>
+<td class="org-left">-0.0946578</td>
+<td class="org-left">0.0106927</td>
+<td class="org-left">0.1182131</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.12589417</td>
+<td class="org-right">0.05600388</td>
+<td class="org-right">0.1957845</td>
+<td class="org-right">0.0000227</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">0.07451240</td>
+<td class="org-right">-0.93949398</td>
+<td class="org-right">1.0885188</td>
+<td class="org-right">0.9976103</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.14743286</td>
+<td class="org-right">-0.14873005</td>
+<td class="org-right">0.4435958</td>
+<td class="org-right">0.5759605</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.05138177</td>
+<td class="org-right">-1.06561449</td>
+<td class="org-right">0.9628510</td>
+<td class="org-right">0.9992114</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.02153869</td>
+<td class="org-right">-0.27539825</td>
+<td class="org-right">0.3184756</td>
+<td class="org-right">0.9977007</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.07292046</td>
+<td class="org-right">-0.98135456</td>
+<td class="org-right">1.1271955</td>
+<td class="org-right">0.9980041</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline47"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-5-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.3</td>
+<td class="org-right">0.3161</td>
+<td class="org-right">0.785</td>
+<td class="org-left">0.37560</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">2.9</td>
+<td class="org-right">2.8657</td>
+<td class="org-right">7.122</td>
+<td class="org-left">0.00769 **</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0025</td>
+<td class="org-right">0.006</td>
+<td class="org-left">0.93771</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">1.9</td>
+<td class="org-right">0.9727</td>
+<td class="org-right">2.417</td>
+<td class="org-left">0.08947 .</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1684</td>
+<td class="org-right">677.6</td>
+<td class="org-right">0.4024</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+
+<p>
+Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.02802364</td>
+<td class="org-left">-0.09004149</td>
+<td class="org-left">0.03399421</td>
+<td class="org-left">0.3755963</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08616223</td>
+<td class="org-left">-0.1496519</td>
+<td class="org-left">-0.0226726</td>
+<td class="org-left">0.0078465</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.002266255</td>
+<td class="org-left">-0.05831542</td>
+<td class="org-left">0.06284793</td>
+<td class="org-left">0.9415191</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.06407042</td>
+<td class="org-right">-0.01537277</td>
+<td class="org-right">0.1435136</td>
+<td class="org-right">0.1413149</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.07806062</td>
+<td class="org-right">-0.14121486</td>
+<td class="org-right">0.2973361</td>
+<td class="org-right">0.6812500</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.01399019</td>
+<td class="org-right">-0.21070480</td>
+<td class="org-right">0.2386852</td>
+<td class="org-right">0.9883085</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+
+<li><a id="orgheadline48"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline50" class="outline-4">
-<h4 id="orgheadline50"><span class="section-number-4">4.5.6</span> Dep</h4>
+
+<div id="outline-container-orgheadline59" class="outline-4">
+<h4 id="orgheadline59"><span class="section-number-4">4.5.6</span> Dep</h4>
 <div class="outline-text-4" id="text-4-5-6">
-</div><ol class="org-ol"><li><a id="orgheadline44"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline45"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline46"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline47"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline48"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline49"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline50"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-6-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">6.76</td>
+<td class="org-right">6.756</td>
+<td class="org-right">51.116</td>
+<td class="org-left">1.16e-12 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">1.22</td>
+<td class="org-right">1.225</td>
+<td class="org-right">9.266</td>
+<td class="org-left">0.00236 **</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">2.35</td>
+<td class="org-right">2.345</td>
+<td class="org-right">17.745</td>
+<td class="org-left">2.62e-05 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">7.06</td>
+<td class="org-right">2.354</td>
+<td class="org-right">17.808</td>
+<td class="org-left">2.00e-11 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2304</td>
+<td class="org-right">304.53</td>
+<td class="org-right">0.132</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.1115747</td>
+<td class="org-left">0.08097184</td>
+<td class="org-left">0.1421775</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.04684272</td>
+<td class="org-left">0.01664721</td>
+<td class="org-left">0.07703823</td>
+<td class="org-left">0.0023757</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.06055369</td>
+<td class="org-left">-0.09072416</td>
+<td class="org-left">-0.03038322</td>
+<td class="org-left">8.54e-05</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.08365541</td>
+<td class="org-right">-0.12355387</td>
+<td class="org-right">-0.04375696</td>
+<td class="org-right">0.0000005</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">0.12657663</td>
+<td class="org-right">-0.34144506</td>
+<td class="org-right">0.59459831</td>
+<td class="org-right">0.8989175</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.16468433</td>
+<td class="org-right">-0.03618467</td>
+<td class="org-right">0.36555334</td>
+<td class="org-right">0.1508617</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">0.21023204</td>
+<td class="org-right">-0.25812668</td>
+<td class="org-right">0.67859076</td>
+<td class="org-right">0.6559713</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.24833975</td>
+<td class="org-right">0.04668671</td>
+<td class="org-right">0.44999278</td>
+<td class="org-right">0.0085066</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.03810771</td>
+<td class="org-right">-0.46994382</td>
+<td class="org-right">0.54615924</td>
+<td class="org-right">0.9974592</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline51"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-6-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.4</td>
+<td class="org-right">1.415</td>
+<td class="org-right">15.051</td>
+<td class="org-left">0.000105 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">6.2</td>
+<td class="org-right">6.185</td>
+<td class="org-right">65.786</td>
+<td class="org-left">5.56e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.1</td>
+<td class="org-right">0.107</td>
+<td class="org-right">1.141</td>
+<td class="org-left">0.285433</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.4</td>
+<td class="org-right">0.220</td>
+<td class="org-right">2.343</td>
+<td class="org-left">0.096120 .</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">11030</td>
+<td class="org-right">1037.1</td>
+<td class="org-right">0.094</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.02277651</td>
+<td class="org-left">-0.03428459</td>
+<td class="org-left">-0.01126844</td>
+<td class="org-left">0.0001053</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.04808769</td>
+<td class="org-left">0.03641032</td>
+<td class="org-left">0.05976506</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.005775698</td>
+<td class="org-left">-0.01722723</td>
+<td class="org-left">0.005675831</td>
+<td class="org-left">0.3228626</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.011720507</td>
+<td class="org-right">-0.003597874</td>
+<td class="org-right">0.02703889</td>
+<td class="org-right">0.1717822</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.018148234</td>
+<td class="org-right">-0.035604648</td>
+<td class="org-right">0.07190112</td>
+<td class="org-right">0.7083361</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.006427727</td>
+<td class="org-right">-0.048264797</td>
+<td class="org-right">0.06112025</td>
+<td class="org-right">0.9590298</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline52"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline53"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-6-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.09</td>
+<td class="org-right">0.089</td>
+<td class="org-right">0.495</td>
+<td class="org-right">0.48164</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">5.05</td>
+<td class="org-right">5.051</td>
+<td class="org-right">28.067</td>
+<td class="org-right">1.32e-07 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.26</td>
+<td class="org-right">1.259</td>
+<td class="org-right">6.998</td>
+<td class="org-right">0.00823 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">0.53</td>
+<td class="org-right">0.177</td>
+<td class="org-right">0.984</td>
+<td class="org-right">0.39951</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1730</td>
+<td class="org-right">311.34</td>
+<td class="org-right">0.180</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.01450824</td>
+<td class="org-left">-0.05493836</td>
+<td class="org-left">0.02592188</td>
+<td class="org-left">0.4816395</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.1077824</td>
+<td class="org-left">-0.1478578</td>
+<td class="org-left">-0.06770708</td>
+<td class="org-left">1e-07</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.05278891</td>
+<td class="org-left">0.01282972</td>
+<td class="org-left">0.0927481</td>
+<td class="org-left">0.0096484</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.02772908</td>
+<td class="org-right">-0.02842357</td>
+<td class="org-right">0.08388173</td>
+<td class="org-right">0.5823123</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">0.16147652</td>
+<td class="org-right">-0.46917700</td>
+<td class="org-right">0.79213005</td>
+<td class="org-right">0.9125940</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.05634513</td>
+<td class="org-right">-0.16001254</td>
+<td class="org-right">0.27270279</td>
+<td class="org-right">0.9085286</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">0.13374744</td>
+<td class="org-right">-0.49775734</td>
+<td class="org-right">0.76525222</td>
+<td class="org-right">0.9480021</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.02861605</td>
+<td class="org-right">-0.19021051</td>
+<td class="org-right">0.24744260</td>
+<td class="org-right">0.9869012</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">-0.10513139</td>
+<td class="org-right">-0.77030491</td>
+<td class="org-right">0.56004213</td>
+<td class="org-right">0.9773174</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline54"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-6-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.05</td>
+<td class="org-right">0.0523</td>
+<td class="org-right">0.516</td>
+<td class="org-right">0.47261</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.68</td>
+<td class="org-right">0.6843</td>
+<td class="org-right">6.758</td>
+<td class="org-right">0.00938 **</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.35</td>
+<td class="org-right">0.3522</td>
+<td class="org-right">3.478</td>
+<td class="org-right">0.06228 .</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.22</td>
+<td class="org-right">0.1103</td>
+<td class="org-right">1.090</td>
+<td class="org-right">0.33650</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2846</td>
+<td class="org-right">288.20</td>
+<td class="org-right">0.1013</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.008736955</td>
+<td class="org-left">-0.0151118</td>
+<td class="org-left">0.03258571</td>
+<td class="org-left">0.4726096</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.03235927</td>
+<td class="org-left">0.007929007</td>
+<td class="org-left">0.05678953</td>
+<td class="org-left">0.0094474</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.02086257</td>
+<td class="org-left">-0.04424572</td>
+<td class="org-left">0.002520581</td>
+<td class="org-left">0.0803238</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.009515847</td>
+<td class="org-right">-0.02103416</td>
+<td class="org-right">0.04006585</td>
+<td class="org-right">0.7454461</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.050676763</td>
+<td class="org-right">-0.03890352</td>
+<td class="org-right">0.14025704</td>
+<td class="org-right">0.3804700</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.041160916</td>
+<td class="org-right">-0.05035843</td>
+<td class="org-right">0.13268026</td>
+<td class="org-right">0.5424472</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline55"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline56"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-6-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.8</td>
+<td class="org-right">0.837</td>
+<td class="org-right">2.269</td>
+<td class="org-left">0.132132</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">25.6</td>
+<td class="org-right">25.624</td>
+<td class="org-right">69.470</td>
+<td class="org-left">&lt; 2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">5.0</td>
+<td class="org-right">4.955</td>
+<td class="org-right">13.433</td>
+<td class="org-left">0.000252 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">3.2</td>
+<td class="org-right">1.053</td>
+<td class="org-right">2.856</td>
+<td class="org-left">0.035830 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2575</td>
+<td class="org-right">949.8</td>
+<td class="org-right">0.369</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.0402146</td>
+<td class="org-left">-0.0925681</td>
+<td class="org-left">0.01213889</td>
+<td class="org-left">0.1321316</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.201262</td>
+<td class="org-left">-0.2487088</td>
+<td class="org-left">-0.1538152</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.08590557</td>
+<td class="org-left">0.03902923</td>
+<td class="org-left">0.1327819</td>
+<td class="org-left">0.0003324</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.03938558</td>
+<td class="org-right">-0.02281065</td>
+<td class="org-right">0.1015818</td>
+<td class="org-right">0.3630061</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">0.25197325</td>
+<td class="org-right">-0.65040345</td>
+<td class="org-right">1.1543499</td>
+<td class="org-right">0.8900417</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.23694236</td>
+<td class="org-right">-0.02661663</td>
+<td class="org-right">0.5005014</td>
+<td class="org-right">0.0957369</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">0.21258767</td>
+<td class="org-right">-0.68999045</td>
+<td class="org-right">1.1151658</td>
+<td class="org-right">0.9303596</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.19755678</td>
+<td class="org-right">-0.06669103</td>
+<td class="org-right">0.4618046</td>
+<td class="org-right">0.2190146</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">-0.01503088</td>
+<td class="org-right">-0.95324314</td>
+<td class="org-right">0.9231814</td>
+<td class="org-right">0.9999749</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline57"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-6-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.9</td>
+<td class="org-right">1.8701</td>
+<td class="org-right">4.947</td>
+<td class="org-left">0.0263 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">1.1</td>
+<td class="org-right">1.0520</td>
+<td class="org-right">2.783</td>
+<td class="org-left">0.0955 .</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0001</td>
+<td class="org-right">0.000</td>
+<td class="org-left">0.9899</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">2.7</td>
+<td class="org-right">1.3403</td>
+<td class="org-right">3.545</td>
+<td class="org-left">0.0291 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1684</td>
+<td class="org-right">636.6</td>
+<td class="org-right">0.3780</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.06816529</td>
+<td class="org-left">0.008053373</td>
+<td class="org-left">0.1282772</td>
+<td class="org-left">0.0262709</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.05220547</td>
+<td class="org-left">-0.009333001</td>
+<td class="org-left">0.1137439</td>
+<td class="org-left">0.0963166</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.0003570174</td>
+<td class="org-left">-0.05836287</td>
+<td class="org-left">0.0590769</td>
+<td class="org-left">0.9904867</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.002518849</td>
+<td class="org-right">-0.07952059</td>
+<td class="org-right">0.0744829</td>
+<td class="org-right">0.9967590</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.235764899</td>
+<td class="org-right">0.02322818</td>
+<td class="org-right">0.4483016</td>
+<td class="org-right">0.0253117</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.238283748</td>
+<td class="org-right">0.02049407</td>
+<td class="org-right">0.4560734</td>
+<td class="org-right">0.0279355</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline58"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline57" class="outline-4">
-<h4 id="orgheadline57"><span class="section-number-4">4.5.7</span> Anx</h4>
+<div id="outline-container-orgheadline69" class="outline-4">
+<h4 id="orgheadline69"><span class="section-number-4">4.5.7</span> Anx</h4>
 <div class="outline-text-4" id="text-4-5-7">
-</div><ol class="org-ol"><li><a id="orgheadline51"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline52"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline53"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline54"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline55"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline56"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline60"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-7-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">6.7</td>
+<td class="org-right">6.664</td>
+<td class="org-right">42.808</td>
+<td class="org-left">7.42e-11 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">2.2</td>
+<td class="org-right">2.199</td>
+<td class="org-right">14.123</td>
+<td class="org-left">0.000175 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.5</td>
+<td class="org-right">1.538</td>
+<td class="org-right">9.878</td>
+<td class="org-left">0.001694 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">6.3</td>
+<td class="org-right">2.091</td>
+<td class="org-right">13.433</td>
+<td class="org-left">1.09e-08 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2304</td>
+<td class="org-right">358.7</td>
+<td class="org-right">0.156</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1 0.110812</td>
+<td class="org-left">0.0775996</td>
+<td class="org-left">0.1440243</td>
+<td class="org-left">0</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.06276381</td>
+<td class="org-left">0.02999353</td>
+<td class="org-left">0.0955341</td>
+<td class="org-left">0.0001771</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04903124</td>
+<td class="org-left">-0.08177435</td>
+<td class="org-left">-0.01628814</td>
+<td class="org-left">0.0033523</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.08451420</td>
+<td class="org-right">-0.1278148</td>
+<td class="org-right">-0.04121361</td>
+<td class="org-right">0.0000034</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.18669660</td>
+<td class="org-right">-0.6946265</td>
+<td class="org-right">0.32123330</td>
+<td class="org-right">0.7805427</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.09760442</td>
+<td class="org-right">-0.3156015</td>
+<td class="org-right">0.12039269</td>
+<td class="org-right">0.6578069</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.10218240</td>
+<td class="org-right">-0.6104781</td>
+<td class="org-right">0.40611328</td>
+<td class="org-right">0.9550843</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.01309022</td>
+<td class="org-right">-0.2319382</td>
+<td class="org-right">0.20575778</td>
+<td class="org-right">0.9987050</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.08909218</td>
+<td class="org-right">-0.4622809</td>
+<td class="org-right">0.64046528</td>
+<td class="org-right">0.9758485</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline61"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-7-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">5.2</td>
+<td class="org-right">5.180</td>
+<td class="org-right">71.834</td>
+<td class="org-left">&lt; 2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">2.9</td>
+<td class="org-right">2.887</td>
+<td class="org-right">40.033</td>
+<td class="org-left">2.59e-10 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.1</td>
+<td class="org-right">0.065</td>
+<td class="org-right">0.896</td>
+<td class="org-left">0.34379</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.7</td>
+<td class="org-right">0.372</td>
+<td class="org-right">5.159</td>
+<td class="org-left">0.00576 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">11030</td>
+<td class="org-right">795.4</td>
+<td class="org-right">0.072</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+
+<p>
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04357591</td>
+<td class="org-left">-0.05365396</td>
+<td class="org-left">-0.03349786</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.03285104</td>
+<td class="org-left">0.02262473</td>
+<td class="org-left">0.04307735</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.004482657</td>
+<td class="org-left">-0.01451119</td>
+<td class="org-left">0.005545873</td>
+<td class="org-left">0.3809506</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.015720595</td>
+<td class="org-right">0.002305719</td>
+<td class="org-right">0.02913547</td>
+<td class="org-right">0.0165949</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.007250560</td>
+<td class="org-right">-0.039822838</td>
+<td class="org-right">0.05432396</td>
+<td class="org-right">0.9306743</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.008470035</td>
+<td class="org-right">-0.056366312</td>
+<td class="org-right">0.03942624</td>
+<td class="org-right">0.9096481</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline62"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline63"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-7-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0089</td>
+<td class="org-right">0.039</td>
+<td class="org-right">0.84402</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0274</td>
+<td class="org-right">0.119</td>
+<td class="org-right">0.72962</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.5</td>
+<td class="org-right">1.5327</td>
+<td class="org-right">6.696</td>
+<td class="org-right">0.00974 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">0.7</td>
+<td class="org-right">0.2448</td>
+<td class="org-right">1.070</td>
+<td class="org-right">0.36079</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1730</td>
+<td class="org-right">396.0</td>
+<td class="org-right">0.2289</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;    95% family-wise confidence level
+</p>
+
+<p>
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.004574668</td>
+<td class="org-left">-0.0410212</td>
+<td class="org-left">0.05017053</td>
+<td class="org-left">0.844021</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.00793143</td>
+<td class="org-left">-0.05312722</td>
+<td class="org-left">0.03726436</td>
+<td class="org-left">0.7307409</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.05823563</td>
+<td class="org-left">0.01317086</td>
+<td class="org-left">0.1033004</td>
+<td class="org-left">0.0113462</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.01845816</td>
+<td class="org-right">-0.08178542</td>
+<td class="org-right">0.0448691</td>
+<td class="org-right">0.8768885</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">0.14077544</td>
+<td class="org-right">-0.57045656</td>
+<td class="org-right">0.8520074</td>
+<td class="org-right">0.9569677</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.14368565</td>
+<td class="org-right">-0.38768728</td>
+<td class="org-right">0.1003160</td>
+<td class="org-right">0.4290595</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">0.15923360</td>
+<td class="org-right">-0.55295842</td>
+<td class="org-right">0.8714256</td>
+<td class="org-right">0.9395807</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.12522749</td>
+<td class="org-right">-0.37201347</td>
+<td class="org-right">0.1215585</td>
+<td class="org-right">0.5599030</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">-0.28446108</td>
+<td class="org-right">-1.03462368</td>
+<td class="org-right">0.4657015</td>
+<td class="org-right">0.7636654</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline64"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-7-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.25</td>
+<td class="org-right">0.2496</td>
+<td class="org-right">2.783</td>
+<td class="org-left">0.0954 .</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.25</td>
+<td class="org-right">0.2457</td>
+<td class="org-right">2.740</td>
+<td class="org-left">0.0980 .</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.43</td>
+<td class="org-right">0.4290</td>
+<td class="org-right">4.784</td>
+<td class="org-left">0.0288 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.32</td>
+<td class="org-right">0.1616</td>
+<td class="org-right">1.802</td>
+<td class="org-left">0.1652</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2846</td>
+<td class="org-right">255.24</td>
+<td class="org-right">0.0897</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.01909483</td>
+<td class="org-left">-0.04153854</td>
+<td class="org-left">0.003348884</td>
+<td class="org-left">0.0953816</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.0193913</td>
+<td class="org-left">-0.003599657</td>
+<td class="org-left">0.04238226</td>
+<td class="org-left">0.0982787</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.02302409</td>
+<td class="org-left">-0.04502963</td>
+<td class="org-left">-0.001018554</td>
+<td class="org-left">0.0403042</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.007478809</td>
+<td class="org-right">-0.02127135</td>
+<td class="org-right">0.03622896</td>
+<td class="org-right">0.8146744</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.066407762</td>
+<td class="org-right">-0.01789491</td>
+<td class="org-right">0.15071043</td>
+<td class="org-right">0.1545922</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.058928952</td>
+<td class="org-right">-0.02719854</td>
+<td class="org-right">0.14505645</td>
+<td class="org-right">0.2438907</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline65"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline66"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-7-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">3.4</td>
+<td class="org-right">3.385</td>
+<td class="org-right">7.778</td>
+<td class="org-right">0.00533 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.7</td>
+<td class="org-right">0.670</td>
+<td class="org-right">1.539</td>
+<td class="org-right">0.21493</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.044</td>
+<td class="org-right">0.102</td>
+<td class="org-right">0.74975</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">2.5</td>
+<td class="org-right">0.836</td>
+<td class="org-right">1.922</td>
+<td class="org-right">0.12387</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2575</td>
+<td class="org-right">1120.6</td>
+<td class="org-right">0.435</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08088179</td>
+<td class="org-left">-0.1377489</td>
+<td class="org-left">-0.02401472</td>
+<td class="org-left">0.0053266</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.03253521</td>
+<td class="org-left">-0.08407255</td>
+<td class="org-left">0.01900213</td>
+<td class="org-left">0.2158678</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.008121633</td>
+<td class="org-left">-0.04279609</td>
+<td class="org-left">0.05903936</td>
+<td class="org-left">0.7544799</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.03300482</td>
+<td class="org-right">-0.03455357</td>
+<td class="org-right">0.1005632</td>
+<td class="org-right">0.5912194</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.65835336</td>
+<td class="org-right">-1.63852715</td>
+<td class="org-right">0.3218204</td>
+<td class="org-right">0.3099382</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.06382750</td>
+<td class="org-right">-0.22245385</td>
+<td class="org-right">0.3501089</td>
+<td class="org-right">0.9401057</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.69135818</td>
+<td class="org-right">-1.67175075</td>
+<td class="org-right">0.2890344</td>
+<td class="org-right">0.2674203</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.03082269</td>
+<td class="org-right">-0.25620687</td>
+<td class="org-right">0.3178522</td>
+<td class="org-right">0.9926543</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.72218087</td>
+<td class="org-right">-0.29691799</td>
+<td class="org-right">1.7412797</td>
+<td class="org-right">0.2632410</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline67"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-7-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">2.8</td>
+<td class="org-right">2.8008</td>
+<td class="org-right">6.664</td>
+<td class="org-right">0.00992 **</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.8</td>
+<td class="org-right">0.7552</td>
+<td class="org-right">1.797</td>
+<td class="org-right">0.18027</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.0001</td>
+<td class="org-right">0.000</td>
+<td class="org-right">0.98564</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.7</td>
+<td class="org-right">0.3495</td>
+<td class="org-right">0.832</td>
+<td class="org-right">0.43553</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1684</td>
+<td class="org-right">707.8</td>
+<td class="org-right">0.4203</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.08342103</td>
+<td class="org-left">0.02003869</td>
+<td class="org-left">0.1468034</td>
+<td class="org-left">0.0099218</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04423135</td>
+<td class="org-left">-0.1091179</td>
+<td class="org-left">0.02065514</td>
+<td class="org-left">0.1813984</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.0005333348</td>
+<td class="org-left">-0.06138123</td>
+<td class="org-left">0.0624479</td>
+<td class="org-left">0.9865221</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.001539948</td>
+<td class="org-right">-0.08273101</td>
+<td class="org-right">0.07965111</td>
+<td class="org-right">0.9989092</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.120237780</td>
+<td class="org-right">-0.10386210</td>
+<td class="org-right">0.34433766</td>
+<td class="org-right">0.4189412</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.121777728</td>
+<td class="org-right">-0.10786090</td>
+<td class="org-right">0.35141636</td>
+<td class="org-right">0.4274171</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+
+<li><a id="orgheadline68"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline64" class="outline-4">
-<h4 id="orgheadline64"><span class="section-number-4">4.5.8</span> Ho</h4>
+<div id="outline-container-orgheadline79" class="outline-4">
+<h4 id="orgheadline79"><span class="section-number-4">4.5.8</span> Ho</h4>
 <div class="outline-text-4" id="text-4-5-8">
-</div><ol class="org-ol"><li><a id="orgheadline58"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline59"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline60"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline61"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline62"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline63"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline70"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-8-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.6</td>
+<td class="org-right">0.621</td>
+<td class="org-right">3.691</td>
+<td class="org-left">0.0548 .</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.5</td>
+<td class="org-right">0.529</td>
+<td class="org-right">3.148</td>
+<td class="org-left">0.0762 .</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">4.2</td>
+<td class="org-right">4.240</td>
+<td class="org-right">25.213</td>
+<td class="org-left">5.53e-07 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">9.4</td>
+<td class="org-right">3.119</td>
+<td class="org-right">18.544</td>
+<td class="org-left">6.92e-12 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2304</td>
+<td class="org-right">387.5</td>
+<td class="org-right">0.168</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.03381963</td>
+<td class="org-left">-0.0007010463</td>
+<td class="org-left">0.0683403</td>
+<td class="org-left">0.0548335</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.03079746</td>
+<td class="org-left">-0.003263724</td>
+<td class="org-left">0.06485864</td>
+<td class="org-left">0.0763454</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08142043</td>
+<td class="org-left">-0.1154534</td>
+<td class="org-left">-0.0473875</td>
+<td class="org-left">2.9e-06</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.10394605</td>
+<td class="org-right">-0.1489524</td>
+<td class="org-right">-0.05893974</td>
+<td class="org-right">0.0000000</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.22825226</td>
+<td class="org-right">-0.7561907</td>
+<td class="org-right">0.29968620</td>
+<td class="org-right">0.6824607</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.03474103</td>
+<td class="org-right">-0.2613256</td>
+<td class="org-right">0.19184350</td>
+<td class="org-right">0.9792334</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.12430621</td>
+<td class="org-right">-0.6526248</td>
+<td class="org-right">0.40401243</td>
+<td class="org-right">0.9305436</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.06920502</td>
+<td class="org-right">-0.1582639</td>
+<td class="org-right">0.29667395</td>
+<td class="org-right">0.8625772</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.19351123</td>
+<td class="org-right">-0.3795818</td>
+<td class="org-right">0.76660421</td>
+<td class="org-right">0.8213469</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline71"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-8-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">7.4</td>
+<td class="org-right">7.353</td>
+<td class="org-right">88.828</td>
+<td class="org-right">&lt; 2e-16 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">1.8</td>
+<td class="org-right">1.751</td>
+<td class="org-right">21.152</td>
+<td class="org-right">4.29e-06 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.021</td>
+<td class="org-right">0.259</td>
+<td class="org-right">0.611</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">0.4</td>
+<td class="org-right">0.190</td>
+<td class="org-right">2.291</td>
+<td class="org-right">0.101</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">11030</td>
+<td class="org-right">913.1</td>
+<td class="org-right">0.083</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.05191895</td>
+<td class="org-left">-0.062717</td>
+<td class="org-left">-0.04112089</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.02558517</td>
+<td class="org-left">0.01462826</td>
+<td class="org-left">0.03654208</td>
+<td class="org-left">4.8e-06</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.002583218</td>
+<td class="org-left">-0.008161785</td>
+<td class="org-left">0.01332822</td>
+<td class="org-left">0.6374724</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">0.001159844</td>
+<td class="org-right">-0.01321344</td>
+<td class="org-right">0.015533125</td>
+<td class="org-right">0.9804697</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.044767579</td>
+<td class="org-right">-0.09520406</td>
+<td class="org-right">0.005668906</td>
+<td class="org-right">0.0939100</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.045927423</td>
+<td class="org-right">-0.09724558</td>
+<td class="org-right">0.005390731</td>
+<td class="org-right">0.0903171</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline72"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline73"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-8-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">16.2</td>
+<td class="org-right">16.202</td>
+<td class="org-right">48.820</td>
+<td class="org-left">3.99e-12 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.5</td>
+<td class="org-right">0.523</td>
+<td class="org-right">1.576</td>
+<td class="org-left">0.2095</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.0</td>
+<td class="org-right">0.009</td>
+<td class="org-right">0.028</td>
+<td class="org-left">0.8663</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">3.3</td>
+<td class="org-right">1.088</td>
+<td class="org-right">3.278</td>
+<td class="org-left">0.0203 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1730</td>
+<td class="org-right">574.1</td>
+<td class="org-right">0.332</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.1955896</td>
+<td class="org-left">-0.2504927</td>
+<td class="org-left">-0.1406864</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.03468435</td>
+<td class="org-left">-0.08910576</td>
+<td class="org-left">0.01973705</td>
+<td class="org-left">0.2114624</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.004562303</td>
+<td class="org-left">-0.05882595</td>
+<td class="org-left">0.04970134</td>
+<td class="org-left">0.86904</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.06767983</td>
+<td class="org-right">-0.1439338</td>
+<td class="org-right">0.008574154</td>
+<td class="org-right">0.1025148</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.50786247</td>
+<td class="org-right">-1.3642752</td>
+<td class="org-right">0.348550221</td>
+<td class="org-right">0.4226842</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.10064831</td>
+<td class="org-right">-0.3944569</td>
+<td class="org-right">0.193160319</td>
+<td class="org-right">0.8147832</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.44018264</td>
+<td class="org-right">-1.2977513</td>
+<td class="org-right">0.417386036</td>
+<td class="org-right">0.5502753</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">-0.03296849</td>
+<td class="org-right">-0.3301298</td>
+<td class="org-right">0.264192844</td>
+<td class="org-right">0.9919062</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.40721416</td>
+<td class="org-right">-0.4960759</td>
+<td class="org-right">1.310504188</td>
+<td class="org-right">0.6526719</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline74"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-8-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">4.8</td>
+<td class="org-right">4.762</td>
+<td class="org-right">24.741</td>
+<td class="org-left">6.95e-07 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">0.1</td>
+<td class="org-right">0.052</td>
+<td class="org-right">0.272</td>
+<td class="org-left">0.6018</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.3</td>
+<td class="org-right">0.275</td>
+<td class="org-right">1.428</td>
+<td class="org-left">0.2322</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">1.6</td>
+<td class="org-right">0.780</td>
+<td class="org-right">4.053</td>
+<td class="org-left">0.0175 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2846</td>
+<td class="org-right">547.7</td>
+<td class="org-right">0.192</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08340398</td>
+<td class="org-left">-0.1162826</td>
+<td class="org-left">-0.05052537</td>
+<td class="org-left">7e-07</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.008955565</td>
+<td class="org-left">-0.02472472</td>
+<td class="org-left">0.04263585</td>
+<td class="org-left">0.6021463</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">0.01842954</td>
+<td class="org-left">-0.01380716</td>
+<td class="org-left">0.05066625</td>
+<td class="org-left">0.2623922</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.04414661</td>
+<td class="org-right">-0.08626375</td>
+<td class="org-right">-0.002029469</td>
+<td class="org-right">0.0373350</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">-0.02342970</td>
+<td class="org-right">-0.14692774</td>
+<td class="org-right">0.100068338</td>
+<td class="org-right">0.8966720</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.02071691</td>
+<td class="org-right">-0.10545438</td>
+<td class="org-right">0.146888199</td>
+<td class="org-right">0.9215434</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><a id="orgheadline75"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline76"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-8-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-left">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">39.3</td>
+<td class="org-right">39.31</td>
+<td class="org-right">52.109</td>
+<td class="org-left">6.88e-13 <b>*</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">5.0</td>
+<td class="org-right">4.99</td>
+<td class="org-right">6.615</td>
+<td class="org-left">0.0102 *</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">1.1</td>
+<td class="org-right">1.12</td>
+<td class="org-right">1.479</td>
+<td class="org-left">0.2240</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">3</td>
+<td class="org-right">7.6</td>
+<td class="org-right">2.54</td>
+<td class="org-right">3.367</td>
+<td class="org-left">0.0179 *</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">2575</td>
+<td class="org-right">1942.5</td>
+<td class="org-right">0.75</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x2014;
+</p>
+
+<p>
+Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$age2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.2756216</td>
+<td class="org-left">-0.3504919</td>
+<td class="org-left">-0.2007513</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$Sex</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.08881945</td>
+<td class="org-left">-0.1566727</td>
+<td class="org-left">-0.02096619</td>
+<td class="org-left">0.0103206</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">$edu2.lvl</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">diff</td>
+<td class="org-left">lwr</td>
+<td class="org-left">upr</td>
+<td class="org-left">p adj</td>
+</tr>
+
+<tr>
+<td class="org-left">2-1</td>
+<td class="org-left">-0.04077052</td>
+<td class="org-left">-0.107808</td>
+<td class="org-left">0.02626697</td>
+<td class="org-left">0.233151</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">$Marriage</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">diff</td>
+<td class="org-right">lwr</td>
+<td class="org-right">upr</td>
+<td class="org-right">p adj</td>
+</tr>
+
+<tr>
+<td class="org-right">2-1</td>
+<td class="org-right">-0.05837616</td>
+<td class="org-right">-0.14732247</td>
+<td class="org-right">0.03057016</td>
+<td class="org-right">0.3306272</td>
+</tr>
+
+<tr>
+<td class="org-right">3-1</td>
+<td class="org-right">-0.43366131</td>
+<td class="org-right">-1.72414285</td>
+<td class="org-right">0.85682022</td>
+<td class="org-right">0.8234849</td>
+</tr>
+
+<tr>
+<td class="org-right">4-1</td>
+<td class="org-right">0.30932569</td>
+<td class="org-right">-0.06758788</td>
+<td class="org-right">0.68623925</td>
+<td class="org-right">0.1502073</td>
+</tr>
+
+<tr>
+<td class="org-right">3-2</td>
+<td class="org-right">-0.37528516</td>
+<td class="org-right">-1.66605475</td>
+<td class="org-right">0.91548443</td>
+<td class="org-right">0.8777910</td>
+</tr>
+
+<tr>
+<td class="org-right">4-2</td>
+<td class="org-right">0.36770184</td>
+<td class="org-right">-0.01019680</td>
+<td class="org-right">0.74560048</td>
+<td class="org-right">0.0599238</td>
+</tr>
+
+<tr>
+<td class="org-right">4-3</td>
+<td class="org-right">0.74298700</td>
+<td class="org-right">-0.59874268</td>
+<td class="org-right">2.08471667</td>
+<td class="org-right">0.4846605</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline77"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-8-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Df</td>
+<td class="org-right">Sum Sq</td>
+<td class="org-right">Mean Sq</td>
+<td class="org-right">F value</td>
+<td class="org-right">Pr(&gt;F)</td>
+</tr>
+
+<tr>
+<td class="org-left">age2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.8</td>
+<td class="org-right">0.7937</td>
+<td class="org-right">1.159</td>
+<td class="org-right">0.282</td>
+</tr>
+
+<tr>
+<td class="org-left">Sex</td>
+<td class="org-right">1</td>
+<td class="org-right">1.1</td>
+<td class="org-right">1.1445</td>
+<td class="org-right">1.671</td>
+<td class="org-right">0.196</td>
+</tr>
+
+<tr>
+<td class="org-left">edu2.lvl</td>
+<td class="org-right">1</td>
+<td class="org-right">0.1</td>
+<td class="org-right">0.0972</td>
+<td class="org-right">0.142</td>
+<td class="org-right">0.706</td>
+</tr>
+
+<tr>
+<td class="org-left">Marriage</td>
+<td class="org-right">2</td>
+<td class="org-right">1.6</td>
+<td class="org-right">0.8131</td>
+<td class="org-right">1.187</td>
+<td class="org-right">0.305</td>
+</tr>
+
+<tr>
+<td class="org-left">Residuals</td>
+<td class="org-right">1684</td>
+<td class="org-right">1153.1</td>
+<td class="org-right">0.6847</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+
+<li><a id="orgheadline78"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline71" class="outline-4">
-<h4 id="orgheadline71"><span class="section-number-4">4.5.9</span> PA</h4>
+<div id="outline-container-orgheadline89" class="outline-4">
+<h4 id="orgheadline89"><span class="section-number-4">4.5.9</span> PA</h4>
 <div class="outline-text-4" id="text-4-5-9">
-</div><ol class="org-ol"><li><a id="orgheadline65"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline66"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline67"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline68"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline69"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline70"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline80"></a>Sub-group P0<br  /></li>
+<li><a id="orgheadline81"></a>Sub-group AH0<br  /></li>
+<li><a id="orgheadline82"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline83"></a>Sub-group P1<br  /></li>
+<li><a id="orgheadline84"></a>Sub-group AH1<br  /></li>
+<li><a id="orgheadline85"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline86"></a>Sub-group P2<br  /></li>
+<li><a id="orgheadline87"></a>Sub-group AH2<br  /></li>
+<li><a id="orgheadline88"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline78" class="outline-4">
-<h4 id="orgheadline78"><span class="section-number-4">4.5.10</span> PI</h4>
+<div id="outline-container-orgheadline99" class="outline-4">
+<h4 id="orgheadline99"><span class="section-number-4">4.5.10</span> PI</h4>
 <div class="outline-text-4" id="text-4-5-10">
-</div><ol class="org-ol"><li><a id="orgheadline72"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline73"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline74"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline75"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline76"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline77"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline90"></a>Sub-group P0<br  /></li>
+<li><a id="orgheadline91"></a>Sub-group AH0<br  /></li>
+<li><a id="orgheadline92"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline93"></a>Sub-group P1<br  /></li>
+<li><a id="orgheadline94"></a>Sub-group AH1<br  /></li>
+<li><a id="orgheadline95"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline96"></a>Sub-group P2<br  /></li>
+<li><a id="orgheadline97"></a>Sub-group AH2<br  /></li>
+<li><a id="orgheadline98"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline85" class="outline-4">
-<h4 id="orgheadline85"><span class="section-number-4">4.5.11</span> Psy</h4>
+<div id="outline-container-orgheadline109" class="outline-4">
+<h4 id="orgheadline109"><span class="section-number-4">4.5.11</span> Psy</h4>
 <div class="outline-text-4" id="text-4-5-11">
-</div><ol class="org-ol"><li><a id="orgheadline79"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline80"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline81"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline82"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline83"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline84"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline100"></a>Sub-group P0<br  /></li>
+<li><a id="orgheadline101"></a>Sub-group AH0<br  /></li>
+<li><a id="orgheadline102"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline103"></a>Sub-group P1<br  /></li>
+<li><a id="orgheadline104"></a>Sub-group AH1<br  /></li>
+<li><a id="orgheadline105"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline106"></a>Sub-group P2<br  /></li>
+<li><a id="orgheadline107"></a>Sub-group AH2<br  /></li>
+<li><a id="orgheadline108"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline92" class="outline-4">
-<h4 id="orgheadline92"><span class="section-number-4">4.5.12</span> AI</h4>
+<div id="outline-container-orgheadline119" class="outline-4">
+<h4 id="orgheadline119"><span class="section-number-4">4.5.12</span> AI</h4>
 <div class="outline-text-4" id="text-4-5-12">
-</div><ol class="org-ol"><li><a id="orgheadline86"></a>Sub-group P0<br  /></li>
-<li><a id="orgheadline87"></a>Sub-group P1<br  /></li>
-<li><a id="orgheadline88"></a>Sub-group P2<br  /></li>
-<li><a id="orgheadline89"></a>Sub-group AH0<br  /></li>
-<li><a id="orgheadline90"></a>Sub-group AH1<br  /></li>
-<li><a id="orgheadline91"></a>Sub-group AH2<br  /></li></ol>
+</div><ol class="org-ol"><li><a id="orgheadline110"></a>Sub-group P0<br  /></li>
+<li><a id="orgheadline111"></a>Sub-group AH0<br  /></li>
+<li><a id="orgheadline112"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline113"></a>Sub-group P1<br  /></li>
+<li><a id="orgheadline114"></a>Sub-group AH1<br  /></li>
+<li><a id="orgheadline115"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline116"></a>Sub-group P2<br  /></li>
+<li><a id="orgheadline117"></a>Sub-group AH2<br  /></li>
+<li><a id="orgheadline118"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
 </div>
 </div>
@@ -3477,7 +11343,7 @@ significant between the two age levels, and the marriage levels 1 and 2.
 <div id="postamble" class="status">
 <p class="date">Date: 8 Aug 2016</p>
 <p class="author">Author: XU Sheng</p>
-<p class="date">Created: 2016-08-28 Sun 10:04</p>
+<p class="date">Created: 2016-08-31 Wed 16:14</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
