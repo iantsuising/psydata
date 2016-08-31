@@ -777,6 +777,59 @@ TukeyHSD(fit6)
 sink()
 
 
+sink("posthoc.pi.txt")
+fit1 <- aov(Paranoid.ideation~age2.lvl+Sex+edu2.lvl+Marriage,data=P0)
+summary(fit1)
+TukeyHSD(fit1)
+
+fit2 <- aov(Paranoid.ideation~age2.lvl+Sex+edu2.lvl+Marriage,data=AH0)
+summary(fit2)
+TukeyHSD(fit2)
+
+fit3 <- aov(Paranoid.ideation~age2.lvl+Sex+edu2.lvl+Marriage,data=P1)
+summary(fit3)
+TukeyHSD(fit3)
+
+fit4 <- aov(Paranoid.ideation~age2.lvl+Sex+edu2.lvl+Marriage,data=AH1)
+summary(fit4)
+TukeyHSD(fit4)
+
+fit5 <- aov(Paranoid.ideation~age2.lvl+Sex+edu2.lvl+Marriage,data=P2)
+summary(fit5)
+TukeyHSD(fit5)
+
+fit6 <- aov(Paranoid.ideation~age2.lvl+Sex+edu2.lvl+Marriage,data=AH2)
+summary(fit6)
+TukeyHSD(fit6)
+sink()
+
+sink("posthoc.psy.txt")
+fit1 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=P0)
+summary(fit1)
+TukeyHSD(fit1)
+
+fit2 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=AH0)
+summary(fit2)
+TukeyHSD(fit2)
+
+fit3 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=P1)
+summary(fit3)
+TukeyHSD(fit3)
+
+fit4 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=AH1)
+summary(fit4)
+TukeyHSD(fit4)
+
+fit5 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=P2)
+summary(fit5)
+TukeyHSD(fit5)
+
+fit6 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=AH2)
+summary(fit6)
+TukeyHSD(fit6)
+sink()
+
+
 
 #####Reg
 
