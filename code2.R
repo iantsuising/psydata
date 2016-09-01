@@ -526,27 +526,21 @@ write.csv(coredata(rest2),"rrr.csv")
 
 png(file="corr1.png", bg="transparent")
 corrplot(cor(P0[,8:17]),type="upper",method="number")
-title("corr for P0", line = -12)
 dev.off()
 png(file="corr2.png", bg="transparent")
 corrplot(cor(P1[,8:17]),type="upper",method="number")
-title("corr for P1", line = -12)
 dev.off()
 png(file="corr3.png", bg="transparent")
 corrplot(cor(P2[,8:17]),type="upper",method="number")
-title("corr for P1", line = -12)
 dev.off()
 png(file="corr4.png", bg="transparent")
 corrplot(cor(AH0[,8:17]),type="upper",method="number")
-title("corr for P1", line = -12)
 dev.off()
 png(file="corr5.png", bg="transparent")
 corrplot(cor(AH1[,8:17]),type="upper",method="number" )
-title("corr for P1", line = -12)
 dev.off()
 png(file="corr6.png", bg="transparent")
 corrplot(cor(AH2[,8:17]),type="upper",method="number" )
-title("corr for P1", line = -12)
 dev.off()
 
 pdf("corr.plot.pdf")
@@ -828,6 +822,35 @@ fit6 <- aov(Psychoticism~age2.lvl+Sex+edu2.lvl+Marriage,data=AH2)
 summary(fit6)
 TukeyHSD(fit6)
 sink()
+
+
+
+sink("posthoc.ai.txt")
+fit1 <- aov(Additional.items~age2.lvl+Sex+edu2.lvl+Marriage,data=P0)
+summary(fit1)
+TukeyHSD(fit1)
+
+fit2 <- aov(Additional.items~age2.lvl+Sex+edu2.lvl+Marriage,data=AH0)
+summary(fit2)
+TukeyHSD(fit2)
+
+fit3 <- aov(Additional.items~age2.lvl+Sex+edu2.lvl+Marriage,data=P1)
+summary(fit3)
+TukeyHSD(fit3)
+
+fit4 <- aov(Additional.items~age2.lvl+Sex+edu2.lvl+Marriage,data=AH1)
+summary(fit4)
+TukeyHSD(fit4)
+
+fit5 <- aov(Additional.items~age2.lvl+Sex+edu2.lvl+Marriage,data=P2)
+summary(fit5)
+TukeyHSD(fit5)
+
+fit6 <- aov(Additional.items~age2.lvl+Sex+edu2.lvl+Marriage,data=AH2)
+summary(fit6)
+TukeyHSD(fit6)
+sink()
+
 
 
 
