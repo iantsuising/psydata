@@ -90,11 +90,19 @@ The bold p-value numbers show that the total scores of the majority groups have 
   following results are based on the comparison between group P and
   AH.
 
+  The total score of observation has been divided into 3 levels: 0, 1,
+  and 2. 0, 1, and 2 respectively stand for health, moderate illness, and serious
+  illness.
+
+  Thus, we name the sub group name by letter(s) plus the total score level.
+
   Sub group naming rule: The Capital letter(s) means the group name, the
   number mean the total score level. For example, the sub-group AH1
-  means the observations in it think themselves have no psychological
-  illness and the total score level is 1.
-
+  means the observations in it subjectively think themselves have no psychological
+  illness and the total score level is 1 (or moderate illness); the sub-group P0
+  means the observations in it subjectively think themselves have psychological
+  illness but the total score level is 0 (or healthy).
+yhh
 
 ** Demographic factors difference
    |  Sub-groups: | P0, N=2311         | P1, N=1737   | P2, N=2582     | AH0, N=11036  | AH1, N=2852  | AH2, N=1690   |
@@ -286,12 +294,35 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: < 2.2e-16
 	Thus, we use Turkey' HSD after the ANOVA to tell, for example, exactly
 	which marriage stage sub-groups are different.
 
+*** Overall Result
+Notations:
+- A: age level has significant effect with p-value lower than 0.001
+- a: age level has significant effect with p-value lower than 0.1
+- S: sex group has significant effect with p-value lower than 0.001
+- s: sex group has significant effect with p-value lower than 0.0
+- E: education level has significant effect with p-value lower than 0.001
+- e: education level has significant effect with p-value lower than 0.1
+- M: marriage group has significant effect with p-value lower than 0.001
+- m: marriage group has significant effect with p-value lower than 0.1
 
+
+	| Significant Factors       | P0   | AH0  | P1   | AH1  | P2   | AH2 |
+	|---------------------------+------+------+------+------+------+-----|
+	| Somatization              | AEM  | ASeM | ASeM | ASEM | ASeM | AM  |
+	| Obsessive.compulsive      | SEm  | Asm  | AEM  | As   | AsM  | -   |
+	| Interpersonal.sensitivity | Ase  | AeM  | AEM  | AEM  | AM   | sm  |
+	| Depression                | AsEM | ASM  | Se   | se   | SEm  | aem |
+	| Anxiety                   | ASeM | ASM  | e    | ase  | a    | a   |
+	| Hostility                 | asEM | AS   | Am   | Am   | Asm  | -   |
+	| Phobic.anxiety            | E    | ASem | e    | Se   | em   | ae  |
+	| Paranoid.ideation         | ASE  | ASeM | Ae   | AS   | Aem  | aS  |
+	| Psychoticism              | SEm  | AeM  | AsM  | ASM  | AsM  | S   |
+	| Additional.items          | AsEM | asm  | Asem | Ase  | Ae   | ASm |
 *** So
 **** Sub-group P0
 	 |           |   Df | Sum Sq | Mean Sq | F value | Pr(>F)    |
 	 | age2.lvl  |    1 |  36.46 |   36.46 |  291.66 | *< 2e-16* |
-	 | Sex       |    1 |   0.01 |    0.01 |    0.07 | *0.792    |
+	 | Sex       |    1 |   0.01 |    0.01 |    0.07 | 0.792     |
 	 | edu2.lvl  |    1 |   9.52 |    9.52 |   76.14 | *< 2e-16* |
 	 | Marriage  |    3 |   9.19 |    3.06 |   24.52 | *1.3e-15* |
 	 | Residuals | 2304 | 288.00 |    0.13 |         |           |

@@ -6460,4 +6460,686 @@ F-statistic: 1.976e+04 on 14 and 1675 DF,  p-value: < 2.2e-16
 > summary(fit6)
 > TukeyHSD(fit6)
 > sink()
+> png(file="corr1.png", bg="transparent")
+> corrplot(cor(P0[,8:17]),type="upper",method="number")
+> dev.off()
+null device 
+          1 
+> png(file="corr2.png", bg="transparent")
+> corrplot(cor(P1[,8:17]),type="upper",method="number")
+> dev.off()
+null device 
+          1 
+> png(file="corr3.png", bg="transparent")
+> corrplot(cor(P2[,8:17]),type="upper",method="number")
+> dev.off()
+null device 
+          1 
+> png(file="corr4.png", bg="transparent")
+> corrplot(cor(AH0[,8:17]),type="upper",method="number")
+> dev.off()
+null device 
+          1 
+> png(file="corr5.png", bg="transparent")
+> corrplot(cor(AH1[,8:17]),type="upper",method="number" )
+> dev.off()
+null device 
+          1 
+> png(file="corr6.png", bg="transparent")
+> corrplot(cor(AH2[,8:17]),type="upper",method="number" )
+> dev.off()
+null device 
+          1 
+> pdf("corr.plot.pdf")
+> corrplot(cor(P0[,8:17]),type="upper",method="number")
+> title("corr for P0", line = -25)
+> corrplot(cor(P1[,8:17]),type="upper",method="number")
+> title("corr for P1", line = -25)
+> corrplot(cor(P2[,8:17]),type="upper",method="number")
+> title("corr for P2", line = -25)
+> corrplot(cor(AH0[,8:17]),type="upper",method="number")
+> title("corr for AH0", line = -25)
+> corrplot(cor(AH1[,8:17]),type="upper",method="number" )
+> title("corr for AH1", line = -25)
+> corrplot(cor(AH2[,8:17]),type="upper",method="number" )
+> title("corr for AH2", line = -25)
+> dev.off()
+null device 
+          1 
+> library(car)
+Error in library(car) : there is no package called 'car'
+> install.packages("car")
+Installing package into 'C:/Users/user/R/win-library/3.3'
+(as 'lib' is unspecified)
+--- Please select a CRAN mirror for use in this session ---
+  C-c C-c
+> install.packages("car")
+Installing package into 'C:/Users/user/R/win-library/3.3'
+(as 'lib' is unspecified)
+--- Please select a CRAN mirror for use in this session ---
+also installing the dependencies 'minqa', 'nloptr', 'RcppEigen', 'lme4', 'SparseM', 'MatrixModels', 'pbkrtest', 'quantreg'
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/minqa_1.2.4.zip'
+Content type 'application/zip' length 617355 bytes (602 KB)
+downloaded 602 KB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/nloptr_1.0.4.zip'
+Content type 'application/zip' length 1171799 bytes (1.1 MB)
+downloaded 1.1 MB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/RcppEigen_0.3.2.9.0.zip'
+Content type 'application/zip' length 2103338 bytes (2.0 MB)
+downloaded 2.0 MB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/lme4_1.1-12.zip'
+Content type 'application/zip' length 4740811 bytes (4.5 MB)
+downloaded 4.5 MB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/SparseM_1.7.zip'
+Content type 'application/zip' length 799559 bytes (780 KB)
+downloaded 780 KB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/MatrixModels_0.4-1.zip'
+Content type 'application/zip' length 195728 bytes (191 KB)
+downloaded 191 KB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/pbkrtest_0.4-6.zip'
+Content type 'application/zip' length 213005 bytes (208 KB)
+downloaded 208 KB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/quantreg_5.26.zip'
+Content type 'application/zip' length 2202535 bytes (2.1 MB)
+downloaded 2.1 MB
+
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/car_2.1-3.zip'
+Content type 'application/zip' length 1447480 bytes (1.4 MB)
+downloaded 1.4 MB
+
+package 'minqa' successfully unpacked and MD5 sums checked
+package 'nloptr' successfully unpacked and MD5 sums checked
+package 'RcppEigen' successfully unpacked and MD5 sums checked
+package 'lme4' successfully unpacked and MD5 sums checked
+package 'SparseM' successfully unpacked and MD5 sums checked
+package 'MatrixModels' successfully unpacked and MD5 sums checked
+package 'pbkrtest' successfully unpacked and MD5 sums checked
+package 'quantreg' successfully unpacked and MD5 sums checked
+package 'car' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\user\AppData\Local\Temp\Rtmpi6Twh8\downloaded_packages
+> Prestige
+Error: object 'Prestige' not found
+> library(car)
+> Prestige
+                          education income women prestige census type
+gov.administrators            13.11  12351 11.16     68.8   1113 prof
+general.managers              12.26  25879  4.02     69.1   1130 prof
+accountants                   12.77   9271 15.70     63.4   1171 prof
+purchasing.officers           11.42   8865  9.11     56.8   1175 prof
+chemists                      14.62   8403 11.68     73.5   2111 prof
+physicists                    15.64  11030  5.13     77.6   2113 prof
+biologists                    15.09   8258 25.65     72.6   2133 prof
+architects                    15.44  14163  2.69     78.1   2141 prof
+civil.engineers               14.52  11377  1.03     73.1   2143 prof
+mining.engineers              14.64  11023  0.94     68.8   2153 prof
+surveyors                     12.39   5902  1.91     62.0   2161 prof
+draughtsmen                   12.30   7059  7.83     60.0   2163 prof
+computer.programers           13.83   8425 15.33     53.8   2183 prof
+economists                    14.44   8049 57.31     62.2   2311 prof
+psychologists                 14.36   7405 48.28     74.9   2315 prof
+social.workers                14.21   6336 54.77     55.1   2331 prof
+lawyers                       15.77  19263  5.13     82.3   2343 prof
+librarians                    14.15   6112 77.10     58.1   2351 prof
+vocational.counsellors        15.22   9593 34.89     58.3   2391 prof
+ministers                     14.50   4686  4.14     72.8   2511 prof
+university.teachers           15.97  12480 19.59     84.6   2711 prof
+primary.school.teachers       13.62   5648 83.78     59.6   2731 prof
+secondary.school.teachers     15.08   8034 46.80     66.1   2733 prof
+physicians                    15.96  25308 10.56     87.2   3111 prof
+veterinarians                 15.94  14558  4.32     66.7   3115 prof
+osteopaths.chiropractors      14.71  17498  6.91     68.4   3117 prof
+nurses                        12.46   4614 96.12     64.7   3131 prof
+nursing.aides                  9.45   3485 76.14     34.9   3135   bc
+physio.therapsts              13.62   5092 82.66     72.1   3137 prof
+pharmacists                   15.21  10432 24.71     69.3   3151 prof
+medical.technicians           12.79   5180 76.04     67.5   3156   wc
+commercial.artists            11.09   6197 21.03     57.2   3314 prof
+radio.tv.announcers           12.71   7562 11.15     57.6   3337   wc
+athletes                      11.44   8206  8.13     54.1   3373 <NA>
+secretaries                   11.59   4036 97.51     46.0   4111   wc
+typists                       11.49   3148 95.97     41.9   4113   wc
+bookkeepers                   11.32   4348 68.24     49.4   4131   wc
+tellers.cashiers              10.64   2448 91.76     42.3   4133   wc
+computer.operators            11.36   4330 75.92     47.7   4143   wc
+shipping.clerks                9.17   4761 11.37     30.9   4153   wc
+file.clerks                   12.09   3016 83.19     32.7   4161   wc
+receptionsts                  11.04   2901 92.86     38.7   4171   wc
+mail.carriers                  9.22   5511  7.62     36.1   4172   wc
+postal.clerks                 10.07   3739 52.27     37.2   4173   wc
+telephone.operators           10.51   3161 96.14     38.1   4175   wc
+collectors                    11.20   4741 47.06     29.4   4191   wc
+claim.adjustors               11.13   5052 56.10     51.1   4192   wc
+travel.clerks                 11.43   6259 39.17     35.7   4193   wc
+office.clerks                 11.00   4075 63.23     35.6   4197   wc
+sales.supervisors              9.84   7482 17.04     41.5   5130   wc
+commercial.travellers         11.13   8780  3.16     40.2   5133   wc
+sales.clerks                  10.05   2594 67.82     26.5   5137   wc
+newsboys                       9.62    918  7.00     14.8   5143 <NA>
+service.station.attendant      9.93   2370  3.69     23.3   5145   bc
+insurance.agents              11.60   8131 13.09     47.3   5171   wc
+real.estate.salesmen          11.09   6992 24.44     47.1   5172   wc
+buyers                        11.03   7956 23.88     51.1   5191   wc
+firefighters                   9.47   8895  0.00     43.5   6111   bc
+policemen                     10.93   8891  1.65     51.6   6112   bc
+cooks                          7.74   3116 52.00     29.7   6121   bc
+bartenders                     8.50   3930 15.51     20.2   6123   bc
+funeral.directors             10.57   7869  6.01     54.9   6141   bc
+babysitters                    9.46    611 96.53     25.9   6147 <NA>
+launderers                     7.33   3000 69.31     20.8   6162   bc
+janitors                       7.11   3472 33.57     17.3   6191   bc
+elevator.operators             7.58   3582 30.08     20.1   6193   bc
+farmers                        6.84   3643  3.60     44.1   7112 <NA>
+farm.workers                   8.60   1656 27.75     21.5   7182   bc
+rotary.well.drillers           8.88   6860  0.00     35.3   7711   bc
+bakers                         7.54   4199 33.30     38.9   8213   bc
+slaughterers.1                 7.64   5134 17.26     25.2   8215   bc
+slaughterers.2                 7.64   5134 17.26     34.8   8215   bc
+canners                        7.42   1890 72.24     23.2   8221   bc
+textile.weavers                6.69   4443 31.36     33.3   8267   bc
+textile.labourers              6.74   3485 39.48     28.8   8278   bc
+tool.die.makers               10.09   8043  1.50     42.5   8311   bc
+machinists                     8.81   6686  4.28     44.2   8313   bc
+sheet.metal.workers            8.40   6565  2.30     35.9   8333   bc
+welders                        7.92   6477  5.17     41.8   8335   bc
+auto.workers                   8.43   5811 13.62     35.9   8513   bc
+aircraft.workers               8.78   6573  5.78     43.7   8515   bc
+electronic.workers             8.76   3942 74.54     50.8   8534   bc
+radio.tv.repairmen            10.29   5449  2.92     37.2   8537   bc
+sewing.mach.operators          6.38   2847 90.67     28.2   8563   bc
+auto.repairmen                 8.10   5795  0.81     38.1   8581   bc
+aircraft.repairmen            10.10   7716  0.78     50.3   8582   bc
+railway.sectionmen             6.67   4696  0.00     27.3   8715   bc
+electrical.linemen             9.05   8316  1.34     40.9   8731   bc
+electricians                   9.93   7147  0.99     50.2   8733   bc
+construction.foremen           8.24   8880  0.65     51.1   8780   bc
+carpenters                     6.92   5299  0.56     38.9   8781   bc
+masons                         6.60   5959  0.52     36.2   8782   bc
+house.painters                 7.81   4549  2.46     29.9   8785   bc
+plumbers                       8.33   6928  0.61     42.9   8791   bc
+construction.labourers         7.52   3910  1.09     26.5   8798   bc
+pilots                        12.27  14032  0.58     66.1   9111 prof
+train.engineers                8.49   8845  0.00     48.9   9131   bc
+bus.drivers                    7.58   5562  9.47     35.9   9171   bc
+taxi.drivers                   7.93   4224  3.59     25.1   9173   bc
+longshoremen                   8.37   4753  0.00     26.1   9313   bc
+typesetters                   10.00   6462 13.58     42.2   9511   bc
+bookbinders                    8.55   3617 70.87     35.2   9517   bc
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=F,span=1,id.n=3)
+general.managers          lawyers       physicians 
+               2               17               24 
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=1,id.n=3)
+general.managers          lawyers       physicians 
+               2               17               24 
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=1,id.n=10)
+        general.managers            psychologists                  lawyers 
+                       2                       15                       17 
+               ministers      university.teachers               physicians 
+                      20                       21                       24 
+osteopaths.chiropractors                   nurses         physio.therapsts 
+                      26                       27                       29 
+     medical.technicians 
+                      31 
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=0.7)
+> scatterplot(prestige~income,data=Prestige,boxplots =T, spread=T,span=0.7)
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=0.7)
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=1)
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=1,ylim=c(0,100))
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=1,ylim=c(0,100),id.n=Inf)
+       gov.administrators          general.managers               accountants 
+                        1                         2                         3 
+      purchasing.officers                  chemists                physicists 
+                        4                         5                         6 
+               biologists                architects           civil.engineers 
+                        7                         8                         9 
+         mining.engineers                 surveyors               draughtsmen 
+                       10                        11                        12 
+      computer.programers                economists             psychologists 
+                       13                        14                        15 
+           social.workers                   lawyers                librarians 
+                       16                        17                        18 
+   vocational.counsellors                 ministers       university.teachers 
+                       19                        20                        21 
+  primary.school.teachers secondary.school.teachers                physicians 
+                       22                        23                        24 
+            veterinarians  osteopaths.chiropractors                    nurses 
+                       25                        26                        27 
+            nursing.aides          physio.therapsts               pharmacists 
+                       28                        29                        30 
+      medical.technicians        commercial.artists       radio.tv.announcers 
+                       31                        32                        33 
+                 athletes               secretaries                   typists 
+                       34                        35                        36 
+              bookkeepers          tellers.cashiers        computer.operators 
+                       37                        38                        39 
+          shipping.clerks               file.clerks              receptionsts 
+                       40                        41                        42 
+            mail.carriers             postal.clerks       telephone.operators 
+                       43                        44                        45 
+               collectors           claim.adjustors             travel.clerks 
+                       46                        47                        48 
+            office.clerks         sales.supervisors     commercial.travellers 
+                       49                        50                        51 
+             sales.clerks                  newsboys service.station.attendant 
+                       52                        53                        54 
+         insurance.agents      real.estate.salesmen                    buyers 
+                       55                        56                        57 
+             firefighters                 policemen                     cooks 
+                       58                        59                        60 
+               bartenders         funeral.directors               babysitters 
+                       61                        62                        63 
+               launderers                  janitors        elevator.operators 
+                       64                        65                        66 
+                  farmers              farm.workers      rotary.well.drillers 
+                       67                        68                        69 
+                   bakers            slaughterers.1            slaughterers.2 
+                       70                        71                        72 
+                  canners           textile.weavers         textile.labourers 
+                       73                        74                        75 
+          tool.die.makers                machinists       sheet.metal.workers 
+                       76                        77                        78 
+                  welders              auto.workers          aircraft.workers 
+                       79                        80                        81 
+       electronic.workers        radio.tv.repairmen     sewing.mach.operators 
+                       82                        83                        84 
+           auto.repairmen        aircraft.repairmen        railway.sectionmen 
+                       85                        86                        87 
+       electrical.linemen              electricians      construction.foremen 
+                       88                        89                        90 
+               carpenters                    masons            house.painters 
+                       91                        92                        93 
+                 plumbers    construction.labourers                    pilots 
+                       94                        95                        96 
+          train.engineers               bus.drivers              taxi.drivers 
+                       97                        98                        99 
+             longshoremen               typesetters               bookbinders 
+                      100                       101                       102 
+> scatterplot(prestige~income,data=Prestige,boxplots = F, spread=T,span=1,ylim=c(0,100),id.n=Inf)
+       gov.administrators          general.managers               accountants 
+                        1                         2                         3 
+      purchasing.officers                  chemists                physicists 
+                        4                         5                         6 
+               biologists                architects           civil.engineers 
+                        7                         8                         9 
+         mining.engineers                 surveyors               draughtsmen 
+                       10                        11                        12 
+      computer.programers                economists             psychologists 
+                       13                        14                        15 
+           social.workers                   lawyers                librarians 
+                       16                        17                        18 
+   vocational.counsellors                 ministers       university.teachers 
+                       19                        20                        21 
+  primary.school.teachers secondary.school.teachers                physicians 
+                       22                        23                        24 
+            veterinarians  osteopaths.chiropractors                    nurses 
+                       25                        26                        27 
+            nursing.aides          physio.therapsts               pharmacists 
+                       28                        29                        30 
+      medical.technicians        commercial.artists       radio.tv.announcers 
+                       31                        32                        33 
+                 athletes               secretaries                   typists 
+                       34                        35                        36 
+              bookkeepers          tellers.cashiers        computer.operators 
+                       37                        38                        39 
+          shipping.clerks               file.clerks              receptionsts 
+                       40                        41                        42 
+            mail.carriers             postal.clerks       telephone.operators 
+                       43                        44                        45 
+               collectors           claim.adjustors             travel.clerks 
+                       46                        47                        48 
+            office.clerks         sales.supervisors     commercial.travellers 
+                       49                        50                        51 
+             sales.clerks                  newsboys service.station.attendant 
+                       52                        53                        54 
+         insurance.agents      real.estate.salesmen                    buyers 
+                       55                        56                        57 
+             firefighters                 policemen                     cooks 
+                       58                        59                        60 
+               bartenders         funeral.directors               babysitters 
+                       61                        62                        63 
+               launderers                  janitors        elevator.operators 
+                       64                        65                        66 
+                  farmers              farm.workers      rotary.well.drillers 
+                       67                        68                        69 
+                   bakers            slaughterers.1            slaughterers.2 
+                       70                        71                        72 
+                  canners           textile.weavers         textile.labourers 
+                       73                        74                        75 
+          tool.die.makers                machinists       sheet.metal.workers 
+                       76                        77                        78 
+                  welders              auto.workers          aircraft.workers 
+                       79                        80                        81 
+       electronic.workers        radio.tv.repairmen     sewing.mach.operators 
+                       82                        83                        84 
+           auto.repairmen        aircraft.repairmen        railway.sectionmen 
+                       85                        86                        87 
+       electrical.linemen              electricians      construction.foremen 
+                       88                        89                        90 
+               carpenters                    masons            house.painters 
+                       91                        92                        93 
+                 plumbers    construction.labourers                    pilots 
+                       94                        95                        96 
+          train.engineers               bus.drivers              taxi.drivers 
+                       97                        98                        99 
+             longshoremen               typesetters               bookbinders 
+                      100                       101                       102 
+> scatterplot(prestige~education,data=Prestige,boxplots = F, spread=T,span=1,ylim=c(0,100),id.n=Inf)
+       gov.administrators          general.managers               accountants 
+                        1                         2                         3 
+      purchasing.officers                  chemists                physicists 
+                        4                         5                         6 
+               biologists                architects           civil.engineers 
+                        7                         8                         9 
+         mining.engineers                 surveyors               draughtsmen 
+                       10                        11                        12 
+      computer.programers                economists             psychologists 
+                       13                        14                        15 
+           social.workers                   lawyers                librarians 
+                       16                        17                        18 
+   vocational.counsellors                 ministers       university.teachers 
+                       19                        20                        21 
+  primary.school.teachers secondary.school.teachers                physicians 
+                       22                        23                        24 
+            veterinarians  osteopaths.chiropractors                    nurses 
+                       25                        26                        27 
+            nursing.aides          physio.therapsts               pharmacists 
+                       28                        29                        30 
+      medical.technicians        commercial.artists       radio.tv.announcers 
+                       31                        32                        33 
+                 athletes               secretaries                   typists 
+                       34                        35                        36 
+              bookkeepers          tellers.cashiers        computer.operators 
+                       37                        38                        39 
+          shipping.clerks               file.clerks              receptionsts 
+                       40                        41                        42 
+            mail.carriers             postal.clerks       telephone.operators 
+                       43                        44                        45 
+               collectors           claim.adjustors             travel.clerks 
+                       46                        47                        48 
+            office.clerks         sales.supervisors     commercial.travellers 
+                       49                        50                        51 
+             sales.clerks                  newsboys service.station.attendant 
+                       52                        53                        54 
+         insurance.agents      real.estate.salesmen                    buyers 
+                       55                        56                        57 
+             firefighters                 policemen                     cooks 
+                       58                        59                        60 
+               bartenders         funeral.directors               babysitters 
+                       61                        62                        63 
+               launderers                  janitors        elevator.operators 
+                       64                        65                        66 
+                  farmers              farm.workers      rotary.well.drillers 
+                       67                        68                        69 
+                   bakers            slaughterers.1            slaughterers.2 
+                       70                        71                        72 
+                  canners           textile.weavers         textile.labourers 
+                       73                        74                        75 
+          tool.die.makers                machinists       sheet.metal.workers 
+                       76                        77                        78 
+                  welders              auto.workers          aircraft.workers 
+                       79                        80                        81 
+       electronic.workers        radio.tv.repairmen     sewing.mach.operators 
+                       82                        83                        84 
+           auto.repairmen        aircraft.repairmen        railway.sectionmen 
+                       85                        86                        87 
+       electrical.linemen              electricians      construction.foremen 
+                       88                        89                        90 
+               carpenters                    masons            house.painters 
+                       91                        92                        93 
+                 plumbers    construction.labourers                    pilots 
+                       94                        95                        96 
+          train.engineers               bus.drivers              taxi.drivers 
+                       97                        98                        99 
+             longshoremen               typesetters               bookbinders 
+                      100                       101                       102 
+> fit2 <- aov(Somatization~age2.lvl+Sex+Education+Marriage,data=P1)
+> summary(fit2)
+              Df Sum Sq Mean Sq F value   Pr(>F)    
+age2.lvl       1   27.7  27.679  119.53  < 2e-16 ***
+Sex            1    3.0   2.965   12.80 0.000356 ***
+Education      1    3.0   3.035   13.11 0.000303 ***
+Marriage       3    4.9   1.646    7.11 9.54e-05 ***
+Residuals   1730  400.6   0.232                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+> TukeyHSD(fit2)
+Error in rep.int(n, length(means)) : unimplemented type 'NULL' in 'rep3'
+In addition: Warning message:
+In replications(paste("~", xx), data = mf) : non-factors ignored: Education
+> summary(P0)
+       ID            Age        Sex        Education     Marriage       Y    
+ A0006  :   1   Min.   : 7.00   1:1372   Min.   :0.000   1:1369   Min.   :1  
+ A0007  :   1   1st Qu.:24.00   2: 939   1st Qu.:2.000   2: 916   1st Qu.:1  
+ A0016  :   1   Median :30.00            Median :3.000   3:   4   Median :1  
+ A0022  :   1   Mean   :33.78            Mean   :2.736   4:  22   Mean   :1  
+ A0026  :   1   3rd Qu.:41.00            3rd Qu.:3.000            3rd Qu.:1  
+ A0035  :   1   Max.   :86.00            Max.   :4.000            Max.   :1  
+ (Other):2305                                                                
+  Total.score     Somatization  Obsessive.compulsive Interpersonal.sensitivity
+ Min.   : 90.0   Min.   :1.00   Min.   :1.000        Min.   :1.000            
+ 1st Qu.:113.5   1st Qu.:1.08   1st Qu.:1.300        1st Qu.:1.110            
+ Median :131.0   Median :1.25   Median :1.600        Median :1.330            
+ Mean   :129.3   Mean   :1.38   Mean   :1.615        Mean   :1.393            
+ 3rd Qu.:146.5   3rd Qu.:1.58   3rd Qu.:1.800        3rd Qu.:1.560            
+ Max.   :160.0   Max.   :3.42   Max.   :3.700        Max.   :2.670            
+                                                                              
+   Depression       Anxiety        Hostility     Phobic.anxiety 
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.150   1st Qu.:1.200   1st Qu.:1.170   1st Qu.:1.000  
+ Median :1.460   Median :1.400   Median :1.330   Median :1.140  
+ Mean   :1.494   Mean   :1.508   Mean   :1.421   Mean   :1.243  
+ 3rd Qu.:1.770   3rd Qu.:1.700   3rd Qu.:1.670   3rd Qu.:1.290  
+ Max.   :3.150   Max.   :3.400   Max.   :5.000   Max.   :3.430  
+                                                                
+ Paranoid.ideation  Psychoticism   Additional.items       t     age.lvl
+ Min.   :1.000     Min.   :1.000   Min.   :1.000    Min.   :0   1:721  
+ 1st Qu.:1.000     1st Qu.:1.100   1st Qu.:1.140    1st Qu.:0   2:719  
+ Median :1.170     Median :1.200   Median :1.570    Median :0   3:472  
+ Mean   :1.291     Mean   :1.299   Mean   :1.648    Mean   :0   4:306  
+ 3rd Qu.:1.500     3rd Qu.:1.400   3rd Qu.:2.000    3rd Qu.:0   5: 93  
+ Max.   :3.670     Max.   :3.000   Max.   :3.430    Max.   :0          
+                                                                       
+ marr2.lvl age2.lvl edu2.lvl Group         so.lvl        ocd.lvl    
+ 1:1369    1:1440   1: 944   A : 869   Mild   : 269   Mild   : 144  
+ 2: 916    2: 871   2:1367   AH:   0   No     :2037   No     :2159  
+ 3:  26                      B : 366   Serious:   5   Serious:   8  
+                             C :1076                                
+                                                                    
+                                                                    
+                                                                    
+     is.lvl        dep.lvl        anx.lvl         ho.lvl         pa.lvl    
+ No     :2242   Mild   :   1   Mild   : 434   Mild   : 140   No     :2085  
+ Serious:  69   No     :2310   No     :1872   No     :2148   Serious: 226  
+                Serious:   0   Serious:   5   Serious:  23                 
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+     pa.lvl         pi.lvl        psy.lvl         ai.lvl    
+ No     :2085   Mild   :  61   Mild   :1497   Mild   : 459  
+ Serious: 226   No     :2248   No     : 813   No     :1807  
+                Serious:   2   Serious:   1   Serious:  45  
+                                                            
+                                                            
+                                                            
+                                                            
+> P0[,4] <- as.factor(P0[,4])
+> P0[,19] <- as.factor(P0[,19])
+> P1[,4] <- as.factor(P1[,4])
+> P1[,19] <- as.factor(P1[,19])
+> P2[,4] <- as.factor(P2[,4])
+> P2[,19] <- as.factor(P2[,19])
+> AH0[,4] <- as.factor(AH0[,4])
+> AH0[,19] <- as.factor(AH0[,19])
+> AH1[,4] <- as.factor(AH1[,4])
+> AH1[,19] <- as.factor(AH1[,19])
+> AH2[,4] <- as.factor(AH2[,4])
+> AH2[,19] <- as.factor(AH2[,19])
+> fit2 <- aov(Somatization~age.lvl+Sex+Education+Marriage,data=P1)
+> summary(fit2)
+              Df Sum Sq Mean Sq F value  Pr(>F)    
+age.lvl        4   38.1   9.527  41.576 < 2e-16 ***
+Sex            1    1.9   1.853   8.087 0.00451 ** 
+Education      4    2.9   0.722   3.152 0.01357 *  
+Marriage       3    1.3   0.445   1.942 0.12077    
+Residuals   1724  395.0   0.229                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+> TukeyHSD(fit2)
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Somatization ~ age.lvl + Sex + Education + Marriage, data = P1)
+
+$age.lvl
+           diff         lwr       upr     p adj
+2-1  0.13832816  0.05458435 0.2220720 0.0000676
+3-1  0.25832031  0.16730159 0.3493390 0.0000000
+4-1  0.44160450  0.33415322 0.5490558 0.0000000
+5-1  0.42495233  0.27432432 0.5755803 0.0000000
+3-2  0.11999215  0.03594910 0.2040352 0.0009519
+4-2  0.30327634  0.20166628 0.4048864 0.0000000
+5-2  0.28662417  0.14010583 0.4331425 0.0000010
+4-3  0.18328420  0.07559953 0.2909689 0.0000355
+5-3  0.16663203  0.01583744 0.3174266 0.0217416
+5-4 -0.01665217 -0.17789850 0.1445942 0.9986178
+
+$Sex
+           diff        lwr         upr     p adj
+2-1 -0.06481068 -0.1100315 -0.01958989 0.0049946
+
+$Education
+           diff        lwr        upr     p adj
+1-0 -0.01694487 -0.2724903 0.23860060 0.9997599
+2-0 -0.09259789 -0.3102278 0.12503201 0.7731372
+3-0 -0.13274293 -0.3530047 0.08751881 0.4683008
+4-0 -0.15266714 -0.3740534 0.06871909 0.3268242
+2-1 -0.07565302 -0.2264514 0.07514534 0.6470959
+3-1 -0.11579805 -0.2703704 0.03877428 0.2446887
+4-1 -0.13572227 -0.2918928 0.02044827 0.1231804
+3-2 -0.04014504 -0.1172935 0.03700345 0.6141838
+4-2 -0.06006925 -0.1403719 0.02023343 0.2460974
+4-3 -0.01992421 -0.1071078 0.06725939 0.9712538
+
+$Marriage
+            diff        lwr       upr     p adj
+2-1 -0.039311564 -0.1026739 0.0240508 0.3814492
+3-1 -0.130915946 -0.8425422 0.5807103 0.9649962
+4-1 -0.002630482 -0.2467674 0.2415064 0.9999924
+3-2 -0.091604382 -0.8041912 0.6209824 0.9875388
+4-2  0.036681083 -0.2102417 0.2836039 0.9810308
+4-3  0.128285465 -0.6222929 0.8788639 0.9716110
+
+>install.packages("fda") 
+> summary(P0)
+       ID            Age        Sex      Education Marriage       Y    
+ A0006  :   1   Min.   : 7.00   1:1372   0: 41     1:1369   Min.   :1  
+ A0007  :   1   1st Qu.:24.00   2: 939   1: 97     2: 916   1st Qu.:1  
+ A0016  :   1   Median :30.00            2:806     3:   4   Median :1  
+ A0022  :   1   Mean   :33.78            3:853     4:  22   Mean   :1  
+ A0026  :   1   3rd Qu.:41.00            4:514              3rd Qu.:1  
+ A0035  :   1   Max.   :86.00                               Max.   :1  
+ (Other):2305                                                          
+  Total.score     Somatization  Obsessive.compulsive Interpersonal.sensitivity
+ Min.   : 90.0   Min.   :1.00   Min.   :1.000        Min.   :1.000            
+ 1st Qu.:113.5   1st Qu.:1.08   1st Qu.:1.300        1st Qu.:1.110            
+ Median :131.0   Median :1.25   Median :1.600        Median :1.330            
+ Mean   :129.3   Mean   :1.38   Mean   :1.615        Mean   :1.393            
+ 3rd Qu.:146.5   3rd Qu.:1.58   3rd Qu.:1.800        3rd Qu.:1.560            
+ Max.   :160.0   Max.   :3.42   Max.   :3.700        Max.   :2.670            
+                                                                              
+   Depression       Anxiety        Hostility     Phobic.anxiety 
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.150   1st Qu.:1.200   1st Qu.:1.170   1st Qu.:1.000  
+ Median :1.460   Median :1.400   Median :1.330   Median :1.140  
+ Mean   :1.494   Mean   :1.508   Mean   :1.421   Mean   :1.243  
+ 3rd Qu.:1.770   3rd Qu.:1.700   3rd Qu.:1.670   3rd Qu.:1.290  
+ Max.   :3.150   Max.   :3.400   Max.   :5.000   Max.   :3.430  
+                                                                
+ Paranoid.ideation  Psychoticism   Additional.items       t     age.lvl
+ Min.   :1.000     Min.   :1.000   Min.   :1.000    Min.   :0   1:721  
+ 1st Qu.:1.000     1st Qu.:1.100   1st Qu.:1.140    1st Qu.:0   2:719  
+ Median :1.170     Median :1.200   Median :1.570    Median :0   3:472  
+ Mean   :1.291     Mean   :1.299   Mean   :1.648    Mean   :0   4:306  
+ 3rd Qu.:1.500     3rd Qu.:1.400   3rd Qu.:2.000    3rd Qu.:0   5: 93  
+ Max.   :3.670     Max.   :3.000   Max.   :3.430    Max.   :0          
+                                                                       
+ marr2.lvl age2.lvl edu2.lvl Group         so.lvl        ocd.lvl    
+ 1:1369    1:1440   1: 944   A : 869   Mild   : 269   Mild   : 144  
+ 2: 916    2: 871   2:1367   AH:   0   No     :2037   No     :2159  
+ 3:  26                      B : 366   Serious:   5   Serious:   8  
+                             C :1076                                
+                                                                    
+                                                                    
+                                                                    
+     is.lvl        dep.lvl        anx.lvl         ho.lvl         pa.lvl    
+ No     :2242   Mild   :   1   Mild   : 434   Mild   : 140   No     :2085  
+ Serious:  69   No     :2310   No     :1872   No     :2148   Serious: 226  
+                Serious:   0   Serious:   5   Serious:  23                 
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+     pa.lvl         pi.lvl        psy.lvl         ai.lvl    
+ No     :2085   Mild   :  61   Mild   :1497   Mild   : 459  
+ Serious: 226   No     :2248   No     : 813   No     :1807  
+                Serious:   2   Serious:   1   Serious:  45  
+                                                            
+                                                            
+                                                            
+                                                            
+> install.packages("fda")
+Installing package into 'C:/Users/user/R/win-library/3.3'
+(as 'lib' is unspecified)
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/fda_2.4.4.zip'
+Content type 'application/zip' length 1902849 bytes (1.8 MB)
+downloaded 1.8 MB
+
+package 'fda' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\user\AppData\Local\Temp\Rtmpi6Twh8\downloaded_packages
+> install.packages("xtable")
+Installing package into 'C:/Users/user/R/win-library/3.3'
+(as 'lib' is unspecified)
+trying URL 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/windows/contrib/3.3/xtable_1.8-2.zip'
+Content type 'application/zip' length 710056 bytes (693 KB)
+downloaded 693 KB
+
+package 'xtable' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\user\AppData\Local\Temp\Rtmpi6Twh8\downloaded_packages
+> xtable(TukeyHSD(fit1))
+Error: could not find function "xtable"
+> library(xtable)
+> xtable(TukeyHSD(fit1))
+Error in UseMethod("xtable") : 
+  no applicable method for 'xtable' applied to an object of class "c('TukeyHSD', 'multicomp')"
+> xtable(fit1)
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Thu Sep 01 16:39:20 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrr}
+  \hline
+ & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+  \hline
+age2.lvl & 1 & 60.77 & 60.77 & 238.29 & 0.0000 \\ 
+  Sex & 1 & 1.54 & 1.54 & 6.02 & 0.0142 \\ 
+  edu2.lvl & 1 & 4.19 & 4.19 & 16.43 & 0.0001 \\ 
+  Marriage & 3 & 13.84 & 4.61 & 18.09 & 0.0000 \\ 
+  Residuals & 2304 & 587.59 & 0.26 &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
 > 

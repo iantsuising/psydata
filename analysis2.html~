@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-09-01 Thu 09:01 -->
+<!-- 2016-09-05 Mon 12:09 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Analysis</title>
@@ -156,7 +156,7 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#orgheadline4">2. Grouping</a></li>
 <li><a href="#orgheadline5">3. Total score comparisons</a></li>
-<li><a href="#orgheadline121">4. Analysis after combining ABC together</a>
+<li><a href="#orgheadline122">4. Analysis after combining ABC together</a>
 <ul>
 <li><a href="#orgheadline6">4.1. Demographic factors difference</a></li>
 <li><a href="#orgheadline7">4.2. Psychological factors difference</a></li>
@@ -176,20 +176,21 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline16">4.4.1. P0 and AH0</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline120">4.5. ANOVA Post-hoc testings</a>
+<li><a href="#orgheadline121">4.5. ANOVA Post-hoc testings</a>
 <ul>
 <li><a href="#orgheadline18">4.5.1. Why use ANOVA?</a></li>
 <li><a href="#orgheadline19">4.5.2. Why use Turkey's HSD &amp; What does Turkey's HSD do?</a></li>
-<li><a href="#orgheadline29">4.5.3. So</a></li>
-<li><a href="#orgheadline39">4.5.4. OCD</a></li>
-<li><a href="#orgheadline49">4.5.5. IS</a></li>
-<li><a href="#orgheadline59">4.5.6. Dep</a></li>
-<li><a href="#orgheadline69">4.5.7. Anx</a></li>
-<li><a href="#orgheadline79">4.5.8. Ho</a></li>
-<li><a href="#orgheadline89">4.5.9. PA</a></li>
-<li><a href="#orgheadline99">4.5.10. PI</a></li>
-<li><a href="#orgheadline109">4.5.11. Psy</a></li>
-<li><a href="#orgheadline119">4.5.12. AI</a></li>
+<li><a href="#orgheadline20">4.5.3. Overall Result</a></li>
+<li><a href="#orgheadline30">4.5.4. So</a></li>
+<li><a href="#orgheadline40">4.5.5. OCD</a></li>
+<li><a href="#orgheadline50">4.5.6. IS</a></li>
+<li><a href="#orgheadline60">4.5.7. Dep</a></li>
+<li><a href="#orgheadline70">4.5.8. Anx</a></li>
+<li><a href="#orgheadline80">4.5.9. Ho</a></li>
+<li><a href="#orgheadline90">4.5.10. PA</a></li>
+<li><a href="#orgheadline100">4.5.11. PI</a></li>
+<li><a href="#orgheadline110">4.5.12. Psy</a></li>
+<li><a href="#orgheadline120">4.5.13. AI</a></li>
 </ul>
 </li>
 </ul>
@@ -887,8 +888,8 @@ The bold p-value numbers show that the total scores of the majority groups have 
 </div>
 </div>
 
-<div id="outline-container-orgheadline121" class="outline-2">
-<h2 id="orgheadline121"><span class="section-number-2">4</span> Analysis after combining ABC together</h2>
+<div id="outline-container-orgheadline122" class="outline-2">
+<h2 id="orgheadline122"><span class="section-number-2">4</span> Analysis after combining ABC together</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Combine the group A, B, and C into one group names group P. The
@@ -1687,8 +1688,8 @@ F-statistic: 5.447e+04 on 14 and 11021 DF,  p-value: &lt; 2.2e-16
 </div>
 </div>
 
-<div id="outline-container-orgheadline120" class="outline-3">
-<h3 id="orgheadline120"><span class="section-number-3">4.5</span> ANOVA Post-hoc testings</h3>
+<div id="outline-container-orgheadline121" class="outline-3">
+<h3 id="orgheadline121"><span class="section-number-3">4.5</span> ANOVA Post-hoc testings</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Even through the sample size for marriage = 3 is small, we will not
@@ -1750,11 +1751,161 @@ which marriage stage sub-groups are different.
 </div>
 </div>
 
-
-<div id="outline-container-orgheadline29" class="outline-4">
-<h4 id="orgheadline29"><span class="section-number-4">4.5.3</span> So</h4>
+<div id="outline-container-orgheadline20" class="outline-4">
+<h4 id="orgheadline20"><span class="section-number-4">4.5.3</span> Overall Result</h4>
 <div class="outline-text-4" id="text-4-5-3">
-</div><ol class="org-ol"><li><a id="orgheadline20"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-3-1">
+<p>
+Notations:
+</p>
+<ul class="org-ul">
+<li>A: age level has significant effect with p-value lower than 0.001</li>
+<li>a: age level has significant effect with p-value lower than 0.1</li>
+<li>S: sex group has significant effect with p-value lower than 0.001</li>
+<li>s: sex group has significant effect with p-value lower than 0.0</li>
+<li>E: education level has significant effect with p-value lower than 0.001</li>
+<li>e: education level has significant effect with p-value lower than 0.1</li>
+<li>M: marriage group has significant effect with p-value lower than 0.001</li>
+<li>m: marriage group has significant effect with p-value lower than 0.1</li>
+</ul>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Significant Factors</th>
+<th scope="col" class="org-left">P0</th>
+<th scope="col" class="org-left">AH0</th>
+<th scope="col" class="org-left">P1</th>
+<th scope="col" class="org-left">AH1</th>
+<th scope="col" class="org-left">P2</th>
+<th scope="col" class="org-left">AH2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Somatization</td>
+<td class="org-left">AEM</td>
+<td class="org-left">ASeM</td>
+<td class="org-left">ASeM</td>
+<td class="org-left">ASEM</td>
+<td class="org-left">ASeM</td>
+<td class="org-left">AM</td>
+</tr>
+
+<tr>
+<td class="org-left">Obsessive.compulsive</td>
+<td class="org-left">SEm</td>
+<td class="org-left">Asm</td>
+<td class="org-left">AEM</td>
+<td class="org-left">As</td>
+<td class="org-left">AsM</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">Interpersonal.sensitivity</td>
+<td class="org-left">Ase</td>
+<td class="org-left">AeM</td>
+<td class="org-left">AEM</td>
+<td class="org-left">AEM</td>
+<td class="org-left">AM</td>
+<td class="org-left">sm</td>
+</tr>
+
+<tr>
+<td class="org-left">Depression</td>
+<td class="org-left">AsEM</td>
+<td class="org-left">ASM</td>
+<td class="org-left">Se</td>
+<td class="org-left">se</td>
+<td class="org-left">SEm</td>
+<td class="org-left">aem</td>
+</tr>
+
+<tr>
+<td class="org-left">Anxiety</td>
+<td class="org-left">ASeM</td>
+<td class="org-left">ASM</td>
+<td class="org-left">e</td>
+<td class="org-left">ase</td>
+<td class="org-left">a</td>
+<td class="org-left">a</td>
+</tr>
+
+<tr>
+<td class="org-left">Hostility</td>
+<td class="org-left">asEM</td>
+<td class="org-left">AS</td>
+<td class="org-left">Am</td>
+<td class="org-left">Am</td>
+<td class="org-left">Asm</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">Phobic.anxiety</td>
+<td class="org-left">E</td>
+<td class="org-left">ASem</td>
+<td class="org-left">e</td>
+<td class="org-left">Se</td>
+<td class="org-left">em</td>
+<td class="org-left">ae</td>
+</tr>
+
+<tr>
+<td class="org-left">Paranoid.ideation</td>
+<td class="org-left">ASE</td>
+<td class="org-left">ASeM</td>
+<td class="org-left">Ae</td>
+<td class="org-left">AS</td>
+<td class="org-left">Aem</td>
+<td class="org-left">aS</td>
+</tr>
+
+<tr>
+<td class="org-left">Psychoticism</td>
+<td class="org-left">SEm</td>
+<td class="org-left">AeM</td>
+<td class="org-left">AsM</td>
+<td class="org-left">ASM</td>
+<td class="org-left">AsM</td>
+<td class="org-left">S</td>
+</tr>
+
+<tr>
+<td class="org-left">Additional.items</td>
+<td class="org-left">AsEM</td>
+<td class="org-left">asm</td>
+<td class="org-left">Asem</td>
+<td class="org-left">Ase</td>
+<td class="org-left">Ae</td>
+<td class="org-left">ASm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgheadline30" class="outline-4">
+<h4 id="orgheadline30"><span class="section-number-4">4.5.4</span> So</h4>
+<div class="outline-text-4" id="text-4-5-4">
+</div><ol class="org-ol"><li><a id="orgheadline21"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-4-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1796,7 +1947,7 @@ which marriage stage sub-groups are different.
 <td class="org-right">0.01</td>
 <td class="org-right">0.01</td>
 <td class="org-right">0.07</td>
-<td class="org-left">*0.792</td>
+<td class="org-left">0.792</td>
 </tr>
 
 <tr>
@@ -2033,7 +2184,7 @@ which marriage stage sub-groups are different.
 </table>
 </div></li>
 
-<li><a id="orgheadline21"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-3-2">
+<li><a id="orgheadline22"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-4-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -2283,7 +2434,7 @@ which marriage stage sub-groups are different.
 </table>
 </div></li>
 
-<li><a id="orgheadline22"></a>Summary for P0 and AH0<br  /><div class="outline-text-5" id="text-4-5-3-3">
+<li><a id="orgheadline23"></a>Summary for P0 and AH0<br  /><div class="outline-text-5" id="text-4-5-4-3">
 <p>
 For the somatization in group P0, all four demographical factors
 except sex have significant influences on the score of
@@ -2304,7 +2455,7 @@ groups, and the marriage levels 1 and 2.
 </p>
 </div></li>
 
-<li><a id="orgheadline23"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-3-4">
+<li><a id="orgheadline24"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-4-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -2582,7 +2733,7 @@ groups, and the marriage levels 1 and 2.
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline24"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-3-5">
+<li><a id="orgheadline25"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-4-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -2837,7 +2988,7 @@ groups, and the marriage levels 1 and 2.
 </table>
 </div></li>
 
-<li><a id="orgheadline25"></a>Summary for P1 and AH1<br  /><div class="outline-text-5" id="text-4-5-3-6">
+<li><a id="orgheadline26"></a>Summary for P1 and AH1<br  /><div class="outline-text-5" id="text-4-5-4-6">
 <p>
 For the somatization in group P1, all four demographical factors
 have significant influences on the score of
@@ -2854,7 +3005,7 @@ groups, and the marriage levels 1 and 2.
 
 
 
-<li><a id="orgheadline26"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-3-7">
+<li><a id="orgheadline27"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-4-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -3133,7 +3284,7 @@ groups, and the marriage levels 1 and 2.
 </table>
 </div></li>
 
-<li><a id="orgheadline27"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-3-8">
+<li><a id="orgheadline28"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-4-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -3379,7 +3530,7 @@ groups, and the marriage levels 1 and 2.
 </table>
 </div></li>
 
-<li><a id="orgheadline28"></a>Summary for P2 and AH2<br  /><div class="outline-text-5" id="text-4-5-3-9">
+<li><a id="orgheadline29"></a>Summary for P2 and AH2<br  /><div class="outline-text-5" id="text-4-5-4-9">
 <p>
 For the somatization in group P2, all four demographical factors
 except sex have significant influences on the score of
@@ -3400,10 +3551,10 @@ significant between the two age levels, and the marriage levels 1 and 2.
 </div></li></ol>
 </div>
 
-<div id="outline-container-orgheadline39" class="outline-4">
-<h4 id="orgheadline39"><span class="section-number-4">4.5.4</span> OCD</h4>
-<div class="outline-text-4" id="text-4-5-4">
-</div><ol class="org-ol"><li><a id="orgheadline30"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-4-1">
+<div id="outline-container-orgheadline40" class="outline-4">
+<h4 id="orgheadline40"><span class="section-number-4">4.5.5</span> OCD</h4>
+<div class="outline-text-4" id="text-4-5-5">
+</div><ol class="org-ol"><li><a id="orgheadline31"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-5-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -3686,7 +3837,7 @@ Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, 
 </table>
 </div></li>
 
-<li><a id="orgheadline31"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-4-2">
+<li><a id="orgheadline32"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-5-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -3949,8 +4100,8 @@ Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, 
 </table>
 </div></li>
 
-<li><a id="orgheadline32"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline33"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-4-4">
+<li><a id="orgheadline33"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline34"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-5-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -4236,7 +4387,7 @@ Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, 
 </table>
 </div></li>
 
-<li><a id="orgheadline34"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-4-5">
+<li><a id="orgheadline35"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-5-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -4498,8 +4649,8 @@ Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, 
 </table>
 </div></li>
 
-<li><a id="orgheadline35"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline36"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-4-7">
+<li><a id="orgheadline36"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline37"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-5-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -4784,7 +4935,7 @@ Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, 
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline37"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-4-8">
+<li><a id="orgheadline38"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-5-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -4864,13 +5015,13 @@ Fit: aov(formula = Obsessive.compulsive ~ age2.lvl + Sex + edu2.lvl + Marriage, 
 </div></li>
 
 
-<li><a id="orgheadline38"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline39"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
 
-<div id="outline-container-orgheadline49" class="outline-4">
-<h4 id="orgheadline49"><span class="section-number-4">4.5.5</span> IS</h4>
-<div class="outline-text-4" id="text-4-5-5">
-</div><ol class="org-ol"><li><a id="orgheadline40"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-5-1">
+<div id="outline-container-orgheadline50" class="outline-4">
+<h4 id="orgheadline50"><span class="section-number-4">4.5.6</span> IS</h4>
+<div class="outline-text-4" id="text-4-5-6">
+</div><ol class="org-ol"><li><a id="orgheadline41"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-6-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -5156,7 +5307,7 @@ Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marri
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline41"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-5-2">
+<li><a id="orgheadline42"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-6-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -5417,9 +5568,9 @@ Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marri
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline42"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline43"></a>Summary for P0 and AH0<br  /></li>
 
-<li><a id="orgheadline43"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-5-4">
+<li><a id="orgheadline44"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-6-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -5705,7 +5856,7 @@ Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marri
 </table>
 </div></li>
 
-<li><a id="orgheadline44"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-5-5">
+<li><a id="orgheadline45"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-6-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -5967,9 +6118,9 @@ Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marri
 </table>
 </div></li>
 
-<li><a id="orgheadline45"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline46"></a>Summary for P1 and AH1<br  /></li>
 
-<li><a id="orgheadline46"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-5-7">
+<li><a id="orgheadline47"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-6-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -6256,7 +6407,7 @@ Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marri
 </table>
 </div></li>
 
-<li><a id="orgheadline47"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-5-8">
+<li><a id="orgheadline48"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-6-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -6520,13 +6671,13 @@ Fit: aov(formula = Interpersonal.sensitivity ~ age2.lvl + Sex + edu2.lvl + Marri
 </div></li>
 
 
-<li><a id="orgheadline48"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline49"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
 
-<div id="outline-container-orgheadline59" class="outline-4">
-<h4 id="orgheadline59"><span class="section-number-4">4.5.6</span> Dep</h4>
-<div class="outline-text-4" id="text-4-5-6">
-</div><ol class="org-ol"><li><a id="orgheadline50"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-6-1">
+<div id="outline-container-orgheadline60" class="outline-4">
+<h4 id="orgheadline60"><span class="section-number-4">4.5.7</span> Dep</h4>
+<div class="outline-text-4" id="text-4-5-7">
+</div><ol class="org-ol"><li><a id="orgheadline51"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-7-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -6811,7 +6962,7 @@ Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline51"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-6-2">
+<li><a id="orgheadline52"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-7-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -7072,8 +7223,8 @@ Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline52"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline53"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-6-4">
+<li><a id="orgheadline53"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline54"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-7-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -7359,7 +7510,7 @@ Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline54"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-6-5">
+<li><a id="orgheadline55"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-7-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -7621,8 +7772,8 @@ Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1
 </table>
 </div></li>
 
-<li><a id="orgheadline55"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline56"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-6-7">
+<li><a id="orgheadline56"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline57"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-7-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -7908,7 +8059,7 @@ Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
 </table>
 </div></li>
 
-<li><a id="orgheadline57"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-6-8">
+<li><a id="orgheadline58"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-7-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -8170,12 +8321,12 @@ Fit: aov(formula = Depression ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2
 </table>
 </div></li>
 
-<li><a id="orgheadline58"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline59"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline69" class="outline-4">
-<h4 id="orgheadline69"><span class="section-number-4">4.5.7</span> Anx</h4>
-<div class="outline-text-4" id="text-4-5-7">
-</div><ol class="org-ol"><li><a id="orgheadline60"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-7-1">
+<div id="outline-container-orgheadline70" class="outline-4">
+<h4 id="orgheadline70"><span class="section-number-4">4.5.8</span> Anx</h4>
+<div class="outline-text-4" id="text-4-5-8">
+</div><ol class="org-ol"><li><a id="orgheadline61"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-8-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -8460,7 +8611,7 @@ Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline61"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-7-2">
+<li><a id="orgheadline62"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-8-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -8723,8 +8874,8 @@ Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
 </table>
 </div></li>
 
-<li><a id="orgheadline62"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline63"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-7-4">
+<li><a id="orgheadline63"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline64"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-8-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -9009,7 +9160,7 @@ Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline64"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-7-5">
+<li><a id="orgheadline65"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-8-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -9271,8 +9422,8 @@ Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
 </table>
 </div></li>
 
-<li><a id="orgheadline65"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline66"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-7-7">
+<li><a id="orgheadline66"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline67"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-8-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -9557,7 +9708,7 @@ Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline67"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-7-8">
+<li><a id="orgheadline68"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-8-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -9820,12 +9971,12 @@ Fit: aov(formula = Anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH2)
 </div></li>
 
 
-<li><a id="orgheadline68"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline69"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline79" class="outline-4">
-<h4 id="orgheadline79"><span class="section-number-4">4.5.8</span> Ho</h4>
-<div class="outline-text-4" id="text-4-5-8">
-</div><ol class="org-ol"><li><a id="orgheadline70"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-8-1">
+<div id="outline-container-orgheadline80" class="outline-4">
+<h4 id="orgheadline80"><span class="section-number-4">4.5.9</span> Ho</h4>
+<div class="outline-text-4" id="text-4-5-9">
+</div><ol class="org-ol"><li><a id="orgheadline71"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-9-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -10110,7 +10261,7 @@ Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P0)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline71"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-8-2">
+<li><a id="orgheadline72"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-9-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -10371,8 +10522,8 @@ Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH0)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline72"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline73"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-8-4">
+<li><a id="orgheadline73"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline74"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-9-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -10657,7 +10808,7 @@ Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P1)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline74"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-8-5">
+<li><a id="orgheadline75"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-9-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -10918,8 +11069,8 @@ Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = AH1)
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline75"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline76"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-8-7">
+<li><a id="orgheadline76"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline77"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-9-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -11205,7 +11356,7 @@ Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
 </table>
 </div></li>
 
-<li><a id="orgheadline77"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-8-8">
+<li><a id="orgheadline78"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-9-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -11281,12 +11432,12 @@ Fit: aov(formula = Hostility ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P2)
 </div></li>
 
 
-<li><a id="orgheadline78"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline79"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline89" class="outline-4">
-<h4 id="orgheadline89"><span class="section-number-4">4.5.9</span> PA</h4>
-<div class="outline-text-4" id="text-4-5-9">
-</div><ol class="org-ol"><li><a id="orgheadline80"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-9-1">
+<div id="outline-container-orgheadline90" class="outline-4">
+<h4 id="orgheadline90"><span class="section-number-4">4.5.10</span> PA</h4>
+<div class="outline-text-4" id="text-4-5-10">
+</div><ol class="org-ol"><li><a id="orgheadline81"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-10-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -11572,7 +11723,7 @@ Fit: aov(formula = Phobic.anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data =
 </table>
 </div></li>
 
-<li><a id="orgheadline81"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-9-2">
+<li><a id="orgheadline82"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-10-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -11833,8 +11984,8 @@ Fit: aov(formula = Phobic.anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data =
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline82"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline83"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-9-4">
+<li><a id="orgheadline83"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline84"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-10-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -12119,7 +12270,7 @@ Fit: aov(formula = Phobic.anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data =
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline84"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-9-5">
+<li><a id="orgheadline85"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-10-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -12380,8 +12531,8 @@ Fit: aov(formula = Phobic.anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data =
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline85"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline86"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-9-7">
+<li><a id="orgheadline86"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline87"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-10-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -12666,7 +12817,7 @@ Fit: aov(formula = Phobic.anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data =
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline87"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-9-8">
+<li><a id="orgheadline88"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-10-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -12929,12 +13080,12 @@ Fit: aov(formula = Phobic.anxiety ~ age2.lvl + Sex + edu2.lvl + Marriage, data =
 </div></li>
 
 
-<li><a id="orgheadline88"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline89"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline99" class="outline-4">
-<h4 id="orgheadline99"><span class="section-number-4">4.5.10</span> PI</h4>
-<div class="outline-text-4" id="text-4-5-10">
-</div><ol class="org-ol"><li><a id="orgheadline90"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-10-1">
+<div id="outline-container-orgheadline100" class="outline-4">
+<h4 id="orgheadline100"><span class="section-number-4">4.5.11</span> PI</h4>
+<div class="outline-text-4" id="text-4-5-11">
+</div><ol class="org-ol"><li><a id="orgheadline91"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-11-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -13219,7 +13370,7 @@ Fit: aov(formula = Paranoid.ideation ~ age2.lvl + Sex + edu2.lvl + Marriage, dat
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline91"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-10-2">
+<li><a id="orgheadline92"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-11-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -13480,8 +13631,8 @@ Fit: aov(formula = Paranoid.ideation ~ age2.lvl + Sex + edu2.lvl + Marriage, dat
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline92"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline93"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-10-4">
+<li><a id="orgheadline93"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline94"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-11-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -13766,7 +13917,7 @@ Fit: aov(formula = Paranoid.ideation ~ age2.lvl + Sex + edu2.lvl + Marriage, dat
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline94"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-10-5">
+<li><a id="orgheadline95"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-11-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -14028,8 +14179,8 @@ Fit: aov(formula = Paranoid.ideation ~ age2.lvl + Sex + edu2.lvl + Marriage, dat
 </table>
 </div></li>
 
-<li><a id="orgheadline95"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline96"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-10-7">
+<li><a id="orgheadline96"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline97"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-11-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -14319,7 +14470,7 @@ Fit: aov(formula = Paranoid.ideation ~ age2.lvl + Sex + edu2.lvl + Marriage, dat
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline97"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-10-8">
+<li><a id="orgheadline98"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-11-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -14582,12 +14733,12 @@ Fit: aov(formula = Paranoid.ideation ~ age2.lvl + Sex + edu2.lvl + Marriage, dat
 </div></li>
 
 
-<li><a id="orgheadline98"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline99"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline109" class="outline-4">
-<h4 id="orgheadline109"><span class="section-number-4">4.5.11</span> Psy</h4>
-<div class="outline-text-4" id="text-4-5-11">
-</div><ol class="org-ol"><li><a id="orgheadline100"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-11-1">
+<div id="outline-container-orgheadline110" class="outline-4">
+<h4 id="orgheadline110"><span class="section-number-4">4.5.12</span> Psy</h4>
+<div class="outline-text-4" id="text-4-5-12">
+</div><ol class="org-ol"><li><a id="orgheadline101"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-12-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -14873,7 +15024,7 @@ Fit: aov(formula = Psychoticism ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P
 </table>
 </div></li>
 
-<li><a id="orgheadline101"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-11-2">
+<li><a id="orgheadline102"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-12-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -15135,8 +15286,8 @@ Fit: aov(formula = Psychoticism ~ age2.lvl + Sex + edu2.lvl + Marriage, data = A
 </table>
 </div></li>
 
-<li><a id="orgheadline102"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline103"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-11-4">
+<li><a id="orgheadline103"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline104"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-12-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -15422,7 +15573,7 @@ Fit: aov(formula = Psychoticism ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P
 </table>
 </div></li>
 
-<li><a id="orgheadline104"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-11-5">
+<li><a id="orgheadline105"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-12-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -15683,8 +15834,8 @@ Fit: aov(formula = Psychoticism ~ age2.lvl + Sex + edu2.lvl + Marriage, data = A
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline105"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline106"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-11-7">
+<li><a id="orgheadline106"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline107"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-12-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -15970,7 +16121,7 @@ Fit: aov(formula = Psychoticism ~ age2.lvl + Sex + edu2.lvl + Marriage, data = P
 </table>
 </div></li>
 
-<li><a id="orgheadline107"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-11-8">
+<li><a id="orgheadline108"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-12-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -16233,12 +16384,12 @@ Fit: aov(formula = Psychoticism ~ age2.lvl + Sex + edu2.lvl + Marriage, data = A
 </div></li>
 
 
-<li><a id="orgheadline108"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline109"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
-<div id="outline-container-orgheadline119" class="outline-4">
-<h4 id="orgheadline119"><span class="section-number-4">4.5.12</span> AI</h4>
-<div class="outline-text-4" id="text-4-5-12">
-</div><ol class="org-ol"><li><a id="orgheadline110"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-12-1">
+<div id="outline-container-orgheadline120" class="outline-4">
+<h4 id="orgheadline120"><span class="section-number-4">4.5.13</span> AI</h4>
+<div class="outline-text-4" id="text-4-5-13">
+</div><ol class="org-ol"><li><a id="orgheadline111"></a>Sub-group P0<br  /><div class="outline-text-5" id="text-4-5-13-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -16523,7 +16674,7 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline111"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-12-2">
+<li><a id="orgheadline112"></a>Sub-group AH0<br  /><div class="outline-text-5" id="text-4-5-13-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -16785,8 +16936,8 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 </table>
 </div></li>
 
-<li><a id="orgheadline112"></a>Summary for P0 and AH0<br  /></li>
-<li><a id="orgheadline113"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-12-4">
+<li><a id="orgheadline113"></a>Summary for P0 and AH0<br  /></li>
+<li><a id="orgheadline114"></a>Sub-group P1<br  /><div class="outline-text-5" id="text-4-5-13-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -17071,7 +17222,7 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline114"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-12-5">
+<li><a id="orgheadline115"></a>Sub-group AH1<br  /><div class="outline-text-5" id="text-4-5-13-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -17332,8 +17483,8 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline115"></a>Summary for P1 and AH1<br  /></li>
-<li><a id="orgheadline116"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-12-7">
+<li><a id="orgheadline116"></a>Summary for P1 and AH1<br  /></li>
+<li><a id="orgheadline117"></a>Sub-group P2<br  /><div class="outline-text-5" id="text-4-5-13-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -17618,7 +17769,7 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 </tbody>
 </table>
 </div></li>
-<li><a id="orgheadline117"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-12-8">
+<li><a id="orgheadline118"></a>Sub-group AH2<br  /><div class="outline-text-5" id="text-4-5-13-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -17880,7 +18031,7 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 </table>
 </div></li>
 
-<li><a id="orgheadline118"></a>Summary for P2 and AH2<br  /></li></ol>
+<li><a id="orgheadline119"></a>Summary for P2 and AH2<br  /></li></ol>
 </div>
 </div>
 </div>
@@ -17888,7 +18039,7 @@ Fit: aov(formula = Additional.items ~ age2.lvl + Sex + edu2.lvl + Marriage, data
 <div id="postamble" class="status">
 <p class="date">Date: 8 Aug 2016</p>
 <p class="author">Author: XU Sheng</p>
-<p class="date">Created: 2016-09-01 Thu 09:01</p>
+<p class="date">Created: 2016-09-05 Mon 12:09</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

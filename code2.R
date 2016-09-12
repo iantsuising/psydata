@@ -3,6 +3,7 @@ library(ggplot2)
 library(scales)
 library(reshape)
 library(sampling)
+library(zoo)
 
 source("totalScorId.R")
 source("multiplot.R")
